@@ -34,13 +34,13 @@ Depending on CourseReg outcomes, plans will also change but I will update this a
 | CS4269 | Fundamentals of Logic in Computer Science | 4MC |
 | HSI2012 | From Ancient Cosmologies To Big Bang | 4MC |
 | MA4264 | Game Theory | 4MC |
-| CS3264 | FOundations of Machine Learning | 4MC |
+| CS3264 | Foundations of Machine Learning | 4MC |
 
 ### Summer 
 
 | Module Code | Name | Units |
 | :--------:  | :--: | :---: |
-| CP3202 | Student Internship Programme II | 4MC |
+| CP3202 | Student Internship Programme II | 6MC |
 
 ## AY25/26
 ### Semester 1
