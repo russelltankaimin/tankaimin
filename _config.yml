@@ -1,8 +1,11 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Tan Kai Min, Russell
+description: Back-up site
 theme: just-the-docs
 
 url: https://just-the-docs.github.io
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  "Main Site" : 
+    - "www.russelltankm.com"
+
+footer_content: Copyright &copy;russelltankaimin. All contents and information are updated as on 07/05/2024.
