@@ -4,6 +4,14 @@ theme: just-the-docs
 
 url: https://just-the-docs.github.io
 
+
+just_the_docs:
+  navigation:
+    - title: "Course Reviews"
+      url: "/coursereviews/"
+      children :
+        - title: "CS1101S"
+          url: "/coursework/cs1101s"
 aux_links:
   "Main Site" : 
     - "https://www.russelltankm.com"

@@ -14,13 +14,13 @@ These are some of the courses that I have completed or are currently studying in
 ## AY21/22
 ### Semester 1
 
-| Module Code | Name | Units |
-| :-----: | :-----: | :----: |
-| CS1101S | Programming Methodology I | 4MC |
-| CS1231S | Discrete Structures | 4MC |
-| MA1521 |	Calculus in Computing | 4MC |
-| MA2001 | Linear Algebra I | 4MC |
-| GEC1030 | Metropolis: A City in World History | 4MC |
+| Module Code | Name | Units | Remarks | 
+| :-----: | :-----: | :----: | :-----:| 
+| CS1101S | Programming Methodology I | 4MC | [Review](coursereviews/cs1101s/)
+| CS1231S | Discrete Structures | 4MC | Review |
+| MA1521 |	Calculus in Computing | 4MC | Review |
+| MA2001 | Linear Algebra I | 4MC | Review |
+| GEC1030 | Metropolis: A City in World History | 4MC | Review |
 |-------| -----| ----|
 
 ### Semester 2
