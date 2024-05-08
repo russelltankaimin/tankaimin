@@ -17,23 +17,23 @@ These are some of the courses that I have completed or are currently studying in
 | Module Code | Name | Units | Remarks | 
 | :-----: | :-----: | :----: | :-----:| 
 | CS1101S | Programming Methodology I | 4MC | [Review](coursereviews/cs1101s.html)
-| CS1231S | Discrete Structures | 4MC | Review |
-| MA1521 |	Calculus in Computing | 4MC | Review |
-| MA2001 | Linear Algebra I | 4MC | Review |
-| GEC1030 | Metropolis: A City in World History | 4MC | Review |
+| CS1231S | Discrete Structures | 4MC | [Review](coursereviews/cs1231s.html) |
+| MA1521 |	Calculus in Computing | 4MC | [Review](coursereviews/ma1521.html) |
+| MA2001 | Linear Algebra I | 4MC | [Review](coursereviews/ma2001.html) |
+| GEC1030 | Metropolis: A City in World History | 4MC | [Review](coursereviews/gec1030.html) |
 |-------| -----| ----|
 
 ### Semester 2
 
-| Module Code | Name | Units |
-| :---------: | :--: | :---: |
-| CS2030S | Programming Methodology II | 4MC |
-| CS2040S | Data Structures and Algorithms | 4MC |
-| GEA1000 | Quantitative Reasoning with Real-World Data | 4MC |
-| ST2334 | Probability and Statistics | 4MC |
-| IS1103 | Ethics in Computing | 4MC |
-| GESS1027 | La Kopi: Forging of the Singaporean Chinese Community | 4MC |
-| CS1010R | Programming Methodology I (Extra Credit) | 1MC |
+| Module Code | Name | Units | Remarks |  
+| :---------: | :--: | :---: | : ----: |  
+| CS2030S | Programming Methodology II | 4MC | [Review](coursereviews/cs2030s.html) |  
+| CS2040S | Data Structures and Algorithms | 4MC | [Review](coursereviews/cs2040s.html) |  
+| GEA1000 | Quantitative Reasoning with Real-World Data | 4MC | [Review](coursereviews/gea1000.html) |  
+| ST2334 | Probability and Statistics | 4MC | [Review](coursereviews/st2334.html) |   
+| IS1103 | Ethics in Computing | 4MC | [Review](coursereviews/is1103.html) |  
+| GESS1027 | La Kopi: Forging of the Singaporean Chinese Community | 4MC | [Review](coursereviews/gess1027.html) |  
+| CS1010R | Programming Methodology I (Extra Credit) | 1MC | Extra credit for doing extra homework in the previous semester |  
 
 ### Summer 
 
