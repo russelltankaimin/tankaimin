@@ -26,7 +26,7 @@ These are some of the courses that I have completed or are currently studying in
 ### Semester 2
 
 | Module Code | Name | Units | Remarks |  
-| :---------: | :--: | :---: | : ----: |  
+| :---------: | :--: | :---: | :-----: |  
 | CS2030S | Programming Methodology II | 4MC | [Review](coursereviews/cs2030s.html) |  
 | CS2040S | Data Structures and Algorithms | 4MC | [Review](coursereviews/cs2040s.html) |  
 | GEA1000 | Quantitative Reasoning with Real-World Data | 4MC | [Review](coursereviews/gea1000.html) |  
