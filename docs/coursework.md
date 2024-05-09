@@ -37,32 +37,32 @@ These are some of the courses that I have completed or are currently studying in
 
 ### Summer 
 
-| Module Code | Name | Units |
-| :---------: | :--: | :---: |
-| CP2106 | Independent Software Engineering Project (Orbital) | 4MC |
+| Module Code | Name | Units | Remarks |
+| :---------: | :--: | :---: | :-----: |
+| CP2106 | Independent Software Engineering Project (Orbital) | 4MC | [Review](coursereviews/cp2106.html) |
 
 ## AY22/23
 ### Semester 1
 
-| Module Code | Name | Units |
-| :---------: | :--: | :---: |
-| MA2101 | Linear Algebra II | 4MC |
-| MA2108 | Mathematical Analysis I | 4MC |
-| ES2660 | Communication in the Information Age | 4MC |
-| CS2100 | Computer Organisation | 4MC |
-| CS3230 | Design and Analysis of Algorithms | 4MC |
-| CFG1002 | Career Catalyst | 2MC |
+| Module Code | Name | Units | Remarks |
+| :---------: | :--: | :---: | :-----: |
+| MA2101 | Linear Algebra II | 4MC | [Review](coursereviews/ma2101.html) |
+| MA2108 | Mathematical Analysis I | 4MC | [Review](coursereviews/ma2108.html) |
+| ES2660 | Communication in the Information Age | 4MC | [Review](coursereviews/es2660.html)|
+| CS2100 | Computer Organisation | 4MC | [Review](coursereviews/cs2100.html) |
+| CS3230 | Design and Analysis of Algorithms | 4MC | [Review](coursereviews/cs3230.html) |
+| CFG1002 | Career Catalyst | 2MC | - |
 
 ### Semester 2
 
-| Module Code | Name | Units |
-| :---------: | :--: | :---: |
-| CS2101 | Effective Communication for Computing Professionals | 4MC |
-| CS2103T | Software Engineering | 4MC |
-| MA2104 | Multivariable Calculus | 4MC |
-| CS2109S | Introduction to A.I and Machine Learning | 4MC |
-| MA3252 | Linear and Network Optimisation | 4MC |
-| CS4230 | Foundations of Modern Cryptography | 0MC (Audited) |
+| Module Code | Name | Units | Remarks |
+| :---------: | :--: | :---: | :----: |
+| CS2101 | Effective Communication for Computing Professionals | 4MC | [Review](coursereviews/cs2101.html) |
+| CS2103T | Software Engineering | 4MC | [Review](coursereviews/cs2103t.html) |
+| MA2104 | Multivariable Calculus | 4MC | [Review](coursereviews/ma2104.html) |
+| CS2109S | Introduction to A.I and Machine Learning | 4MC | [Review](coursereviews/cs2109s.html) |
+| MA3252 | Linear and Network Optimisation | 4MC | [Review](coursereviews/ma3252.html) |
+| CS4230 | Foundations of Modern Cryptography | 0MC (Audited) | - |
 
 ## AY23/24
 ### Semester 1
