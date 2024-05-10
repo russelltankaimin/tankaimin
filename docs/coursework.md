@@ -67,15 +67,15 @@ These are some of the courses that I have completed or are currently studying in
 ## AY23/24
 ### Semester 1
 
-| Module Code | Name | Units |
-| :---------: | :--: | :---: |
-| CP3209 | Undergraduate Research Project in Computing (Part I) | 4MC |
-| CS2106 | Introduction to Operating Systems | 4MC |
-| MA3236 | Non Linear Programming | 4MC |
-| MA3238 | Stochastic Processes I | 4MC |
-| HSH1000 | The Human Condition | 4MC |
-| HSI1000 | How Science Work, Why Science Works | 4MC |
-| GEN2002X | Total Defence Project Against Threat to Community (Part I) | 2MC |
+| Module Code | Name | Units | Remarks |
+| :---------: | :--: | :---: | :-----: |
+| CP3209 | Undergraduate Research Project in Computing (Part I) | 4MC | Pending |
+| CS2106 | Introduction to Operating Systems | 4MC | [Review](coursereviews/cs2106.html) |
+| MA3236 | Non Linear Programming | 4MC | [Review](coursereviews/ma3236.html) |
+| MA3238 | Stochastic Processes I | 4MC | [Review](coursereviews/ma3238.html) |
+| HSH1000 | The Human Condition | 4MC | [Review](coursereviews/hsh1000.html) |
+| HSI1000 | How Science Work, Why Science Works | 4MC | [Review](coursereviews/hsi1000.html) |
+| GEN2002X | Total Defence Project Against Threat to Community (Part I) | 2MC | [Review](coursereviews/gen2002x.html) |
 
 ### Semester 2
 
