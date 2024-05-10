@@ -4,6 +4,7 @@ theme: just-the-docs
 
 url: https://just-the-docs.github.io
 
+plugins: - jekyll-sitemap
 
 just_the_docs:
   navigation:
