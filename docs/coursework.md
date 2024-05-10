@@ -69,7 +69,7 @@ These are some of the courses that I have completed or are currently studying in
 
 | Module Code | Name | Units | Remarks |
 | :---------: | :--: | :---: | :-----: |
-| CP3209 | Undergraduate Research Project in Computing (Part I) | 4MC | Pending |
+| CP3209 | Undergraduate Research Project in Computing (Part I) | 4MC | [Review](coursereviews/cp3209.html) |
 | CS2106 | Introduction to Operating Systems | 4MC | [Review](coursereviews/cs2106.html) |
 | MA3236 | Non Linear Programming | 4MC | [Review](coursereviews/ma3236.html) |
 | MA3238 | Stochastic Processes I | 4MC | [Review](coursereviews/ma3238.html) |
@@ -79,16 +79,16 @@ These are some of the courses that I have completed or are currently studying in
 
 ### Semester 2
 
-| Module Code | Name | Units |
-| :---------: | :--: | :---: |
-| CP3209 | Undergraduate Research Project in Computing (Part II) | 4MC |
-| CS3236 | Introduction to Information Theory | 4MC |
-| CS4231 | Parallel and Distributed Algorithms | 4MC |
-| CS3263 | Foundations of Artificial Intelligence | 4MC |
-| DTK1234 | Design Thinking | 4MC |
-| MA2202 | Algebra I | 4MC |
-| GEN2002X | Total Defence Project Against Threat to Community (Part II) | 2MC |
-| CFG3001 | Career Advancement | 2MC |
+| Module Code | Name | Units | Remarks |
+| :---------: | :--: | :---: | :-----: |
+| CP3209 | Undergraduate Research Project in Computing (Part II) | 4MC | [Review](coursereviews/cp3209.html) |
+| CS3236 | Introduction to Information Theory | 4MC | Pending |
+| CS4231 | Parallel and Distributed Algorithms | 4MC | Pending |
+| CS3263 | Foundations of Artificial Intelligence | 4MC | Pending |
+| DTK1234 | Design Thinking | 4MC | Pending |
+| MA2202 | Algebra I | 4MC | Pending |
+| GEN2002X | Total Defence Project Against Threat to Community (Part II) | 2MC | [Review](coursereviews/gen2002x.html) |
+| CFG3001 | Career Advancement | 2MC | - |
 
 ### Summer 
 
