@@ -2,7 +2,7 @@
 layout: default
 title: Research
 nav_order: 10
-has_children: false
+has_children: true
 ---
 
 # Research
