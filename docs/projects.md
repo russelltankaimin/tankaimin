@@ -12,6 +12,8 @@ These are the projects that I did in school and during vacation.
 *May 2024 - Present*  
 It is an A.I SAT Solver, still at the conceptualisation and research phase. This is expected to take many years given this is my own pet project. I am not releasing anymore details since it is a WIP.
 
+<hr style="border: 2px solid black;">
+
 ## Personal Website (Russell-Site)  
 *June 2016 - June 2023*  
 My personal website where I post stuff and possibly host (my own) software too.  
@@ -21,6 +23,8 @@ This is V1.4 of my personal website. My first website was built solely using Goo
 ### Find project @  
 1. [Github](https://github.com/russelltankaimin/russelltankaimin)
 2. [Russell-site](https://russelltankaimin.github.io/russelltankaimin/)
+
+<hr style="border: 2px solid black;">
 
 ## EduMate  
 *February 2023 - April 2023*  
@@ -36,6 +40,8 @@ This project is done as a team project for CS2103T (Software Engineering). I do 
 5. [About Us](https://ay2223s2-cs2103t-w14-2.github.io/tp/AboutUs.html)
 
 
+<hr style="border: 2px solid black;">
+
 ## NUSMods Timetable Scheduler  
 *August 2022 - September 2022*  
 NUS Mods Timetable Scheduler using constraint optimisation techniques from a SAT Solver  
@@ -45,6 +51,8 @@ Built as a command line alternative for the Timetable Generator feature built in
 ### Find project @  
 1. [Project Link](https://github.com/russelltankaimin/TimeTable-Scheduler)
 
+<hr style="border: 2px solid black;">
+
 ## PlanNUS  
 *April 2022 - September 2022*  
 Engineered an Android Application to help NUS Freshmen organise schedules.  
@@ -53,6 +61,8 @@ Built features include : To-Do List, Dashboard, Timetable Generator built using 
 
 ### Find project @  
 1. [Project Link](https://github.com/russelltankaimin/TheGrumpyNUSFreshman)
+
+<hr style="border: 2px solid black;">
 
 ## MeasureText  
 *March 2020 - April 2020*  
@@ -64,7 +74,7 @@ Built using Sci-kit Learn and Pandas to extract features using a parser that I b
 1. [Project Link](https://github.com/russelltankaimin/MeasureText)  
 2. [Federalist Papers](https://avalon.law.yale.edu/subject_menus/fed.asp)
 
-
+<hr style="border: 2px solid black;">
 
 ## Sum of 3 Palindromes  
 *Jan 2020 - March 2020*  

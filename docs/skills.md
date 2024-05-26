@@ -9,25 +9,46 @@ has_children: false
 Below are some of the tools and skills I have acquired since being in education (or rather alive). YoE means "Years of Experience"
 
 ## Programming Languages
-1. C/C++ (5 YoE)
-2. Java (3 YoE)
-3. Python (7 YoE)
-4. Rust (2 YoE)
-5. Matlab (1 YoE)
-6. SQL (< 1 YoE)
-7. Haskell (1 YoE)
+
+<div style="display: flex; justify-content: space-between; width: 100%;">
+  <div>
+    C/C++ (5 YoE) <br>
+    Java (3 YoE) <br>
+    Python (7 YoE) <br>
+  </div>
+  <div>
+    Rust (2 YoE) <br>
+    Matlab (1 YoE) <br>
+    SQL (< 1 YoE) <br>
+  </div>
+  <div>
+    Haskell (1 YoE) <br>
+  </div>
+</div>
 
 ## API/Frameworks
-1. Android
-2. Spring Boot
-3. REST API
-4. Flask
-5. React.js (< 1 YoE)
-6. Google OR-Tools
-7. Microsoft Z3
-8. SageMath
-9. Pandas
-10. NumPy
+
+<div style="display: flex; justify-content: space-between; width: 100%;">
+  <div>
+    Android <br>
+    Spring Boot <br>
+    React.js (< 1 YoE) <br>
+    SageMath <br>
+  </div>
+  <div>
+    REST API <br>
+    Django <br>
+    Google OR-Tools <br>
+    Pandas <br>
+  </div>
+  <div>
+    Flask <br>
+    GraphQL <br>
+    Microsoft Z3 <br>
+    NumPy <br>
+  </div>
+</div>
+
 
 ## Cloud Platforms 
 1. Google Cloud Platform (1 YoE)

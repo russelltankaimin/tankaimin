@@ -17,12 +17,16 @@ Department: Computer Architecture Group
 Role: UROP Student  
 Working on accelerating SAT Solver algorithms using FPGAs
 
+<hr style="border: 2px solid black;">
+
 ### Seagate Technology 
 **May 2023 - Aug 2023**  
 Department: Seagate Research Group (SRG)  
 Role: Data Trust Intern  
 Working on Optical Fully Homomorphic Encryption  
 *Further details are confidential*  
+
+<hr style="border: 2px solid black;">
 
 ### DSO National Laboratories
 **March 2021 - June 2021**  
@@ -31,12 +35,16 @@ Role: Machine Learning Research Intern
 Working on using A.I to solve Boolean SAT problems.  
 *Due to the nature of the job, further details are not revealed here*  
 
+<hr style="border: 2px solid black;">
+
 ### DSTA
 **Jan 2019 - Feb 2019**  
 Department: Cybersecurity  
 Role: Software Cryptography Engineer  
 Working on building new cryptographic algorithms based on Elliptic Curves  
 *Due to the nature of the job, further deatils are not revealed here*  
+
+<hr style="border: 2px solid black;">
 
 ## Teaching
 

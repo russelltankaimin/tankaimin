@@ -16,17 +16,23 @@ CS Focus Areas : Algorithms and Theory, Artificial Intelligence
 Math Interests : Applied Mathematics, Operations Research  
 Double Degree Specialisation : Algorithms and Computation  
 
+<hr style="border: 2px solid black;">
+
 ### GCE A-Level 
 *Victoria Junior College (2017 - 2018)*  
 H1 : General Paper, Project Work  
 H2 : Mathematics, Further Mathematics, Physics, Economics  
 H3 : Mathematics  
 
+<hr style="border: 2px solid black;">
+
 ### GCE O-Level
 *Chung Cheng High School (Main) (2013 - 2016)*  
 English, Higher Chinese  
 Mathematics, Add. Mathematics, Physics, Chemistry  
 History, Social Studies + English Lit.  
+
+<hr style="border: 2px solid black;">
 
 ### PSLE (Primary School Leaving Examination)  
 *Pei Chun Public School*
