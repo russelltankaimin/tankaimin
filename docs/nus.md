@@ -1,15 +1,9 @@
----
-layout: default
-title: Education
-nav_order: 2
-has_children: true
----
-
 # Education
 
 Education has clearly taken up most of my energy while I am alive. I am from Singapore, so I went through the 10 years of compulsory education, 2 years of Junior College (equiv. to High School in the USA). I then went on to pursue my undergraduate studies in both Computer Science and Mathematics at NUS.
 
 ### B Comp (Computer Science) and B Sci (Mathematics)  
+*National University of Singapore*  
 Start : Aug 2021  
 Expected Graduation : May 2026  
 CS Focus Areas : Algorithms and Theory, Artificial Intelligence  

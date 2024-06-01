@@ -1,10 +1,3 @@
----
-layout: default
-title: Study Plan
-nav_order: 8
-parent: Education
-has_children: false
----
 
 # My Study Plan at NUS
 Below, I list all the potential classes that I am interested, and may take in the whatever remaining semesters I have. For friends or juniors visiting and wanting to take classes with me , you may refer to this page but do note, plans are not fixed as schedules change every academic year.
