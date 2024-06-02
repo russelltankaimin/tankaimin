@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "School"
-permalink: coursework/
+permalink: exp/
 author_profile: true
 ---
 
