@@ -7,11 +7,7 @@ author_profile: true
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-<div id="content"></div>
-
-<script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
 function showContent(file) {
     fetch(file)
         .then(response => response.text())
@@ -24,8 +20,9 @@ document.addEventListener("DOMContentLoaded", function() {
         showContent('../docs/nus.md'); // Load default content
         });
 </script>
-
 <button onclick="showContent('../docs/nus.md')">Education</button>
 <button onclick="showContent('../docs/coursework.md')">Coursework</button>
 <button onclick="showContent('../docs/studyplan.md')">Study Plan</button>
+
+<div id="content"></div>
 
