@@ -20,8 +20,6 @@ function showContent(file) {
                 })
     .catch(error => console.error('Error fetching the markdown file:', error));
 }
-</script>
-<script>
 document.addEventListener("DOMContentLoaded", function() {
         showContent('../docs/nus.md'); // Load default content
         });
