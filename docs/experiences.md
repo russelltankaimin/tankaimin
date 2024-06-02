@@ -1,12 +1,3 @@
----
-layout: default
-title: Experiences
-nav_order: 7
-has_children: false
----
-
-# My Work Experiences
-
 I have been doing internships during my time post A-Level and during my university time. Below are some work experiences I have.
 
 ## Professional

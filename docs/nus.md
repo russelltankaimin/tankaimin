@@ -1,4 +1,4 @@
-# Education
+# Education History
 
 Education has clearly taken up most of my energy while I am alive. I am from Singapore, so I went through the 10 years of compulsory education, 2 years of Junior College (equiv. to High School in the USA). I then went on to pursue my undergraduate studies in both Computer Science and Mathematics at NUS.
 

@@ -1,11 +1,3 @@
----
-layout: default
-title: Skills
-nav_order: 4
-has_children: false
----
-
-# Skills
 Below are some of the tools and skills I have acquired since being in education (or rather alive). YoE means "Years of Experience"
 
 ## Programming Languages

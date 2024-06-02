@@ -1,11 +1,3 @@
----
-layout: default
-title: Extra-Curriculars and Achievements
-nav_order: 5
-has_children: false
----
-
-# Notable Achievements
 I can't possibly list down everything I participated so I shall note down here the most prominent and recent ones. Any repeated awards will be (heavily) summarised.
 
 1. May 2024 -- Django Application Development with SQL and Databases Course (edX)
