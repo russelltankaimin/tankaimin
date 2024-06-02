@@ -185,7 +185,7 @@
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/docs/research_notes/ant_colony_optimisation/</loc>
+<loc>http://localhost:4000/research/aco</loc>
 </url>
 <url>
 <loc>http://localhost:4000/archive-layout-with-content/</loc>
@@ -296,7 +296,7 @@
 <loc>http://localhost:4000/docs/coursereviews/ma2202/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/docs/notes/ma2202_stuff/</loc>
+<loc>http://localhost:4000/notes/ma2202</loc>
 </url>
 <url>
 <loc>http://localhost:4000/docs/coursereviews/ma3236/</loc>
@@ -314,6 +314,9 @@
 <loc>http://localhost:4000/non-menu-page/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/notes/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/docs/notes/notes/</loc>
 </url>
 <url>
@@ -329,7 +332,7 @@
 <loc>http://localhost:4000/projects/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/docs/research_notes/q-learning-graph-nn-sat/</loc>
+<loc>http://localhost:4000/research/q-learn-graph-sat</loc>
 </url>
 <url>
 <loc>http://localhost:4000/research/</loc>
@@ -403,6 +406,14 @@
 <url>
 <loc>http://localhost:4000/docs/notes/ma2202_notes.pdf</loc>
 <lastmod>2024-06-01T19:41:08-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/files/MA2202%20Summary.pdf</loc>
+<lastmod>2024-06-01T23:06:45-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/files/ma2202_notes.pdf</loc>
+<lastmod>2024-06-01T23:05:22-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/files/paper1.pdf</loc>

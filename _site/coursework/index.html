@@ -269,12 +269,26 @@
     
       <h1 class="page__title">School</h1>
     
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <p><button onclick="showContent('../docs/nus.md')">Education</button>
+<button onclick="showContent('../docs/coursework.md')">Coursework</button>
+<button onclick="showContent('../docs/studyplan.md')">Study Plan</button></p>
 
-<p><button onclick="()=&gt; {     fetch('../docs/nus.md').then(res =&gt; res.text()).then(text =&gt; {         document.getElementById('content').innerHTML = marked.parse(text);         })}">Education</button>
-<button onclick="()=&gt; {     fetch('../docs/coursework.md').then(res =&gt; res.text()).then(text =&gt; {         document.getElementById('content').innerHTML = marked.parse(text);         })}">Coursework</button>
-<button onclick="()=&gt; {     fetch('../docs/studyplan.md').then(res =&gt; res.text()).then(text =&gt; {         document.getElementById('content').innerHTML = marked.parse(text);         })}">Study Plan</button></p>
-<div id="content"></div>
+<div id="content">
+    <script>showContent('../docs/nus.md')</script>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<script>
+    function showContent(file) {
+        fetch(file)
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('content').innerHTML = marked.parse(text);
+            })
+            .catch(error => console.error('Error fetching the markdown file:', error));
+    }
+</script>
 
 
   </div>
