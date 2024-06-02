@@ -5,20 +5,10 @@ permalink: /research/
 author_profile: true
 ---
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+One of my favourite activities to do is research because it lets me learn things outside of school and it has also led to me to contribute to new knowledge. Most of my background is in research, particularly in the field of A.I and Cryptography. However, I have been also interested in Boolean Satisfiability problems (SAT) for a very long time, or more generally constraint satisfaction and optimisation problems. It has wide-ranging applications to **Software Verficiation, Cryptanalysis, Supply Chain Management, Operations Research and Artificial Intelligence**
 
-<div id="content"></div>
+## Topic : Boolean Satisfiability (SAT)
+- [Example of Q-Learning on SAT Problems]("/aco/") 
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-        showContent('../docs/research.md'); // Load default content
-        });
-function showContent(file) {
-    fetch(file)
-        .then(response => response.text())
-        .then(text => {
-                document.getElementById('content').innerHTML = marked.parse(text);
-                })
-    .catch(error => console.error('Error fetching the markdown file:', error));
-}
-</script>
+## Topic : Optimisation Algorithms
+- [Ant Colony Optimisation]("/q-learn-graph-sat/")

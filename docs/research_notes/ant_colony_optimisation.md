@@ -1,12 +1,9 @@
 ---
-layout: default
-title: Ant Colony Optimisation
-parent: Research
-nav_order: 2
-has_children: false
+title: 'Ant Colony Optimisation'
+permalink: /research/aco
+tags:
+    - Comp Sci
 ---
-
-# Ant Colony Optimisation
 
 ## Authors  
 1. Marco Dorigo  
