@@ -9,7 +9,9 @@ author_profile: true
 <button onclick="showContent('../docs/coursework.md')">Coursework</button>
 <button onclick="showContent('../docs/studyplan.md')">Study Plan</button>
 
-<div id="content"></div>
+<div id="content">
+    <script>showContent('../docs/nus.md')</script>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
