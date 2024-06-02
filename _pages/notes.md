@@ -11,7 +11,7 @@ Just some random notes lying around on my computer which could be useful to some
 - To be uploaded 
 
 ## Maths related
-- [MA2202 Algebra I notes](../ma2202) 
+- [MA2202 Algebra I notes](../notes/ma2202) 
 
 ## Others
 
