@@ -17,7 +17,7 @@ author_profile: true
         fetch(file)
             .then(response => response.text())
             .then(text => {
-                document.getElementById('content').innerHTML = marked(text);
+                document.getElementById('content').innerHTML = marked.parse(text);
             })
             .catch(error => console.error('Error fetching the markdown file:', error));
     }
