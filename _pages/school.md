@@ -10,21 +10,15 @@ author_profile: true
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 <button onclick="()=> {
-    fetch('../docs/nus.md')
-    .then(res => res.text())
-    .then(text => {
+    fetch('../docs/nus.md').then(res => res.text()).then(text => {
         document.getElementById('content').innerHTML = marked.parse(text);
         })}">Education</button>
 <button onclick="()=> {
-    fetch('../docs/coursework.md')
-    .then(res => res.text())
-    .then(text => {
+    fetch('../docs/coursework.md').then(res => res.text()).then(text => {
         document.getElementById('content').innerHTML = marked.parse(text);
         })}">Coursework</button>
 <button onclick="()=> {
-    fetch('../docs/studyplan.md')
-    .then(res => res.text())
-    .then(text => {
+    fetch('../docs/studyplan.md').then(res => res.text()).then(text => {
         document.getElementById('content').innerHTML = marked.parse(text);
         })}">Study Plan</button>
 <div id="content"></div>
