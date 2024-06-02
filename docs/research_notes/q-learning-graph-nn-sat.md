@@ -1,12 +1,9 @@
 ---
-layout: default
-title: Q-Learning with Graph Networks on Generalising Branching Heuristic for SAT Solvers
-parent: Research
-nav_order: 1
-has_children: false
+title: 'Can Q-Learning with Graph Networks Learn a Generalisable Branching Heuristic for a SAT Solver?'
+permalink: /research/q-learn-graph-sat
+tags:
+    - Comp Sci
 ---
-
-# Can *Q* Learning with Graph Networks Learn a Generalisable Branching Heuristic for a SAT Solver?
 
 ## Authors:  
 1. Vitaly Kurin  

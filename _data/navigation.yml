@@ -1,0 +1,22 @@
+# main links links
+main:
+  - title: "School"
+    url: /coursework/
+
+  - title: "Projects"
+    url: /projects/    
+
+  - title: "Experiences"
+    url: /exp/    
+    
+  - title: "Awards"
+    url: /awards/
+        
+  - title: "Blog Posts"
+    url: /year-archive/
+    
+  - title: "Research"
+    url: /research/
+    
+  - title: "Notes"
+    url: /notes/
