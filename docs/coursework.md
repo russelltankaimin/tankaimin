@@ -88,7 +88,7 @@ These are some of the courses that I have completed or are currently studying in
 | :---------: | :--: | :---: |
 | CP3200 | Student Internship Programme I | 6MC |
 
-### AY24/25  
+## AY24/25  
 ### Semester 1  
   
 | Module Code | Name | Units | Remarks |
