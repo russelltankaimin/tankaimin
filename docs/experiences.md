@@ -2,6 +2,16 @@ I have been doing internships during my time post A-Level and during my universi
 
 ## Professional
 
+### Advanced Remanufacturing Technology Centre (ARTC)
+**May 2024 - Aug 2024**  
+Department: Digital Supply Chain Group  
+Role: (I) A.I and Algorithm Intern, (II) Software Backend Intern  
+(I)  Created geo-segmentation algorithms for vehicle routing problems, explored A.I algorithms to FMCG (Fast Moving Consumer Goods) distribution problem  
+(II) Assisted in building API infrastructure for the client's data I/O API and experiments and simulations API  
+*Awarded the ASTAR Research Internship Award (ARIA)*  
+
+<hr style="border: 2px solid black;">
+
 ### National University of Singapore
 **Aug 2023 - May 2024**  
 Department: Computer Architecture Group  

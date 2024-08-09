@@ -88,4 +88,16 @@ These are some of the courses that I have completed or are currently studying in
 | :---------: | :--: | :---: |
 | CP3200 | Student Internship Programme I | 6MC |
 
+### AY24/25  
+### Semester 1  
+  
+| Module Code | Name | Units | Remarks |
+| :---------: | :--: | :---: | :-----: |
+| CS4234 | Optimisation Algorithms | 4MC | WIP |
+| CS2106 | Algorithmic Mechanism Design | 4MC | WIP |
+| CS4246 | A.I Planning and Decision Making | 4MC | WIP |
+| HSI2010 | New Worlds Beyond Earth | 4MC | WIP |
+| MA4254 | Discrete Optimisation | 4MC | WIP |
+| LSM1301 | General Biology | 4MC | WIP |
+
 
