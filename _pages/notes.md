@@ -14,4 +14,4 @@ Just some random notes lying around on my computer which could be useful to some
 - [MA2202 Algebra I notes](../notes/ma2202) 
 
 ## Others
-
+- [HSI2010 New Worlds Beyond Earth notes](../notes/hsi2010)
