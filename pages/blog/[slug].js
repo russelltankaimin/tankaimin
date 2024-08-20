@@ -39,7 +39,7 @@ const BlogPost = ({ post }) => {
         <div className="mt-10 flex flex-col">
           <img
             className="w-full h-96 rounded-lg shadow-lg object-cover"
-            src={post.image}
+            src={`../${post.image}`}
             alt={post.title}
           ></img>
           <h1

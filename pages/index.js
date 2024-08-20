@@ -96,13 +96,13 @@ export default function Home() {
           </div>
 
           {/* Image Section */}
-          <div className="mt-5 laptop:mt-0 mr-20 laptop:ml-2 w-full laptop:w-1/4 tablet:ml-10 mr-5">
+          <div className="mt-5 laptop:mt-0 laptop:ml-2 w-1/3 tablet:ml-10 mr-5 w-full">
             <Image 
               src="/images/face.jpg" 
               alt="My Face" 
-              layout="responsive" 
-              width={100} 
-              height={100} 
+              layout="responsive"
+              width={500} 
+              height={500} 
               className="rounded"
             />
           </div>

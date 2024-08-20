@@ -9,7 +9,7 @@
 }
 
 body {
-  @apply dark:bg-black dark:text-white;
+  @apply dark:bg-slate-200 dark:text-white;
 }
 
 .gradient-circle {
