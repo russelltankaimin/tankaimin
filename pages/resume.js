@@ -10,6 +10,7 @@ import { useTheme } from "next-themes";
 import { name, showResume } from "../data/portfolio.json";
 import { resume } from "../data/portfolio.json";
 import data from "../data/portfolio.json";
+import cca from "../data/achievements.json"
 
 const Resume = () => {
   const router = useRouter();
@@ -121,6 +122,30 @@ const Resume = () => {
                       </ul>
                     </div>
                   )}
+                </div>
+              </div>
+              <div className="mt-5">
+                <h1 className="text-2xl font-bold">Achievements</h1>
+                <div className="mt-2">
+                  <ul className="list-disc">
+                        {cca.awards.map((award, index) => (
+                          <li key={index} className="ml-5 py-2">
+                            {award}
+                          </li>
+                        ))}
+                      </ul>
+                </div>
+              </div>
+              <div className="mt-5">
+                <h1 className="text-2xl font-bold">Extra Curriculars</h1>
+                <div className="mt-2">
+                  <ul className="list-disc">
+                        {cca.cca.map((exc, index) => (
+                          <li key={index} className="ml-5 py-2">
+                            {exc}
+                          </li>
+                        ))}
+                      </ul>
                 </div>
               </div>
             </div>
