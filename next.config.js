@@ -1,27 +1,27 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async redirects() {
+  redirects: async ()=> {
     return [
       // Basic redirect
       {
-        source: '/aboutme/:slug',
+        source: '/aboutme/:slug/',
         destination: '/resume',
-        permanent: true,
+        permanent: false,
       },
       // Wildcard path matching
       {
-        source: '/docs/:slug',
+        source: '/docs/:slug/',
         destination: '/blog',
-        permanent: true,
+        permanent: false,
       },
       {
-        source: '/blog/uni/:slug',
+        source: '/blog/uni/:slug/',
         destination: '/blog',
-        permanent: true,
+        permanent: false,
       },
     ]
   },
-  reactStrictMode: true,
+  reactStrictMode: true
 }
 
 module.exports = nextConfig
