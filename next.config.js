@@ -6,18 +6,18 @@ const nextConfig = {
       {
         source: '/aboutme/:slug/',
         destination: '/resume',
-        permanent: false,
+        permanent: true,
       },
       // Wildcard path matching
       {
         source: '/docs/:slug/',
         destination: '/blog',
-        permanent: false,
+        permanent: true,
       },
       {
         source: '/blog/uni/:slug/',
         destination: '/blog',
-        permanent: false,
+        permanent: true,
       },
     ]
   },
