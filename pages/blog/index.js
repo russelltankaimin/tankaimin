@@ -74,12 +74,12 @@ const Blog = ({ posts }) => {
         >
           <Header isBlog={true}></Header>
           <div className="mt-10">
-            <h1
+            <h3
               ref={text}
               className="mx-auto mob:p-2 text-bold text-6xl laptop:text-8xl w-full"
             >
-              Just my thoughts...
-            </h1>
+            Just a bit of my thoughts. The posts include my course reviews of the classes I took in NUS and also some general thoughts about life in general.
+            </h3>
             <div className="mt-10 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
               {posts &&
                 posts.map((post) => (
