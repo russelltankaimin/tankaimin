@@ -75,3 +75,32 @@ body {
   background: inherit;
   border-radius: inherit;
 }
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.profile-image {
+  width: 1% !important;
+  height: 1% !important;
+  /* Makes the image perfectly circular */
+}
+
+
+.biography {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .biography {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    text-align: center;
+  }
+}

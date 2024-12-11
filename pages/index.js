@@ -12,6 +12,7 @@ import Link from "next/link";
 import Cursor from "../components/Cursor";
 import Image from "next/image";
 import { Helmet } from "react-helmet";
+import myface from "../public/images/myface.jpg"
 
 // Local Data
 import data from "../data/portfolio.json";
@@ -67,39 +68,36 @@ export default function Home() {
         />
         <div className="laptop:mt-20 mt-10 flex flex-col laptop:flex-row items-start">
           <div className="flex-grow">
-            <div className="mt-5">
-              <h1
+          <div style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "20px" }} className="biography">
+            <div style={{ flex: "0 0 auto"}}>
+              <Image
+                src={myface}
+                alt="Profile"
+                width={250}
+                height={250}
+                style={{ borderRadius: "50%" }}
+              />
+            </div>
+        <div style={{ flex: "1" }}>
+      <h1
                 ref={textOne}
                 className="text-2xl tablet:text-4xl laptop:text-3xl laptopl:text-3xl p-1 ml-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
               >
-                {data.headerTaglineOne}
+              Hello! My name is Tan Kai Min, Russell
               </h1>
-              <h1
-                ref={textTwo}
-                className="text-3xl tablet:text-4xl laptop:text-3xl laptopl:text-3xl p-1 ml-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-              >
-                {data.headerTaglineTwo}
-              </h1>
-              <h1
-                ref={textThree}
-                className="text-3xl tablet:text-4xl laptop:text-3xl laptopl:text-3xl p-1 ml-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-              >
-                {data.headerTaglineThree}
-              </h1>
-              <h1
-                ref={textFour}
-                className="text-3xl tablet:text-4xl laptop:text-3xl laptopl:text-3xl p-1 ml-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-              >
-                {data.headerTaglineFour}
-              </h1>
-            </div>
-            <Socials className="mt-2 p-1 ml-1 laptop:mt-5" />
+        <p>
+        I am a 4-th Year Computer Science and Mathematics Double Degree Student @ National University of Singapore (NUS). I am an aspiring Computer Scientist and looking for PhD opportunities soon. I have both industrial software engineering as well as research experience over the past 9 years. My career goal is to create novel algorithmic methods to solve extremely HARD problems in Mathematics, Theoretical Computer Science and Artificial Intelligence.
+        </p>
+      </div>
+    </div>
+          
+          <Socials className="mt-2 p-1 ml-1 laptop:mt-5" />
           </div>
         </div>
 
 
         <div className="mt-10 laptop:mt-4 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="tablet:m-10 text-2xl">About.</h1>
+          <h1 className="tablet:m-10 text-2xl">Research Interests.</h1>
           <p className="tablet:m-10 mt-2 ml-5 text-xl laptop:text-xl w-full laptop:w-3/5">
             {data.aboutpara}
           </p>
