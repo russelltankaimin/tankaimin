@@ -12,7 +12,6 @@ import Link from "next/link";
 import Cursor from "../components/Cursor";
 import Image from "next/image";
 import { Helmet } from "react-helmet";
-import myface from "../public/images/face.jpg"
 
 // Local Data
 import data from "../data/portfolio.json";
