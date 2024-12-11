@@ -67,7 +67,7 @@ export default function Home() {
         />
         <div className="laptop:mt-20 mt-10 flex flex-col laptop:flex-row items-start">
           <div className="flex-grow">
-          <div style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "20px" }} className="biography">
+          <div style={{ display: "flex", flexDirection: "col", alignItems: "center", gap: "20px" }} className="biography">
             <div style={{ flex: "0 0 auto"}}>
               <Image
                 src="/images/face.jpg"
@@ -77,8 +77,8 @@ export default function Home() {
                 style={{ borderRadius: "50%" }}
               />
             </div>
-        <div style={{ flex: "1" }}>
-      <h1
+            <div style={{ flex: "1" }}>
+              <h1
                 ref={textOne}
                 className="text-2xl tablet:text-4xl laptop:text-3xl laptopl:text-3xl p-1 ml-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
               >
