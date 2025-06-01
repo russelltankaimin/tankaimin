@@ -59,5 +59,5 @@ I provide tutoring services for Secondary school O Level E/A maths and A Level H
 
 ## contact  
 1. gmail: russelltankm@u.nus.edu  
-2. github: [russelltankaimin](www.github.com/russelltankaim)
+2. github: russelltankaimin
 3. NUS SOC email: rtkm8168@comp.nus.edu.sg  
