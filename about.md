@@ -13,6 +13,7 @@ I previously studied at Victoria Junior College for my pre-University education.
 
 I am born and raised here in Singapore.  
 
+I am also looking for PhD positions in the US, UK for the Fall of 2026.
 
 ## research interests
 
@@ -56,3 +57,7 @@ I am born and raised here in Singapore.
 
 I provide tutoring services for Secondary school O Level E/A maths and A Level H2 Maths/Further Maths. I have taught a total of 3 students from their secondary school days and seen them through A Levels. All of my former students are in university now.
 
+## contact  
+1. gmail: russelltankm@u.nus.edu  
+2. github: [russelltankaimin](www.github.com/russelltankaim)
+3. NUS SOC email: rtkm8168@comp.nus.edu.sg  
