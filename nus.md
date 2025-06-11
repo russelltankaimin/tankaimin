@@ -43,13 +43,14 @@ tags: nus
 5. MA2108 - Mathematical Analysis I 
 6. MA2202 - Algebra I  
 7. MA2213 - Numerical Analysis I
-8. MA3233 - Combinatorics and Graphs II (Part I exempted)  
-9. MA3252 - Linear and Network Optimisation  
-10. MA3236 - Non Linear Programming  
-11. MA3238 - Stochastic Processes I  
-12. MA4254 - Discrete Optimisation  
-13. MA4264 - Game Theory
-14. ST2334 - Probability and Statistics
+8. MA2214 - Combinatorics and Graphs I (Exempted)  
+9. MA3233 - Combinatorics and Graphs II  
+10. MA3252 - Linear and Network Optimisation  
+11. MA3236 - Non Linear Programming  
+12. MA3238 - Stochastic Processes I  
+13. MA4254 - Discrete Optimisation  
+14. MA4264 - Game Theory
+15. ST2334 - Probability and Statistics
 
 
 ## Others  
