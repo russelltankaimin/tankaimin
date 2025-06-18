@@ -69,4 +69,9 @@ tags: nus
 12. IS1103 - Ethics for Computing  
 13. LSM1301 - General Biology 
 
+## External  
+**These are classes I could not attend due to workload limitations, but study in significant detail by myself through available course materials online**  
+
+1. 18.712 (MIT) - Representation Theory  
+
 **NOTE** : My website used to have reviews but I don't really think they are important at all for people who want to know more about the stuff I was interested in during my UG days.
