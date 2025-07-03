@@ -50,8 +50,19 @@ tags: nus
 12. MA3238 - Stochastic Processes I  
 13. MA4254 - Discrete Optimisation  
 14. MA4264 - Game Theory
-15. ST2334 - Probability and Statistics
+15. ST2334 - Probability and Statistics  
 
+### Planned for Final Year  
+1. MA3220 Ordinary Differential Equations  
+2. MA3270 Mathematics of A.I  
+3. MA4260 Stochastic Operatiosn Research 
+4. MA4270 Data Modelling and Computation 
+5. MA4271 Differential Geometry of Curves and Surfaces 
+6. MA4275 Mathematics for Reinforcement Learning
+7. CS3264 Foundations of Machine Learning 
+8. CS4268 Quantum Computing 
+9. MA4198 Mathematics Capstone Project
+10. HS2914 How to get Machines and Humans to Talk to each other 
 
 ## Others  
 
@@ -73,5 +84,6 @@ tags: nus
 **These are classes I could not attend due to workload limitations, but study in significant detail by myself through available course materials online**  
 
 1. 18.712 (MIT) - Representation Theory  
+2. Wesleyan University - Complex Analysis   
 
 **NOTE** : My website used to have reviews but I don't really think they are important at all for people who want to know more about the stuff I was interested in during my UG days.
