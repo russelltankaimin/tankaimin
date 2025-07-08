@@ -5,24 +5,24 @@ permalink: /nus/
 tags: nus
 ---
 
- I enrolled in the double degree programme at NUS. That means I have 2 GPAs (one for each subject major). Below are the classes I took.
+ I enrolled in the double degree programme at NUS. That means I have 2 GPAs (one for each subject major). Below are the classes I took. Highlighted in red are topics I am confident in.
 
 ## Computer Science (SoC)  
 
 ### Taught Courses  
-1. CS1101S - Programming Methodology I  
-2. CS1231S - Discrete Structures  
-3. CS2030S - Programming Methodology II  
-4. CS2040S - Data Structures and Algorithms  
+1. <span style="color:red">CS1101S - Programming Methodology I</span>
+2. <span style="color:red">CS1231S - Discrete Structures</span>  
+3. <span style="color:red">CS2030S - Programming Methodology II</span>   
+4. <span style="color:red">CS2040S - Data Structures and Algorithms</span>   
 5. CS2100 - Computer Organisation  
-6. CS2103T - Software Engineering  
+6. <span style="color:red">CS2103T - Software Engineering</span>   
 7. CS2106 - Introduction to Operating Systems
 8. CS2109S - Introduction to A.I and Machine Learning  
-9. CS3230 - Design and Analysis of Algorithms  
+9. <span style="color:red">CS3230 - Design and Analysis of Algorithms</span>   
 10. CS3236 - Introduction to Information Theory  
-11. CS3263 - Foundations of A.I  
+11. <span style="color:red">CS3263 - Foundations of A.I</span> 
 12. CS4246 - A.I Planning and Decision Making  
-13. CS4234 - Optimisation Algorithms  
+13. <span style="color:red">CS4234 - Optimisation Algorithms</span>   
 14. CS4261 - Algorithmic Mechanism Design  
 15. CS4231 - Parallel and Distributed Algorithms
 16. CS5275 - The Algorithm Designer's Toolkit  
@@ -36,26 +36,26 @@ tags: nus
 
 ## Mathematics (CHS)  
 
-1. MA1521 - Calculus for Computing  
-2. MA2001 - Linear Algebra I  
-3. MA2101 - Linear Algebra II  
-4. MA2104 - Multivariable Calculus  
+1. <span style="color:red">MA1521 - Calculus for Computing</span>  
+2. <span style="color:red">MA2001 - Linear Algebra I</span>  
+3. <span style="color:red">MA2101 - Linear Algebra II</span>  
+4. <span style="color:red">MA2104 - Multivariable Calculus</span>  
 5. MA2108 - Mathematical Analysis I 
 6. MA2202 - Algebra I  
-7. MA2213 - Numerical Analysis I
-8. MA2214 - Combinatorics and Graphs I (Exempted)  
-9. MA3233 - Combinatorics and Graphs II  
+7. <span style="color:red">MA2213 - Numerical Analysis I</span>
+8. <span style="color:red">MA2214 - Combinatorics and Graphs I (Exempted)</span>  
+9. <span style="color:red">MA3233 - Combinatorics and Graphs II</span>  
 10. MA3252 - Linear and Network Optimisation  
-11. MA3236 - Non Linear Programming  
+11. <span style="color:red">MA3236 - Non Linear Programming</span>  
 12. MA3238 - Stochastic Processes I  
-13. MA4254 - Discrete Optimisation  
+13. <span style="color:red">MA4254 - Discrete Optimisation</span>  
 14. MA4264 - Game Theory
-15. ST2334 - Probability and Statistics  
+15. <span style="color:red">ST2334 - Probability and Statistics</span>  
 
 #### Planned for Final Year  
 1. MA3220 - Ordinary Differential Equations  
 2. MA3270 - Mathematics of A.I  
-3. MA4260 - Stochastic Operatiosn Research 
+3. MA4260 - Stochastic Operations Research 
 4. MA4270 - Data Modelling and Computation 
 5. MA4271 - Differential Geometry of Curves and Surfaces 
 6. MA4275 - Mathematics for Reinforcement Learning
@@ -80,7 +80,7 @@ tags: nus
 12. IS1103 - Ethics for Computing  
 13. LSM1301 - General Biology 
 
-## External  
+### External  
 **These are classes I could not attend due to workload limitations, but study in significant detail by myself through available course materials online**  
 
 1. 18.712 (MIT) - Representation Theory  
