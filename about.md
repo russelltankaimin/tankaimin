@@ -31,7 +31,7 @@ I am also looking for PhD positions in the US, UK for the Fall of 2026.
 4. CS3263 Foundations of A.I Best Project Award ($30)  
 5. Orbital Artemis Achievement Level
 
-## employment history
+## experience
 
 ### Jan 2025 - Present 
 - Undergraduate Researcher (Final Year Project CP4101)
@@ -51,7 +51,7 @@ I am also looking for PhD positions in the US, UK for the Fall of 2026.
 - Undergraduate Researcher (UROPs) @ Computer Architecture Group, NUS School of Computing
     - Accelerating SAT Solver Solutions in FPGAs 
     - Supervised by Prof Trevor Carlson (on-site), and Prof Kuldeep S. Meel (remote)  
-    
+
 ### May 2023 - Aug 2023 
 - Data Trust Intern @ Seagate Technologies
     - Worked on Optical Fully Homomorphic Encryption  
