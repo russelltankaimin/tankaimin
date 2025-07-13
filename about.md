@@ -15,7 +15,7 @@ I am born and raised here in Singapore.
 
 I am also looking for PhD positions in the US, UK for the Fall of 2026.
 
-<hr/>
+---
 
 ## research interests
 
