@@ -31,7 +31,15 @@ I am also looking for PhD positions in the US, UK for the Fall of 2026.
 4. CS3263 Foundations of A.I Best Project Award ($30)  
 5. Orbital Artemis Achievement Level
 
-## employment history 
+## employment history
+
+### Jan 2025 - Present 
+- Undergraduate Researcher (Final Year Project CP4101)
+    - Computational Game Theory
+
+###  Jan 2025 - May 2025 
+- Teaching Assistant @ NUS School of Computing. 
+    - Grader in CS4246/CS5446 A.I Planning and Decision Making
 
 ###  May 2024 - Aug 2024
 - Software Engineering Intern @ Advanced Remanufacturing Technology Center (A\*STAR)
@@ -39,6 +47,11 @@ I am also looking for PhD positions in the US, UK for the Fall of 2026.
     - Part of the A\*STAR Internship Award (ARIA)  
     - Project scope includes backend development and computational geometry in the algorithm side 
 
+### May 2023 - May 2024  
+- Undergraduate Researcher (UROPs) @ Computer Architecture Group, NUS School of Computing
+    - Accelerating SAT Solver Solutions in FPGAs 
+    - Supervised by Prof Trevor Carlson (on-site), and Prof Kuldeep S. Meel (remote)  
+    
 ### May 2023 - Aug 2023 
 - Data Trust Intern @ Seagate Technologies
     - Worked on Optical Fully Homomorphic Encryption  
@@ -46,11 +59,11 @@ I am also looking for PhD positions in the US, UK for the Fall of 2026.
 
 ### March 2021 - June 2021 
 - Machine Learning Intern in the Information Exploitation Lab @ DSO National Labs
-    - Confidential Work  
+    - Confidential Work on Machine Learning with SAT Solvers 
 
 ### Jan 2019 - Feb 2019  
 - Cybersecurity Intern @ DSTA 
-    - Confidential Work
+    - Confidential Work on Elliptic Curve Cryptography
 
 ## service
 1. tutoring  
