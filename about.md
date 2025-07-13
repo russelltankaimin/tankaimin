@@ -15,6 +15,8 @@ I am born and raised here in Singapore.
 
 I am also looking for PhD positions in the US, UK for the Fall of 2026.
 
+<hr/>
+
 ## research interests
 
 1. Constraint Satisfaction (SAT Solving/SMT Solving)  
@@ -30,6 +32,8 @@ I am also looking for PhD positions in the US, UK for the Fall of 2026.
 3. Distinction in A.I Focus Area (SoC)
 4. CS3263 Foundations of A.I Best Project Award ($30)  
 5. Orbital Artemis Achievement Level
+
+<hr/>
 
 ## experience
 
@@ -64,6 +68,8 @@ I am also looking for PhD positions in the US, UK for the Fall of 2026.
 ### Jan 2019 - Feb 2019  
 - Cybersecurity Intern @ DSTA 
     - Confidential Work on Elliptic Curve Cryptography
+
+<hr/>
 
 ## service
 1. tutoring  
