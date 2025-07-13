@@ -45,9 +45,9 @@ I am also looking for PhD positions in the US, UK for the Fall of 2026.
 - Teaching Assistant @ NUS School of Computing. 
     - Grader in CS4246/CS5446 A.I Planning and Decision Making
 
-###  May 2024 - Aug 2024
-- Software Engineering Intern @ Advanced Remanufacturing Technology Center (A\*STAR)
-    - Algorithm and A.I Intern (Dual Role in a single internship)
+###  May 2024 - Aug 2024  
+- Algorithm and A.I Intern @ Advanced Remanufacturing Technology Center (A\*STAR)
+- Software Engineering Intern (Dual Role in a single internship)
     - Part of the A\*STAR Internship Award (ARIA)  
     - Project scope includes backend development and computational geometry in the algorithm side 
 
