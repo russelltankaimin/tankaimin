@@ -33,23 +33,23 @@ I am also looking for PhD positions in the US, UK for the Fall of 2026.
 
 ## employment history 
 
-1. Advanced Remanufacturing Technology Center (May 2024 - Aug 2024)
-    - Software Engineering Intern
+###  May 2024 - Aug 2024
+- Software Engineering Intern @ Advanced Remanufacturing Technology Center (A\*STAR)
     - Algorithm and A.I Intern (Dual Role in a single internship)
     - Part of the A\*STAR Internship Award (ARIA)  
     - Project scope includes backend development and computational geometry in the algorithm side 
 
-2. Seagate Technology (May 2023 - Aug 2023)  
-    - Data Trust Intern  
+### May 2023 - Aug 2023 
+- Data Trust Intern @ Seagate Technologies
     - Worked on Optical Fully Homomorphic Encryption  
     - Presenter in the Seagate Research Group Tech Sharing (across Singapore, USA, India)  
 
-3. DSO National Labs (March 2021 - June 2021)  
-    - Machine Learning Intern in the Information Exploitation Lab  
+### March 2021 - June 2021 
+- Machine Learning Intern in the Information Exploitation Lab @ DSO National Labs
     - Confidential Work  
 
-4. DSTA (Jan 2019 - Feb 2019)  
-    - Cybersecurity Intern 
+### Jan 2019 - Feb 2019  
+- Cybersecurity Intern @ DSTA 
     - Confidential Work
 
 ## service
