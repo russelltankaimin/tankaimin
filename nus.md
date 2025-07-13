@@ -21,7 +21,7 @@ tags: nus
 9. <span style="color:red">CS3230 - Design and Analysis of Algorithms</span>   
 10. CS3236 - Introduction to Information Theory  
 11. <span style="color:red">CS3263 - Foundations of A.I</span> 
-12. CS4246 - A.I Planning and Decision Making  
+12. <span style="color:red">CS4246 - A.I Planning and Decision Making</span>  
 13. <span style="color:red">CS4234 - Optimisation Algorithms</span>   
 14. CS4261 - Algorithmic Mechanism Design  
 15. CS4231 - Parallel and Distributed Algorithms
