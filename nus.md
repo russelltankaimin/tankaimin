@@ -7,6 +7,11 @@ tags: nus
 
  I enrolled in the double degree programme at NUS. That means I have 2 GPAs (one for each subject major). Below are the classes I took. Highlighted in red are topics I am confident in.
 
+## Current Statistics:  
+- B. Comp (Hons): 1st with 153 Course Credits 
+- B. Sci (Hons): 1st with 120 Course Credits
+- Expected Graduation: June 2026 with 253 joint Credits
+
 ## Computer Science (SoC)  
 
 ### Taught Courses  
@@ -26,6 +31,7 @@ tags: nus
 14. CS4261 - Algorithmic Mechanism Design  
 15. CS4231 - Parallel and Distributed Algorithms
 16. CS5275 - The Algorithm Designer's Toolkit  
+17. CS3264 - Foundations of Machine Learning. 
 
 ### Project Courses  
 1. CP3209 - Undergraduate Research Project in Computing (1 Year)
@@ -51,18 +57,21 @@ tags: nus
 13. <span style="color:red">MA4254 - Discrete Optimisation</span>  
 14. MA4264 - Game Theory
 15. <span style="color:red">ST2334 - Probability and Statistics</span>  
+16. MA3220 - Ordinary Differential Equations  
+17. MA3270 - Mathematics of A.I  
+18. MA4270 - Data Modelling and Computation 
 
-#### Planned for Final Year  
-1. MA3220 - Ordinary Differential Equations  
-2. MA3270 - Mathematics of A.I  
-3. MA4260 - Stochastic Operations Research 
-4. MA4270 - Data Modelling and Computation 
-5. MA4271 - Differential Geometry of Curves and Surfaces 
-6. MA4275 - Mathematics for Reinforcement Learning
-7. CS3264 - Foundations of Machine Learning 
-8. CS4268 - Quantum Computing 
-9. MA4198 - Mathematics Capstone Project
-10. HS2914 - How to get Machines and Humans to Talk to each other 
+### Project Courses 
+1. MA4198 - Mathematics Capstone Project
+2. MA4288O - Undergraduate Project in Mathematics   
+
+#### Planned classes for Final Semester  
+
+1. MA4260 - Stochastic Operations Research 
+2. MA4271 - Differential Geometry of Curves and Surfaces 
+3. MA4275 - Mathematics for Reinforcement Learning 
+4. CS4268 - Quantum Computing 
+5. HS2914 - How to get Machines and Humans to Talk to each other 
 
 ## Others  
 
