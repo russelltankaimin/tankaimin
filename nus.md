@@ -32,6 +32,7 @@ tags: nus
 15. CS4231 - Parallel and Distributed Algorithms
 16. CS5275 - The Algorithm Designer's Toolkit  
 17. CS3264 - Foundations of Machine Learning. 
+18. CS4230 - Foundations of Modern Cryptography (AUDIT)
 
 ### Project Courses  
 1. CP3209 - Undergraduate Research Project in Computing (1 Year)
@@ -60,6 +61,7 @@ tags: nus
 16. MA3220 - Ordinary Differential Equations  
 17. MA3270 - Mathematics of A.I  
 18. MA4270 - Data Modelling and Computation 
+19. MA3209 - Metric and Topological Spaces (AUDIT)
 
 ### Project Courses 
 1. MA4198 - Mathematics Capstone Project
