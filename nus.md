@@ -39,6 +39,7 @@ tags: nus
 2. CP3000 - Internship I  
 3. CP2106 - Independent Software Engineering Project (Orbital)  
 4. CP4101 - B. Comp Dissertation  
+5. CP3108B - Independent Work (Incoming)
 
 
 ## Mathematics (CHS)  
@@ -60,20 +61,17 @@ tags: nus
 15. <span style="color:red">ST2334 - Probability and Statistics</span>  
 16. MA3220 - Ordinary Differential Equations  
 17. MA3270 - Mathematics of A.I  
-18. MA4270 - Data Modelling and Computation 
+18. <span style="color:red">MA4270 - Data Modelling and Computation</span>  
 19. MA3209 - Metric and Topological Spaces (AUDIT)
 
 ### Project Courses 
 1. MA4198 - Mathematics Capstone Project
-2. MA4288O - Undergraduate Project in Mathematics   
 
 #### Planned classes for Final Semester  
 
-1. MA4260 - Stochastic Operations Research 
-2. MA4271 - Differential Geometry of Curves and Surfaces 
-3. MA4275 - Mathematics for Reinforcement Learning 
-4. CS4268 - Quantum Computing 
-5. HS2914 - How to get Machines and Humans to Talk to each other 
+1. MA4260 - Stochastic Operations Research  
+2. MA4275 - Mathematics for Reinforcement Learning 
+3. HS2914 - How to get Machines and Humans to Talk to each other 
 
 ## Others  
 
@@ -96,5 +94,6 @@ tags: nus
 
 1. 18.712 (MIT) - Representation Theory  
 2. Wesleyan University - Complex Analysis   
+3. Various sources - Algebraic Topology 
 
 **NOTE** : My website used to have reviews but I don't really think they are important at all for people who want to know more about the stuff I was interested in during my UG days.

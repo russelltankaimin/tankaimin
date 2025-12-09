@@ -7,13 +7,13 @@ tags: about
 
 ## about  
 
-Hi! I am currently a Computer Science and Mathematics Double Degree Programme student at the National University of Singapore. I am interested in algorithm research and theory of artificial intelligence. My home faculty is the School of Computing.  
+Hi! I am currently a Computer Science and Mathematics Double Degree Programme student at the National University of Singapore. I am interested in algorithm research and theory of artificial intelligence. My home faculty is the School of Computing (SoC) but technically also belong to the Department of Mathematics. I am also an incoming Masters of Research (MRes) student in Artificial Intelligence also at SoC.    
 
 I previously studied at Victoria Junior College for my pre-University education.  
 
 I am born and raised here in Singapore.  
 
-I am also looking for PhD positions in the US, UK for the Fall of 2026.
+I am also looking for PhD positions in the US, UK for the Fall of 2027.
 
 ---
 
