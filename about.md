@@ -38,8 +38,10 @@ I am also looking for PhD positions in the US, UK for the Fall of 2027.
 ## experience
 
 ### Jan 2025 - Present 
-- Undergraduate Researcher (Final Year Project CP4101)
-    - Computational Game Theory
+- Undergraduate Researcher 
+    - Topics: Computational Game Theory, with links to Optimisation, Algebraic Topology etc. 
+    - Final Year Project (FYP) Student  (Jan 25 - Nov 25)  
+    - Post FYP Student (Dec 25 - Present)  
 
 ###  Jan 2025 - May 2025 
 - Teaching Assistant @ NUS School of Computing. 
