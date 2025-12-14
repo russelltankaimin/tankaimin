@@ -137,4 +137,4 @@ plugins:
 pagination:
   enabled: true
   per_page: 5
-  permalink: "/Blog/page/:num/"
+  permalink: "/blog/page/:num/"
