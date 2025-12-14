@@ -38,10 +38,11 @@ I am also looking for PhD positions in the US, UK for the Fall of 2027.
 ## experience
 
 ### Jan 2025 - Present 
-- Undergraduate Researcher 
+- Undergraduate Researcher @ AGORAI (Algorithms, Games, Operations Research, Artificial Intelligence) Lab, NUS School of Computing    
     - Topics: Computational Game Theory, with links to Optimisation, Algebraic Topology etc. 
     - Final Year Project (FYP) Student  (Jan 25 - Nov 25)  
     - Post FYP Student (Dec 25 - Present)  
+    - Independent Researcher under Independent Work Scheme CP3108B (Expected Jan 2026 - May 2026)
 
 ###  Jan 2025 - May 2025 
 - Teaching Assistant @ NUS School of Computing. 
