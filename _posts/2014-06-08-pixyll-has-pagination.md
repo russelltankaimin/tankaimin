@@ -6,4 +6,4 @@ summary: Yes
 categories: general
 ---
 
-This is an empty post to illustrate the pagination component with Pixyll.
+This post is merely for testing
