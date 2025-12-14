@@ -9,7 +9,7 @@ date_format: "%b %-d, %Y"
 header_pages:
  - about.md
  - nus.md
- - blog.html
+ - blog/index.html
  - contact.html
 
 # Google services
@@ -117,7 +117,8 @@ markdown:     kramdown
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 permalink:    pretty
-paginate:     4
+paginate:     5
+paginate_path: "/blog/page:num"
 sass:
   style: compressed
 plugins:
@@ -131,10 +132,3 @@ exclude:
   - README.md
   - screenshot.png
   - vendor
-plugins:
-  - jekyll-paginate-v2
-
-pagination:
-  enabled: true
-  per_page: 5
-  permalink: "/blog/page/:num/"
