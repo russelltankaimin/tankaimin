@@ -131,3 +131,10 @@ exclude:
   - README.md
   - screenshot.png
   - vendor
+plugins:
+  - jekyll-paginate-v2
+
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: "/Blog/page/:num/"
