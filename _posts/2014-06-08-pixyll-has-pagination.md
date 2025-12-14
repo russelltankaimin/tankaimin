@@ -1,10 +1,9 @@
 ---
-layout: default
-title: Pixyll has Pagination
-permalink: /Blog/test
-date: 2014-06-08 11:21:29
-summary:    This is an empty post to illustrate the pagination component with Pixyll.
-categories: jekyll pixyll
+layout: post
+title: New Website
+date: 2019-08-16 19:22
+summary: Yes
+categories: general
 ---
 
 This is an empty post to illustrate the pagination component with Pixyll.
