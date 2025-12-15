@@ -8,9 +8,9 @@ tags: nus
  I enrolled in the double degree programme at NUS. That means I have 2 GPAs (one for each subject major). Below are the classes I took. Highlighted in red are topics I am confident in.
 
 ## Current Statistics:  
-- B. Comp (Hons): 1st with 153 Course Credits 
-- B. Sci (Hons): 1st with 120 Course Credits
-- Expected Graduation: June 2026 with 253 joint Credits
+- B. Comp (Hons): 1st with 157 Course Credits 
+- B. Sci (Hons): 1st with 140 Course Credits
+- Expected Graduation: June 2026 with 247 joint Credits
 
 ## Computer Science (SoC)  
 
@@ -36,9 +36,11 @@ tags: nus
 
 ### Project Courses  
 1. CP3209 - Undergraduate Research Project in Computing (1 Year)
+ - Topic: Using FPGAs to accelerate SAT Solving (supervised by Prof. Trevor Carlson and Prof. Kuldeep S. Meel)
 2. CP3000 - Internship I  
 3. CP2106 - Independent Software Engineering Project (Orbital)  
-4. CP4101 - B. Comp Dissertation  
+4. CP4101 - B. Comp Dissertation
+ - Topic: Theoretical and Computational Models in Nash Equilibrium Selection in Bi-matrix games via Hidden Actions (supervised by Prof. Ling Chun Kai)  
 5. CP3108B - Independent Work (Incoming)
 
 
@@ -66,12 +68,14 @@ tags: nus
 
 ### Project Courses 
 1. MA4198 - Mathematics Capstone Project
+ - Topic: Markov Chains and Mixing Times (supervised by Prof. Sun Rongfeng)  
 
 #### Planned classes for Final Semester  
 
 1. MA4260 - Stochastic Operations Research  
 2. MA4275 - Mathematics for Reinforcement Learning 
 3. HS2914 - How to get Machines and Humans to Talk to each other 
+4. ST4234 - Bayesian Statistics  
 
 ## Others  
 
