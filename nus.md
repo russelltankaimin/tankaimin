@@ -31,16 +31,18 @@ tags: nus
 14. CS4261 - Algorithmic Mechanism Design  
 15. CS4231 - Parallel and Distributed Algorithms
 16. CS5275 - The Algorithm Designer's Toolkit  
-17. CS3264 - Foundations of Machine Learning. 
+17. <span style="color:red">CS3264 - Foundations of Machine Learning</span> 
 18. CS4230 - Foundations of Modern Cryptography (AUDIT)
 
 ### Project Courses  
 1. CP3209 - Undergraduate Research Project in Computing (1 Year)
  - Topic: Using FPGAs to accelerate SAT Solving (supervised by Prof. Trevor Carlson and Prof. Kuldeep S. Meel)
+ - Grade: A+
 2. CP3000 - Internship I  
 3. CP2106 - Independent Software Engineering Project (Orbital)  
 4. CP4101 - B. Comp Dissertation
- - Topic: Theoretical and Computational Models in Nash Equilibrium Selection in Bi-matrix games via Hidden Actions (supervised by Prof. Ling Chun Kai)  
+ - Topic: Theoretical and Computational Models in Nash Equilibrium Selection in Bi-matrix games via Hidden Actions (supervised by Prof. Ling Chun Kai)
+ - Grade: A+  
 5. CP3108B - Independent Work (Incoming)
 
 
@@ -59,16 +61,17 @@ tags: nus
 11. <span style="color:red">MA3236 - Non Linear Programming</span>  
 12. MA3238 - Stochastic Processes I  
 13. <span style="color:red">MA4254 - Discrete Optimisation</span>  
-14. MA4264 - Game Theory
+14. <span style="color:red">MA4264 - Game Theory</span>
 15. <span style="color:red">ST2334 - Probability and Statistics</span>  
-16. MA3220 - Ordinary Differential Equations  
-17. MA3270 - Mathematics of A.I  
+16. <span style="color:red">MA3220 - Ordinary Differential Equations</span>  
+17. <span style="color:red">MA3270 - Mathematics of A.I</span>  
 18. <span style="color:red">MA4270 - Data Modelling and Computation</span>  
 19. MA3209 - Metric and Topological Spaces (AUDIT)
 
 ### Project Courses 
 1. MA4198 - Mathematics Capstone Project
- - Topic: Markov Chains and Mixing Times (supervised by Prof. Sun Rongfeng)  
+ - Topic: Markov Chains and Mixing Times (supervised by Prof. Sun Rongfeng)
+ - Grade: A  
 
 #### Planned classes for Final Semester  
 
