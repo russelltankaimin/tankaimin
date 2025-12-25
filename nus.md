@@ -10,7 +10,7 @@ tags: nus
 ## Current Statistics:  
 - B. Comp (Hons): 1st with 157 Course Credits 
 - B. Sci (Hons): 1st with 140 Course Credits
-- Expected Graduation: June 2026 with 247 joint Credits
+- Expected Graduation: June 2026 with 249 joint Credits
 
 ## Computer Science (SoC)  
 
