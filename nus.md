@@ -78,7 +78,8 @@ tags: nus
 1. MA4260 - Stochastic Operations Research  
 2. MA4275 - Mathematics for Reinforcement Learning 
 3. HS2914 - How to get Machines and Humans to Talk to each other 
-4. ST4234 - Bayesian Statistics  
+4. ST4234 - Bayesian Statistics
+5. CS5340 - Uncertainty Modelling in A.I  
 
 ## Others  
 
