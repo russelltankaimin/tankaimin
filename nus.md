@@ -66,20 +66,20 @@ tags: nus
 16. <span style="color:red">MA3220 - Ordinary Differential Equations</span>  
 17. <span style="color:red">MA3270 - Mathematics of A.I</span>  
 18. <span style="color:red">MA4270 - Data Modelling and Computation</span>  
-19. MA3209 - Metric and Topological Spaces (AUDIT)
+19. MA3209 - Metric and Topological Spaces (AUDIT)  
+20. MA4260 - Stochastic Operations Research   
+21. MA4275 - Mathematics for Reinforcement Learning  
 
 ### Project Courses 
 1. MA4198 - Mathematics Capstone Project
  - Topic: Markov Chains and Mixing Times (supervised by Prof. Sun Rongfeng)
  - Grade: A  
 
-#### Planned classes for Final Semester  
+#### Planned classes for Final Semester (To be acquired)  
 
-1. MA4260 - Stochastic Operations Research  
-2. MA4275 - Mathematics for Reinforcement Learning 
-3. HS2914 - How to get Machines and Humans to Talk to each other 
-4. ST4234 - Bayesian Statistics
-5. CS5340 - Uncertainty Modelling in A.I  
+1. CS4268 - Quantum Computing **Or**
+2. CS5340 - Uncertainty Modelling in A.I **Or**  
+3. IE6520 - Theory and Algorithms for Online Learning
 
 ## Others  
 
@@ -95,7 +95,8 @@ tags: nus
 10. HSI2010 - New Worlds Beyond Earth  
 11. HS2911 - Social Media and Mental Health  
 12. IS1103 - Ethics for Computing  
-13. LSM1301 - General Biology 
+13. LSM1301 - General Biology  
+14. HS2914 - How to get Machines and Humans to Talk to each other
 
 ### External  
 **These are classes I could not attend due to workload limitations, but study in significant detail by myself through available course materials online**  
