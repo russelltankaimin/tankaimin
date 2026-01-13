@@ -33,6 +33,8 @@ tags: nus
 16. CS5275 - The Algorithm Designer's Toolkit  
 17. <span style="color:red">CS3264 - Foundations of Machine Learning</span> 
 18. CS4230 - Foundations of Modern Cryptography (AUDIT)
+19. IE6520 - Theory and Algorithms for Online Learning (AUDIT) - PhD class  
+20. CS4268 - Quantum Computing  
 
 ### Project Courses  
 1. CP3209 - Undergraduate Research Project in Computing (1 Year)
@@ -77,9 +79,7 @@ tags: nus
 
 #### Planned classes for Final Semester (To be acquired)  
 
-1. CS4268 - Quantum Computing **Or**
-2. CS5340 - Uncertainty Modelling in A.I **Or**  
-3. IE6520 - Theory and Algorithms for Online Learning
+1. CS5340 - Uncertainty Modelling in A.I  
 
 ## Others  
 
