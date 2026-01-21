@@ -8,9 +8,9 @@ tags: nus
  I enrolled in the double degree programme at NUS. That means I have 2 GPAs (one for each subject major). Below are the classes I took. Highlighted in red are topics I am confident in.
 
 ## Current Statistics:  
-- B. Comp (Hons): 1st with 157 Course Credits 
-- B. Sci (Hons): 1st with 140 Course Credits
-- Expected Graduation: June 2026 with 249 joint Credits
+- B. Comp (Hons): 1st with 165 Course Credits 
+- B. Sci (Hons): 1st with 136 Course Credits
+- Expected Graduation: June 2026 with 253 joint Credits
 
 ## Computer Science (SoC)  
 
@@ -35,6 +35,7 @@ tags: nus
 18. CS4230 - Foundations of Modern Cryptography (AUDIT)
 19. IE6520 - Theory and Algorithms for Online Learning (AUDIT) - PhD class  
 20. CS4268 - Quantum Computing  
+21. CS5340 - Uncertainty Modelling in A.I  
 
 ### Project Courses  
 1. CP3209 - Undergraduate Research Project in Computing (1 Year)
@@ -45,8 +46,8 @@ tags: nus
 4. CP4101 - B. Comp Dissertation
  - Topic: Theoretical and Computational Models in Nash Equilibrium Selection in Bi-matrix games via Hidden Actions (supervised by Prof. Ling Chun Kai)
  - Grade: A+  
-5. CP3108B - Independent Work (Incoming)
-
+5. CP3108B - Independent Work 
+ - Topic: Advanced Topices in Computational Game Theory (supervised by Prof. Ling Chun Kai)
 
 ## Mathematics (CHS)  
 
@@ -61,7 +62,7 @@ tags: nus
 9. <span style="color:red">MA3233 - Combinatorics and Graphs II</span>  
 10. MA3252 - Linear and Network Optimisation  
 11. <span style="color:red">MA3236 - Non Linear Programming</span>  
-12. MA3238 - Stochastic Processes I  
+12. <span style="color:red">MA3238 - Stochastic Processes I</span>  
 13. <span style="color:red">MA4254 - Discrete Optimisation</span>  
 14. <span style="color:red">MA4264 - Game Theory</span>
 15. <span style="color:red">ST2334 - Probability and Statistics</span>  
@@ -77,9 +78,6 @@ tags: nus
  - Topic: Markov Chains and Mixing Times (supervised by Prof. Sun Rongfeng)
  - Grade: A  
 
-#### Planned classes for Final Semester (To be acquired)  
-
-1. CS5340 - Uncertainty Modelling in A.I  
 
 ## Others  
 
