@@ -102,5 +102,7 @@ tags: nus
 1. 18.712 (MIT) - Representation Theory  
 2. Wesleyan University - Complex Analysis   
 3. Various sources - Algebraic Topology 
+4. 18.217 (MIT) - Geometric Combinatorics 
+5. 18.212 (MIT) - Algebraic Combinatorics  
 
 **NOTE** : My website used to have reviews but I don't really think they are important at all for people who want to know more about the stuff I was interested in during my UG days.
