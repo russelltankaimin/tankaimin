@@ -19,10 +19,12 @@ I am also looking for PhD positions in the US, UK for the Fall of 2027.
 
 ## research interests
 
-1. Constraint Satisfaction (SAT Solving/SMT Solving)  
-2. Mathematical Optimisation (Discrete and Continuous)  
-3. Artificial Intelligence and Machine Learning (Decision Making) Theory  
-
+1. Artificial Intelligence and Machine Learning (+ Decision Making) Theory  
+2. Stochastic Processes, Markov Chains and its applications  
+3. Mathematical Optimisation (Discrete and Continuous)
+4. Applied Probability  
+5. Constraint Satisfaction (SAT Solving/SMT Solving)  
+  
 ## conferences  
 1. International Conference of Learning Representations (ICLR) 2025 (Singapore)  
 
@@ -41,8 +43,8 @@ I am also looking for PhD positions in the US, UK for the Fall of 2027.
 - Undergraduate Researcher @ AGORAI (Algorithms, Games, Operations Research, Artificial Intelligence) Lab, NUS School of Computing    
     - Topics: Computational Game Theory, with links to Optimisation, Algebraic Topology etc. 
     - Final Year Project (FYP) Student  (Jan 25 - Nov 25)  
-    - Post FYP Student (Dec 25 - Present)  
-    - Independent Researcher under Independent Work Scheme CP3108B (Expected Jan 2026 - May 2026)
+    - Post FYP Student (Dec 25 - Jan 26)  
+    - Independent Researcher under Independent Work Scheme CP3108B (Jan 26 - May 26)
 
 ###  Jan 2025 - May 2025 
 - Teaching Assistant @ NUS School of Computing. 
