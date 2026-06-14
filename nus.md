@@ -4,13 +4,20 @@ title: NUS Stuff
 permalink: /nus/
 tags: nus
 ---
+# Masters
+I am an incoming research masters student at the School of Computing. 
 
- I enrolled in the double degree programme at NUS. That means I have 2 GPAs (one for each subject major). Below are the classes I took. Highlighted in red are topics I am confident in.
+## Plan:
+- TBD
 
-## Current Statistics:  
-- B. Comp (Hons): 1st with 165 Course Credits 
-- B. Sci (Hons): 1st with 136 Course Credits
-- Expected Graduation: June 2026 with 253 joint Credits
+
+# Undergraduate
+For my undergraduate, I enrolled in the double degree programme at NUS. That means I have 2 GPAs (one for each subject major). Below are the classes I took. Highlighted in red are topics I am confident in OR did well in.
+
+## Statistics:  
+- B. Comp (Hons) in Computer Science: 1st with 165 Course Credits 
+- B. Sci (Hons) in Mathematics: 1st with 136 Course Credits
+- Graduation: June 2026 with 253 joint Credits (Both with Highest Distinctions)
 
 ## Computer Science (SoC)  
 
@@ -34,8 +41,8 @@ tags: nus
 17. <span style="color:red">CS3264 - Foundations of Machine Learning</span> 
 18. CS4230 - Foundations of Modern Cryptography (AUDIT)
 19. IE6520 - Theory and Algorithms for Online Learning (AUDIT) - PhD class  
-20. CS4268 - Quantum Computing  
-21. CS5340 - Uncertainty Modelling in A.I  
+20. <span style="color:red">CS4268 - Quantum Computing</span>  
+21. <span style="color:red">CS5340 - Uncertainty Modelling in A.I</span>  
 
 ### Project Courses  
 1. CP3209 - Undergraduate Research Project in Computing (1 Year)
@@ -70,8 +77,8 @@ tags: nus
 17. <span style="color:red">MA3270 - Mathematics of A.I</span>  
 18. <span style="color:red">MA4270 - Data Modelling and Computation</span>  
 19. MA3209 - Metric and Topological Spaces (AUDIT)  
-20. MA4260 - Stochastic Operations Research   
-21. MA4275 - Mathematics for Reinforcement Learning  
+20. <span style="color:red">MA4260 - Stochastic Operations Research</span>   
+21. <span style="color:red">MA4275 - Mathematics for Reinforcement Learning</span>  
 
 ### Project Courses 
 1. MA4198 - Mathematics Capstone Project
