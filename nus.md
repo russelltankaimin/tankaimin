@@ -12,7 +12,7 @@ I am an incoming research masters student at the School of Computing.
 
 
 # Undergraduate
-For my undergraduate, I enrolled in the double degree programme at NUS. That means I have 2 GPAs (one for each subject major). Below are the classes I took. Highlighted in red are topics I am confident in OR did well in.
+For my undergraduate, I enrolled in the double degree programme at NUS. That means I have 2 GPAs (one for each subject major). Below are the classes I took. Highlighted in red are topics I am confident in **AND** did well in.
 
 ## Statistics:  
 - B. Comp (Hons) in Computer Science: 1st with 165 Course Credits 
