@@ -8,11 +8,19 @@ tags: nus
 I am an incoming research masters student at the School of Computing. 
 
 ## Plan:
-- TBD
-
+- Semester 1:  
+    - CS6101: Exploration of Computer Science Research
+    - CS6216: Advanced Topics in Machine Learning
+    - CS6235: Advanced Topics in Theoretical Computer Science
+    - MA6225: Information Theoretic Methods in Statistical Learning
+- Semester 2:  
+    - CS6234: Advanced Algorithms
+    - MA5249: Stochastic Processes and Algorithms
+- Year Long:
+    - Masters Thesis
 
 # Undergraduate
-For my undergraduate, I enrolled in the double degree programme at NUS. That means I have 2 GPAs (one for each subject major). Below are the classes I took. Highlighted in red are topics I am confident in **AND** did well in.
+For my undergraduate, I enrolled in the double degree programme at NUS. That means I have 2 GPAs (one for each subject major). Below are the classes I took. As of 30th June 2026, I have since **graduated** with a Highest Distinctions (equiv. First Class Hons) for **BOTH** degrees.
 
 ## Statistics:  
 - B. Comp (Hons) in Computer Science: 1st with 165 Course Credits 
@@ -22,27 +30,27 @@ For my undergraduate, I enrolled in the double degree programme at NUS. That mea
 ## Computer Science (SoC)  
 
 ### Taught Courses  
-1. <span style="color:red">CS1101S - Programming Methodology I</span>
-2. <span style="color:red">CS1231S - Discrete Structures</span>  
-3. <span style="color:red">CS2030S - Programming Methodology II</span>   
-4. <span style="color:red">CS2040S - Data Structures and Algorithms</span>   
+1. CS1101S - Programming Methodology I
+2. CS1231S - Discrete Structures  
+3. CS2030S - Programming Methodology II   
+4. CS2040S - Data Structures and Algorithms   
 5. CS2100 - Computer Organisation  
-6. <span style="color:red">CS2103T - Software Engineering</span>   
+6. CS2103T - Software Engineering   
 7. CS2106 - Introduction to Operating Systems
 8. CS2109S - Introduction to A.I and Machine Learning  
-9. <span style="color:red">CS3230 - Design and Analysis of Algorithms</span>   
+9. CS3230 - Design and Analysis of Algorithms   
 10. CS3236 - Introduction to Information Theory  
-11. <span style="color:red">CS3263 - Foundations of A.I</span> 
-12. <span style="color:red">CS4246 - A.I Planning and Decision Making</span>  
-13. <span style="color:red">CS4234 - Optimisation Algorithms</span>   
+11. CS3263 - Foundations of A.I 
+12. CS4246 - A.I Planning and Decision Making  
+13. CS4234 - Optimisation Algorithms   
 14. CS4261 - Algorithmic Mechanism Design  
 15. CS4231 - Parallel and Distributed Algorithms
 16. CS5275 - The Algorithm Designer's Toolkit  
-17. <span style="color:red">CS3264 - Foundations of Machine Learning</span> 
+17. CS3264 - Foundations of Machine Learning 
 18. CS4230 - Foundations of Modern Cryptography (AUDIT)
 19. IE6520 - Theory and Algorithms for Online Learning (AUDIT) - PhD class  
-20. <span style="color:red">CS4268 - Quantum Computing</span>  
-21. <span style="color:red">CS5340 - Uncertainty Modelling in A.I</span>  
+20. CS4268 - Quantum Computing  
+21. CS5340 - Uncertainty Modelling in A.I  
 
 ### Project Courses  
 1. CP3209 - Undergraduate Research Project in Computing (1 Year)
@@ -58,27 +66,27 @@ For my undergraduate, I enrolled in the double degree programme at NUS. That mea
 
 ## Mathematics (CHS)  
 
-1. <span style="color:red">MA1521 - Calculus for Computing</span>  
-2. <span style="color:red">MA2001 - Linear Algebra I</span>  
-3. <span style="color:red">MA2101 - Linear Algebra II</span>  
-4. <span style="color:red">MA2104 - Multivariable Calculus</span>  
+1. MA1521 - Calculus for Computing  
+2. MA2001 - Linear Algebra I  
+3. MA2101 - Linear Algebra II  
+4. MA2104 - Multivariable Calculus  
 5. MA2108 - Mathematical Analysis I 
 6. MA2202 - Algebra I  
-7. <span style="color:red">MA2213 - Numerical Analysis I</span>
-8. <span style="color:red">MA2214 - Combinatorics and Graphs I (Exempted)</span>  
-9. <span style="color:red">MA3233 - Combinatorics and Graphs II</span>  
+7. MA2213 - Numerical Analysis I
+8. MA2214 - Combinatorics and Graphs I (Exempted)  
+9. MA3233 - Combinatorics and Graphs II  
 10. MA3252 - Linear and Network Optimisation  
-11. <span style="color:red">MA3236 - Non Linear Programming</span>  
-12. <span style="color:red">MA3238 - Stochastic Processes I</span>  
-13. <span style="color:red">MA4254 - Discrete Optimisation</span>  
-14. <span style="color:red">MA4264 - Game Theory</span>
-15. <span style="color:red">ST2334 - Probability and Statistics</span>  
-16. <span style="color:red">MA3220 - Ordinary Differential Equations</span>  
-17. <span style="color:red">MA3270 - Mathematics of A.I</span>  
-18. <span style="color:red">MA4270 - Data Modelling and Computation</span>  
+11. MA3236 - Non Linear Programming  
+12. MA3238 - Stochastic Processes I  
+13. MA4254 - Discrete Optimisation  
+14. MA4264 - Game Theory
+15. ST2334 - Probability and Statistics  
+16. MA3220 - Ordinary Differential Equations  
+17. MA3270 - Mathematics of A.I  
+18. MA4270 - Data Modelling and Computation  
 19. MA3209 - Metric and Topological Spaces (AUDIT)  
-20. <span style="color:red">MA4260 - Stochastic Operations Research</span>   
-21. <span style="color:red">MA4275 - Mathematics for Reinforcement Learning</span>  
+20. MA4260 - Stochastic Operations Research   
+21. MA4275 - Mathematics for Reinforcement Learning  
 
 ### Project Courses 
 1. MA4198 - Mathematics Capstone Project
