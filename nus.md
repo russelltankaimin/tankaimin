@@ -5,7 +5,7 @@ permalink: /nus/
 tags: nus
 ---
 # Masters
-I am an incoming research masters student at the School of Computing. 
+I am currently a research masters student at the School of Computing. 
 
 ## Plan:
 - Semester 1:  
