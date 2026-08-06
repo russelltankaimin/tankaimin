@@ -7,7 +7,7 @@ tags: about
 
 ## about  
 
-Hi! I am an incoming Masters of Science (MSc) student in Artificial Intelligence Research at SoC. Previously, I am a Computer Science and Mathematics Double Degree Programme (Double First Class Honours / Highest Distinction) student at the National University of Singapore. I am interested in algorithm research and theory of artificial intelligence.      
+Hi! I am an incoming Masters of Science (MSc) student in Artificial Intelligence Research at SoC. Previously, I am a Computer Science and Mathematics Double Degree Programme student at the National University of Singapore. I am interested in algorithm research and theory of artificial intelligence.      
 
 I previously studied at Victoria Junior College for my pre-University education (Singapore-GCE A Levels).  
 
@@ -39,13 +39,17 @@ I am also looking for PhD positions in the US, UK for the Fall of 2027.
 
 ## experience
 
-### Jan 2025 - Present 
+### Aug 2026 - Present    
+- Graduate Researcher 
+    - Topic: TBC
+
+### Jan 2025 - July 2026 
 - Undergraduate Researcher @ AGORAI (Algorithms, Games, Operations Research, Artificial Intelligence) Lab, NUS School of Computing    
     - Topics: Computational Game Theory, with links to Optimisation, Algebraic Topology etc. 
     - Final Year Project (FYP) Student  (Jan 25 - Nov 25)  
     - Post FYP Student (Dec 25 - Jan 26)  
     - Independent Researcher under Independent Work Scheme CP3108B (Jan 26 - May 26)
-    - Just independent researcher (May 26 - Present)
+    - Just independent researcher (May 26 - July 2026)
 
 ###  Jan 2025 - May 2025 
 - Teaching Assistant @ NUS School of Computing. 

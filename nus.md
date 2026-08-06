@@ -11,8 +11,8 @@ I am an incoming research masters student at the School of Computing.
 - Semester 1:  
     - CS6101: Exploration of Computer Science Research
     - CS6216: Advanced Topics in Machine Learning
-    - CS6235: Advanced Topics in Theoretical Computer Science
-    - MA6225: Information Theoretic Methods in Statistical Learning
+    - CS6235: Advanced Topics in Theoretical Computer Science (Topic: Quantum Sublinear Algorithms)
+    - CS5234: Algorithms at Scale  
 - Semester 2:  
     - CS6234: Advanced Algorithms
     - MA5249: Stochastic Processes and Algorithms
@@ -20,7 +20,7 @@ I am an incoming research masters student at the School of Computing.
     - Masters Thesis
 
 # Undergraduate
-For my undergraduate, I enrolled in the double degree programme at NUS. That means I have 2 GPAs (one for each subject major). Below are the classes I took. As of 30th June 2026, I have since **graduated** with a Highest Distinctions (equiv. First Class Hons) for **BOTH** degrees.
+For my undergraduate, I enrolled in the double degree programme at NUS. That means I have 2 GPAs (one for each subject major). Below are the classes I took. As of 30th June 2026, I have since graduated =)
 
 ## Statistics:  
 - B. Comp (Hons) in Computer Science: 1st with 165 Course Credits 
