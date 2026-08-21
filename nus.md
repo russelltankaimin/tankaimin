@@ -10,8 +10,7 @@ I am currently a research masters student at the School of Computing.
 ## Plan:
 - Semester 1:  
     - CS6101: Exploration of Computer Science Research
-    - CS6216: Advanced Topics in Machine Learning
-    - CS6235: Advanced Topics in Theoretical Computer Science (Topic: Quantum Sublinear Algorithms)
+    - CS6216: Advanced Topics in Machine Learning  
     - CS5234: Algorithms at Scale  
 - Semester 2:  
     - CS6234: Advanced Algorithms

@@ -7,11 +7,11 @@ tags: about
 
 ## about  
 
-Hi! I am an incoming Masters of Science (MSc) student in Artificial Intelligence Research at SoC. Previously, I was a Computer Science and Mathematics Double Degree Programme student at the National University of Singapore. I am interested in algorithm research and theory of artificial intelligence.      
+Hi! I am a Masters of Science (MSc) student in Artificial Intelligence Research at SoC. Previously, I was a Computer Science and Mathematics Double Degree Programme student at the National University of Singapore. I am interested in algorithm research and theory of artificial intelligence.      
 
 I previously studied at Victoria Junior College for my pre-University education (Singapore-GCE A Levels).  
 
-I am born and raised here in Singapore.  
+I was born and raised here in Singapore.  
 
 I am also looking for PhD positions in the US, UK for the Fall of 2027.
 
