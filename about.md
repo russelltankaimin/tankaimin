@@ -7,17 +7,17 @@ tags: about
 
 ## about  
 
-Hi! I am a Masters of Science (MSc) student in Artificial Intelligence Research at SoC. Previously, I was a Computer Science and Mathematics Double Degree Programme student at the National University of Singapore. I am interested in algorithm research and theory of artificial intelligence.      
+Hi! I am a Masters of Science (MSc) student in Artificial Intelligence Research at SoC. It is an accelerated Masters programme so it is just 1 year of research and a heavily reduced coursework requirements as the priority is on research. Previously, I was a Computer Science and Mathematics Double Degree Programme student at the National University of Singapore.       
 
-I previously studied at Victoria Junior College for my pre-University education (Singapore-GCE A Levels).  
+I previously studied at Victoria Junior College for my pre-University education (Singapore-GCE A Levels) back in 2017-2018. 
 
-I was born and raised here in Singapore.  
-
-I am also looking for PhD positions in the US, UK for the Fall of 2027.
+I was born and raised here in Singapore and am a proud Singaporean.  
 
 ---
 
 ## research interests
+
+My primary research interests revolve around the following topics:
 
 1. Artificial Intelligence and Machine Learning (+ Decision Making) Theory  
 2. Stochastic Processes, Markov Chains and its applications  
@@ -25,6 +25,9 @@ I am also looking for PhD positions in the US, UK for the Fall of 2027.
 4. Applied Probability  
 5. Constraint Satisfaction (SAT Solving/SMT Solving)  
   
+I tend to favour topics with a more theoretical flavour. But it's still cool to see how theoretical research can be applied in many practical settings.
+
+
 ## conferences  
 1. International Conference of Learning Representations (ICLR) 2025 (Singapore)  
 
