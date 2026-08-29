@@ -45,6 +45,8 @@ I tend to favour topics with a more theoretical flavour. But it's still cool to 
 ### Aug 2026 - Present    
 - Graduate Researcher 
     - Topic: TBC
+    - Funded by AISG Accelerated Masters Programme  
+    - Expected graduation: June-July 2027 
 
 ### Jan 2025 - July 2026 
 - Undergraduate Researcher @ AGORAI (Algorithms, Games, Operations Research, Artificial Intelligence) Lab, NUS School of Computing    
