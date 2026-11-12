@@ -1399,30 +1399,32 @@
   }
 
   // Wide screens: a column of figures down each margin, the left one
-  // offset by half a step so the two sides interleave. If the left
-  // margin is too narrow, everything goes on the right (where the
-  // ragged line ends leave room to overlap a little). Narrow screens:
+  // offset by half a step so the two sides interleave. Each figure is
+  // sized to fit its margin with a clear gap to the text, so it never
+  // overlaps the words. If the margins can't fit a MIN_PX figure:
   // faint watermarks behind the text, alternating sides.
   // A figure is only placed if all of it - caption included - ends
   // above the bottom of the content, so none can run into the footer.
   var CAPTION_PX = 150;     // generous allowance for a wrapped caption
   var BOTTOM_SLACK = 24;    // may reach this far into the page's bottom padding
+  var EDGE = 32;            // figure's outer edge sits this far in from the viewport edge
+  var GAP = 28;             // minimum clear space between a figure and the text
+  var MIN_PX = 200, MAX_PX = 440;
   function arrange() {
     var vw = document.documentElement.clientWidth;
     var W = root.clientWidth, H = root.offsetHeight;
-    var wide = vw >= 1024;
-    var room = (vw - W) / 2 - 32;
+    // Width available in each margin without touching the text column
+    var fit = Math.min(MAX_PX, Math.floor((vw - W) / 2 - EDGE - GAP));
+    var margins = vw >= 1024 && fit >= MIN_PX;
+    layer.classList.toggle('gbg-layer--margins', margins);
     var slots = [];
-    if (wide) {
-      var right = Math.max(300, Math.min(480, room + 40));
-      var left = room >= 280 ? Math.min(480, room - 12) : 0;
-      var opR = right - room > 70 ? '0.42' : '0.85';
-      var stepR = right + 200, stepL = left + 200;
-      var limit = H + BOTTOM_SLACK;
-      for (var y = 0; y + right + CAPTION_PX <= limit; y += stepR) slots.push({ side: 'right', top: y, px: right, op: opR });
-      if (left) for (y = stepL / 2; y + left + CAPTION_PX <= limit; y += stepL) slots.push({ side: 'left', top: y, px: left, op: '0.85' });
+    if (margins) {
+      var step = fit + 200, limit = H + BOTTOM_SLACK;
+      for (var y = 0; y + fit + CAPTION_PX <= limit; y += step) slots.push({ side: 'right', top: y, px: fit, op: '' });
+      for (y = step / 2; y + fit + CAPTION_PX <= limit; y += step) slots.push({ side: 'left', top: y, px: fit, op: '' });
       slots.sort(function (a, b) { return a.top - b.top; });
     } else {
+      // Margins too narrow: faint watermarks behind the text instead
       var px = Math.min(vw * 0.85, 360);
       for (var k = 0, yy = 0; yy + px <= H + BOTTOM_SLACK; k++, yy += px + 260) {
         slots.push({ side: k % 2 ? 'left' : 'right', top: yy, px: px, op: '' });

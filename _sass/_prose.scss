@@ -206,3 +206,39 @@ pre { padding: 1rem 1.15rem; font-size: .84rem; line-height: 1.65; }
   .gd { color: #b0567f; }
   .gi { color: #2f8a6e; }
 }
+
+// -- Maths posts (MathJax 3) and inline diagrams ----------------
+// Wide display equations scroll inside themselves on phones.
+.prose mjx-container[display="true"] {
+  display: block;
+  margin: 1.25rem 0 !important;
+  padding: .2rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.prose mjx-container:not([display]) { white-space: nowrap; }
+
+.prose .diagram { margin: 2rem 0; text-align: center; }
+.prose .diagram svg { display: block; width: 100%; max-width: 32rem; height: auto; margin: 0 auto; }
+.prose .diagram figcaption {
+  max-width: 34rem;
+  margin: .75rem auto 0;
+  color: var(--text-dim);
+  font-size: .85rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+.prose .diagram .d-edge { fill: none; stroke: #9a89ea; stroke-width: 1.6; }
+.prose .diagram .d-vert { fill: #fff; stroke: #5b48c2; stroke-width: 1.5; }
+.prose .diagram .d-node { fill: #fff; stroke: #c4bce6; stroke-width: 1.2; }
+.prose .diagram .d-op   { fill: #ebe7fb; stroke: #9a89ea; stroke-width: 1.2; }
+.prose .diagram text {
+  fill: var(--text-strong);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+.prose .diagram .d-lab { font-style: italic; fill: #1f6aa5; font-weight: 600; }
+.prose .diagram .d-small { font-size: 10px; fill: var(--text-dim); }
+.prose .diagram .d-warn  { font-size: 10px; fill: #b0567f; font-style: italic; }
