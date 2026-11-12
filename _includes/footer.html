@@ -1,18 +1,20 @@
-<footer class="center">
-  <div class="measure">
-    <small>
-      Transire suum pectus mundoque potiri
-    </small>
+<footer class="site-footer">
+  <div class="statusline">
+    <div class="statusline__left">
+      <span class="statusline__mode" aria-hidden="true">NORMAL</span>
+      <span class="statusline__motto">Transire suum pectus mundoque potiri</span>
+    </div>
+    <div class="statusline__right">
+      {% if site.github_username %}<a href="https://github.com/{{ site.github_username }}">github</a>{% endif %}
+      <a href="{{ "/feed.xml" | relative_url }}">rss</a>
+      <span aria-hidden="true">utf-8</span>
+      <span>&copy; {{ site.time | date: "%Y" }}</span>
+    </div>
   </div>
 </footer>
 {% if site.enable_anchorjs %}<!-- AnchorJS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.0.0/anchor.min.js"></script>
 <script>
     anchors.options.visible = 'always';
-    anchors.add('article h2, article h3, article h4, article h5, article h6');
+    anchors.add('.prose h2, .prose h3, .prose h4, .prose h5, .prose h6');
 </script>{% endif %}
-<script type="text/javascript">
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("{{ '/sw.js' | relative_url }}")
-    }
-</script>

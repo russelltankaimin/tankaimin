@@ -1,0 +1,52 @@
+// -------------------------------------------------------------
+//  Neon terminal - design tokens
+//  Edit colours here; everything else reads these variables.
+//  NB: GitHub Pages compiles with Ruby Sass 3.7, so avoid CSS
+//  min()/max() and space-separated rgb() in these files.
+// -------------------------------------------------------------
+
+$bp-sm: 40em;   // 640px
+$bp-md: 56em;   // 896px
+
+:root {
+  color-scheme: dark;
+
+  // Surfaces
+  --bg:          #05070b;
+  --bg-raised:   #0a0e15;
+  --bg-sunken:   #030406;
+  --line:        #1a2230;
+  --line-bright: #2a3648;
+
+  // Text
+  --text:        #c9d4e2;
+  --text-strong: #eef4fb;
+  --text-dim:    #7f8ca0;
+
+  // Neon accents
+  --cyan:        #00eaff;
+  --magenta:     #ff3ddc;
+  --lime:        #7dff6a;
+  --amber:       #ffc247;
+
+  --cyan-soft:    rgba(0, 234, 255, 0.14);
+  --magenta-soft: rgba(255, 61, 220, 0.14);
+
+  --glow-cyan:    0 0 6px rgba(0, 234, 255, 0.55), 0 0 22px rgba(0, 234, 255, 0.25);
+  --glow-magenta: 0 0 6px rgba(255, 61, 220, 0.55), 0 0 22px rgba(255, 61, 220, 0.25);
+
+  // Type
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --fs-body: 0.95rem;
+  --fs-small: 0.8rem;
+
+  // Layout
+  --measure: 46rem;
+  --gutter: 1rem;
+  --nav-h: 3.5rem;
+  --radius: 6px;
+}
+
+@media (min-width: $bp-sm) {
+  :root { --gutter: 2rem; }
+}

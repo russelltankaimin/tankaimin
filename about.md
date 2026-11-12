@@ -1,8 +1,23 @@
 ---
-layout: page
+layout: home
 title: Welcome!
+nav_label: about
 permalink: /
 tags: about
+hero:
+  name: Tan Kai Min, Russell
+  education:
+    - MSc (AI Research) @ NUS School of Computing
+    - B.Comp in Computer Science (Hons)
+    - B.Sci in Mathematics (Hons)
+  interests:
+    - Machine Learning Theory
+    - Artificial Intelligence
+    - Computational Game Theory
+    - Cybersecurity
+    - Cryptography
+    - Optimisation Theory
+    - SAT Solving
 ---
 
 ## about  
@@ -20,10 +35,9 @@ I was born and raised here in Singapore and am a proud Singaporean.
 My primary research interests revolve around the following topics:
 
 1. Artificial Intelligence and Machine Learning (+ Decision Making) Theory  
-2. Stochastic Processes, Markov Chains and its applications  
+2. Cybersecurity, Cryptography
 3. Mathematical Optimisation (Discrete and Continuous)
-4. Applied Probability  
-5. Constraint Satisfaction (SAT Solving/SMT Solving)  
+4. Constraint Satisfaction (SAT Solving/SMT Solving) 
   
 I tend to favour topics with a more theoretical flavour. But it's still cool to see how theoretical research can be applied in many practical settings.
 
@@ -32,6 +46,7 @@ I tend to favour topics with a more theoretical flavour. But it's still cool to 
 1. International Conference of Learning Representations (ICLR) 2025 (Singapore)  
 
 ## awards (uni only)  
+1. DEADFACE CTF 2026 - Top 11% (224th placing out of 1886)
 1. REx Prime Fellowship ($1000) - Would have been $2500 if the fellowship existed when I was in Year 3  
 2. Distinction in Algorithms and Theory Focus Area (SoC)  
 3. Distinction in A.I Focus Area (SoC)
@@ -44,9 +59,9 @@ I tend to favour topics with a more theoretical flavour. But it's still cool to 
 
 ### Aug 2026 - Present    
 - Graduate Researcher 
-    - Topic: TBC
+    - Topic: Multi-agent Decision Making and Computational Game Theory
     - Funded by AISG Accelerated Masters Programme  
-    - Expected graduation: June-July 2027 
+    - Expected graduation: Aug-Sept 2027 
 
 ### Jan 2025 - July 2026 
 - Undergraduate Researcher @ AGORAI (Algorithms, Games, Operations Research, Artificial Intelligence) Lab, NUS School of Computing    

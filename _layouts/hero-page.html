@@ -1,0 +1,42 @@
+---
+layout: default
+---
+{%- comment -%}
+  A regular page with a generative hero instead of the plain header.
+  Front matter:
+    hero:
+      art: graph                 # script in /js, e.g. graph or randomwalk
+      title: ...                 # optional, defaults to page.title
+      caption: "..."             # optional HTML caption, bottom-left
+      commands:                  # terminal lines, typed in order
+        - cmd: cat transcript.txt
+          out: [line, line]      # plain output lines
+        - cmd: ls ./things
+          tags: [a, b, c]        # output shown as tags
+{%- endcomment -%}
+{%- assign hero = page.hero -%}
+{%- assign hero_title = hero.title | default: page.title -%}
+{%- assign crumb_path = page.url | remove: "index.html" | split: "/" | join: "/" -%}
+{%- capture hero_cwd -%}~{{ crumb_path }}{%- endcapture -%}
+
+{%- capture hero_body -%}
+      <p class="term__line term__line--cmd"><span class="prompt" aria-hidden="true">$</span>cat README.md</p>
+      <h1 class="term__line hero__name glitch" data-text="{{ hero_title | escape }}">{{ hero_title }}</h1>
+      {%- for c in hero.commands %}
+      <p class="term__line term__line--cmd"><span class="prompt" aria-hidden="true">$</span>{{ c.cmd }}</p>
+      {%- for line in c.out %}
+      <p class="term__line term__line--out">{{ line }}</p>
+      {%- endfor %}
+      {%- if c.tags %}
+      <p class="term__line term__line--out">{% for t in c.tags %}<span class="tag">{{ t }}</span>{% endfor %}</p>
+      {%- endif %}
+      {%- endfor %}
+{%- endcapture -%}
+
+{% include hero.html art=hero.art body=hero_body caption=hero.caption cwd=hero_cwd modifier="page" %}
+
+<main id="main" class="site-main site-main--hero">
+  <article class="shell prose" data-reveal>
+    {{ content }}
+  </article>
+</main>

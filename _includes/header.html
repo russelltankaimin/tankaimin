@@ -1,14 +1,10 @@
-<header class="site-header px2 px-responsive">
-  <div class="mt2 wrap">
-    <div class="measure">
-      <a href="{{ "/" | relative_url }}" class="site-title">{{ site.title }}</a>
-      <nav class="site-nav">
-        {% include navigation.html %}
-      </nav>
-      <div class="clearfix"></div>
-      {% if site.show_social_icons %}
-        {% include social_links.html %}
-      {% endif %}
-    </div>
-  </div>
+<header class="site-nav">
+  <nav class="site-nav__inner" aria-label="Main">
+    <a href="{{ "/" | relative_url }}" class="site-logo" aria-label="{{ site.title }}, home">
+      <span class="site-logo__user">{{ site.prompt_user | default: "user" }}</span>@{{ site.prompt_host | default: "web" }}:<span class="site-logo__path">~</span>$<span class="cursor" aria-hidden="true"></span>
+    </a>
+    <ul class="site-links">
+      {% include navigation.html %}
+    </ul>
+  </nav>
 </header>

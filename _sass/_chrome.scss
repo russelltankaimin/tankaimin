@@ -1,0 +1,148 @@
+// Site chrome: top bar, page shell, footer status line
+
+.site-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--line);
+  background: rgba(5, 7, 11, 0.72);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+          backdrop-filter: blur(12px) saturate(140%);
+}
+
+.site-nav__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .25rem 1.5rem;
+  max-width: 72rem;
+  min-height: var(--nav-h);
+  margin: 0 auto;
+  padding: .5rem var(--gutter);
+}
+
+.site-logo {
+  color: var(--text-strong);
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+.site-logo__user { color: var(--lime); }
+.site-logo__path { color: var(--cyan); }
+.site-logo .cursor { height: 1em; width: .55em; }
+.site-logo:hover { text-shadow: none; color: var(--text-strong); }
+
+.site-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: .85rem;
+}
+
+.site-links a {
+  position: relative;
+  color: var(--text-dim);
+}
+.site-links a::before { content: "./"; color: var(--line-bright); transition: color .15s; }
+.site-links a:hover { color: var(--cyan); }
+.site-links a:hover::before { color: var(--magenta); }
+
+.site-links a[aria-current="page"] { color: var(--cyan); text-shadow: var(--glow-cyan); }
+.site-links a[aria-current="page"]::before { color: var(--magenta); }
+.site-links a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -.2rem;
+  height: 1px;
+  background: var(--cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+// On phones, logo sits above the links
+@media (max-width: $bp-sm) {
+  :root { --nav-h: 5rem; }
+  .site-nav__inner { flex-direction: column; align-items: flex-start; justify-content: center; }
+}
+
+// -- Page shell -----------------------------------------------
+.site-main {
+  padding: calc(var(--nav-h) + 3rem) var(--gutter) 5rem;
+}
+
+.site-main--hero { padding-top: 3rem; }
+
+.shell {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+.page-header { margin-bottom: 2.5rem; }
+
+.page-crumb {
+  margin: 0 0 .75rem;
+  overflow-wrap: anywhere;
+  color: var(--text-dim);
+  font-size: var(--fs-small);
+}
+.page-crumb .prompt { color: var(--lime); }
+.page-crumb .path   { color: var(--cyan); }
+
+.page-title {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: clamp(1.9rem, 6vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  text-shadow: 0 0 28px rgba(0, 234, 255, 0.25);
+}
+
+.page-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 .6rem;
+  margin: .9rem 0 0;
+  color: var(--text-dim);
+  font-size: var(--fs-small);
+}
+.page-meta span + span::before { content: "\00B7"; margin-right: .6rem; color: var(--line-bright); }
+
+// -- Footer: a vim-style status line -------------------------
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: var(--bg-sunken);
+  font-size: var(--fs-small);
+}
+
+.statusline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: .5rem 1rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: .9rem var(--gutter);
+  color: var(--text-dim);
+}
+
+.statusline__left { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
+
+.statusline__mode {
+  padding: 0 .55rem;
+  background: var(--cyan);
+  color: var(--bg);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.statusline__motto { font-style: italic; color: var(--text); }
+
+.statusline__right { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+.statusline__right a { color: var(--text-dim); }
+.statusline__right a:hover { color: var(--cyan); }

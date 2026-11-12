@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{%- assign hero = page.hero -%}
+{%- assign hero_name = hero.name | default: site.title -%}
+
+{%- capture hero_body -%}
+      <p class="term__line term__line--cmd"><span class="prompt" aria-hidden="true">$</span>whoami</p>
+      <h1 class="term__line hero__name glitch" data-text="{{ hero_name | escape }}">{{ hero_name }}</h1>
+
+      {%- if hero.education %}
+      <p class="term__line term__line--cmd"><span class="prompt" aria-hidden="true">$</span>cat education.txt</p>
+      {%- for line in hero.education %}
+      <p class="term__line term__line--out">{{ line }}</p>
+      {%- endfor %}
+      {%- endif %}
+
+      {%- if hero.interests %}
+      <p class="term__line term__line--cmd"><span class="prompt" aria-hidden="true">$</span>ls ./interests</p>
+      <p class="term__line term__line--out">{% for interest in hero.interests %}<span class="tag">{{ interest }}</span>{% endfor %}</p>
+      {%- endif %}
+{%- endcapture -%}
+
+{%- capture hero_caption -%}
+    // <code>X<sub>t+1</sub> = X<sub>t</sub> + &xi;<sub>t</sub></code> &mdash; simple random walks on &#8484;&sup2;.
+    <span class="hero__hint">Hover to add drift &middot; click to release walkers.</span>
+{%- endcapture -%}
+
+{% include hero.html art="randomwalk" body=hero_body caption=hero_caption %}
+
+<main id="main" class="site-main site-main--hero">
+  <div class="shell prose prose--home" data-reveal>
+    {{ content }}
+  </div>
+</main>

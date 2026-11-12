@@ -1,0 +1,165 @@
+// Styles for rendered markdown (.prose)
+
+.prose {
+  overflow-wrap: break-word;
+
+  > :first-child { margin-top: 0; }
+
+  p, ul, ol, blockquote, pre, table { margin: 0 0 1.25rem; }
+
+  strong { color: var(--text-strong); }
+  em { color: var(--text-strong); }
+
+  a {
+    border-bottom: 1px solid rgba(0, 234, 255, 0.35);
+  }
+  a:hover { border-bottom-color: var(--cyan); }
+
+  // Headings read like markdown source
+  h1, h2, h3, h4 {
+    color: var(--text-strong);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -.01em;
+  }
+
+  h1 { margin: 3.5rem 0 1.25rem; font-size: 1.7rem; }
+  h2 { margin: 3.5rem 0 1.25rem; font-size: 1.3rem; }
+  h3 { margin: 2.25rem 0 .75rem; font-size: 1.02rem; }
+  h4 { margin: 1.75rem 0 .5rem; font-size: .95rem; color: var(--text); }
+
+  h1::before { content: "# ";   color: var(--magenta); text-shadow: var(--glow-magenta); }
+  h2::before { content: "## ";  color: var(--magenta); text-shadow: var(--glow-magenta); }
+  h3::before { content: "### "; color: var(--cyan); }
+  h4::before { content: "#### "; color: var(--text-dim); }
+
+  // Lists: [01] counters for ordered, > for unordered
+  ul, ol { padding-left: 0; list-style: none; }
+  ul ul, ol ol, ul ol, ol ul { margin: .35rem 0 .35rem 1.25rem; }
+
+  li { position: relative; padding-left: 1.6rem; }
+  li + li { margin-top: .35rem; }
+
+  ul > li::before {
+    content: "\203A";
+    position: absolute;
+    left: .35rem;
+    color: var(--lime);
+    font-weight: 700;
+  }
+
+  ol { counter-reset: item; }
+  ol > li { counter-increment: item; padding-left: 3.1rem; }
+  ol > li::before {
+    content: "[" counter(item, decimal-leading-zero) "]";
+    position: absolute;
+    left: 0;
+    color: var(--cyan);
+  }
+
+  hr {
+    height: 1px;
+    margin: 3rem 0;
+    border: 0;
+    background: linear-gradient(90deg, var(--magenta), var(--cyan) 40%, transparent);
+    opacity: .5;
+  }
+
+  blockquote {
+    padding: .75rem 1rem;
+    border-left: 2px solid var(--magenta);
+    background: var(--magenta-soft);
+    color: var(--text-strong);
+  }
+  blockquote > :last-child { margin-bottom: 0; }
+
+  img { height: auto; border: 1px solid var(--line-bright); border-radius: var(--radius); }
+
+  // Tables scroll inside themselves rather than widening the page
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-size: .88rem;
+  }
+  th, td { padding: .5rem .85rem; border: 1px solid var(--line); text-align: left; }
+  th { color: var(--cyan); background: var(--bg-raised); font-weight: 700; }
+}
+
+// -- Home: h3 + list pairs render as a glowing timeline ------
+.prose--home {
+  h3 {
+    position: relative;
+    margin: 0;
+    padding: 2rem 0 .5rem 1.75rem;
+    border-left: 1px solid var(--line-bright);
+    color: var(--cyan);
+    font-size: .85rem;
+    letter-spacing: .04em;
+  }
+  h3::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 2.45rem;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--cyan);
+    box-shadow: var(--glow-cyan);
+  }
+  h3 + ul {
+    margin: 0;
+    padding: 0 0 .25rem 1.75rem;
+    border-left: 1px solid var(--line-bright);
+  }
+  h3 + ul > li { padding-left: 0; }
+  h3 + ul > li::before { content: none; }
+  h3 + ul > li:first-child { color: var(--text-strong); font-weight: 700; }
+  h3 + ul > li > ul { margin-left: 0; color: var(--text); font-weight: 400; }
+  h3 + ul > li + li { margin-top: .75rem; }
+}
+
+// Section-level card around research interests etc. is done by
+// the content itself; scroll-reveal is added by js/site.js.
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+// -- Code ----------------------------------------------------
+code, kbd, pre { font-family: var(--font-mono); }
+
+:not(pre) > code {
+  padding: .1em .4em;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--bg-raised);
+  color: var(--amber);
+  font-size: .88em;
+}
+
+pre,
+.highlight {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-sunken);
+}
+pre { padding: 1rem 1.1rem; font-size: .85rem; line-height: 1.6; }
+.highlight pre { margin: 0; border: 0; background: none; }
+
+// Rouge tokens
+.highlight {
+  .c, .c1, .cm, .cs, .cp, .ch, .cpf { color: var(--text-dim); font-style: italic; }
+  .k, .kc, .kd, .kn, .kp, .kr, .kt, .ow { color: var(--magenta); }
+  .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx, .sr, .ss { color: var(--lime); }
+  .m, .mi, .mf, .mh, .mo, .il { color: var(--amber); }
+  .nf, .fm, .nc, .nn { color: var(--cyan); }
+  .nb, .bp, .nt { color: var(--cyan); }
+  .na, .nv, .vi, .vg, .vc { color: var(--text-strong); }
+  .o { color: var(--text-dim); }
+  .err { color: var(--magenta); background: none; }
+  .gd { color: var(--magenta); }
+  .gi { color: var(--lime); }
+}
