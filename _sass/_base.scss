@@ -16,8 +16,8 @@ body {
   min-height: 100vh;
   background-color: var(--bg);
   background-image:
-    radial-gradient(55rem 38rem at 88% -8%, rgba(179, 166, 242, 0.28), transparent 62%),
-    radial-gradient(48rem 36rem at -8% 18%, rgba(159, 208, 245, 0.26), transparent 62%);
+    radial-gradient(55rem 38rem at 88% -8%, rgba(154, 137, 234, 0.28), transparent 62%),
+    radial-gradient(48rem 36rem at -8% 18%, rgba(128, 187, 236, 0.26), transparent 62%);
   background-attachment: fixed;
   color: var(--text);
   font-family: var(--font-sans);
@@ -41,7 +41,7 @@ body::before {
           mask-image: radial-gradient(ellipse at 50% 0%, #000 25%, transparent 75%);
 }
 
-::selection { background: rgba(179, 166, 242, 0.45); color: var(--text-strong); }
+::selection { background: rgba(154, 137, 234, 0.45); color: var(--text-strong); }
 
 body > main { flex: 1 0 auto; }
 
@@ -79,20 +79,6 @@ a:hover { color: var(--blue); }
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
-
-// Soft text cursor for the terminal card
-.cursor {
-  display: inline-block;
-  width: 2px;
-  height: 1.15em;
-  margin-left: .2em;
-  vertical-align: text-bottom;
-  border-radius: 1px;
-  background: var(--purple);
-  animation: breathe 1.6s ease-in-out infinite;
-}
-
-@keyframes breathe { 50% { opacity: .15; } }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

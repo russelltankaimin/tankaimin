@@ -1,4 +1,5 @@
-// Hero: generative graph canvas + a frosted terminal card
+// Hero: a generative graph with the intro set directly on top.
+// Education is drawn as a path graph, interests as labelled vertices.
 
 .hero {
   position: relative;
@@ -8,7 +9,7 @@
   justify-content: center;
   min-height: 100vh;
   min-height: 100svh;
-  padding: calc(var(--nav-h) + 2rem) var(--gutter) 4.5rem;
+  padding: calc(var(--nav-h) + 2.5rem) var(--gutter) 5rem;
   overflow: hidden;
   isolation: isolate;
 }
@@ -16,15 +17,15 @@
 .hero__canvas {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: -2;
   width: 100%;
   height: 100%;
 }
 
 // Inner pages: a slightly shorter hero so content is closer
 .hero--page {
-  min-height: 86vh;
-  min-height: 86svh;
+  min-height: 80vh;
+  min-height: 80svh;
 }
 
 // Fade the art into the page at the bottom edge
@@ -38,128 +39,225 @@
   pointer-events: none;
 }
 
-// -- Terminal card -------------------------------------------
-.term {
+// -- Intro ---------------------------------------------------
+.intro {
+  position: relative;
   width: 100%;
-  max-width: 42rem;
-  border: 1px solid rgba(212, 207, 236, 0.9);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.72);
-  -webkit-backdrop-filter: blur(10px) saturate(140%);
-          backdrop-filter: blur(10px) saturate(140%);
-  box-shadow: var(--shadow-lg);
-  font-family: var(--font-mono);
+  max-width: 50rem;
+  text-align: center;
 }
 
-.term__bar {
-  display: flex;
-  align-items: center;
-  gap: .45rem;
-  padding: .65rem 1rem;
-  border-bottom: 1px solid var(--line);
-  color: var(--text-dim);
-  font-size: .72rem;
+// A soft clearing in the graph so the words sit on calm ground
+.intro::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -5rem; bottom: -5rem;
+  left: -8rem; right: -8rem;
+  background: radial-gradient(closest-side, rgba(247, 246, 252, 0.96), rgba(247, 246, 252, 0.82) 55%, rgba(247, 246, 252, 0));
+  pointer-events: none;
 }
 
-.term__dot { width: .62rem; height: .62rem; border-radius: 50%; background: var(--line-bright); }
-.term__dot:nth-child(1) { background: #f4c3d9; }
-.term__dot:nth-child(2) { background: #c9bff5; }
-.term__dot:nth-child(3) { background: #b5dcf7; }
-.term__title { margin-left: auto; margin-right: auto; padding-right: 2.5rem; }
-
-.term__body {
-  padding: 1.25rem 1.15rem 1.5rem;
-  font-size: .85rem;
-  line-height: 1.75;
-}
-
-@media (min-width: $bp-sm) {
-  .term__body { padding: 1.75rem 2rem 2rem; font-size: .9rem; }
-}
-
-.term__line { margin: 0; overflow-wrap: anywhere; }
-.term__line + .term__line { margin-top: .15rem; }
-.term__line--cmd { margin-top: 1rem !important; color: var(--text-dim); }
-.term__line--cmd:first-child { margin-top: 0 !important; }
-.term__line--out { color: var(--text); }
-.term__line--dim { color: var(--text-dim); }
-
-.prompt { color: var(--purple); }
-.prompt::after { content: " "; }
-
-.tag {
-  display: inline-block;
-  margin: .2rem .35rem .2rem 0;
-  padding: 0 .6rem;
-  border-radius: 999px;
-  background: var(--blue-soft);
-  color: #2b6597;
-  font-size: .8em;
-  line-height: 1.85;
-}
-.tag:nth-child(even) { background: var(--purple-soft); color: #5a49b8; }
-
-// Typewriter helper - the untyped remainder keeps its space so
-// nothing shifts while typing.
-.is-pending { visibility: hidden; }
-.typed-rest { color: transparent !important; }
-.typed-rest .tag { background: transparent; }
-
-// -- Name ----------------------------------------------------
-.hero__name {
-  margin: .2rem 0 0;
+.intro__name {
+  margin: 0;
   color: var(--text-strong);
-  font-family: var(--font-sans);
-  font-size: clamp(1.9rem, 7vw, 3.2rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -.03em;
+  font-size: clamp(2.4rem, 8vw, 4.6rem);
+  font-weight: 650;
+  line-height: 1.05;
+  letter-spacing: -.035em;
 }
 
-// Gradient ink where the browser supports it
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
-  .hero__name {
-    background: linear-gradient(100deg, #1f2238 30%, #5a49b8 75%, #2a77b3);
+  .intro__name {
+    background: linear-gradient(100deg, #1f2238 25%, #4f3db0 70%, #1f6aa5);
     -webkit-background-clip: text;
             background-clip: text;
     color: transparent;
   }
 }
 
+// Education: a path graph P_n, newest degree first
+.intro__path {
+  display: flex;
+  justify-content: center;
+  margin: 2.75rem auto 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text);
+  font-size: .95rem;
+  line-height: 1.45;
+}
+
+.intro__path li {
+  position: relative;
+  flex: 1 1 0;
+  max-width: 15rem;
+  padding: 1.75rem .75rem 0;
+}
+
+// vertex
+.intro__path li::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  border: 2px solid var(--purple-light);
+  border-radius: 50%;
+  background: var(--bg-raised);
+}
+.intro__path li:first-child::before {
+  border-color: transparent;
+  background: linear-gradient(135deg, #80bbec, #7c64da);
+  box-shadow: 0 0 0 5px rgba(154, 137, 234, 0.25);
+}
+.intro__path li:first-child { color: var(--text-strong); font-weight: 600; }
+
+// edge to the next vertex
+.intro__path li + li::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient);
+  opacity: .8;
+}
+
+// Interests: vertices with labels
+.intro__vertices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .55rem .6rem;
+  max-width: 42rem;
+  margin: 2.5rem auto 0;
+  padding: 0;
+  list-style: none;
+}
+
+.intro__vertices li {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .32rem .9rem .32rem .55rem;
+  border: 1px solid rgba(212, 207, 236, 0.9);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text);
+  font-size: .85rem;
+  line-height: 1.4;
+}
+.intro__vertices li::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--blue-light);
+}
+.intro__vertices li:nth-child(3n+2)::before { background: var(--purple-light); }
+.intro__vertices li:nth-child(3n)::before { background: #eaa9cb; }
+
+// Inner pages: short lines under the title
+.intro__lines {
+  display: inline-block;
+  margin: 2rem auto 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text);
+  font-size: 1rem;
+  text-align: left;
+}
+.intro__lines li { position: relative; padding-left: 1.4rem; }
+.intro__lines li + li { margin-top: .4rem; }
+.intro__lines li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--purple-light);
+}
+// consecutive lines are joined, like a path
+.intro__lines li + li::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  bottom: calc(100% - .55em);
+  height: calc(.4rem + .9em);
+  width: 2px;
+  background: rgba(154, 137, 234, 0.45);
+}
+
+// Phones: the path graph runs downwards
+@media (max-width: $bp-sm) {
+  .intro__path {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 22rem;
+    text-align: left;
+  }
+  .intro__path li { max-width: none; padding: 0 0 1.1rem 1.9rem; }
+  .intro__path li::before { top: .2em; left: 0; margin-left: 0; }
+  .intro__path li + li::after { content: none; }
+  .intro__path li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: calc(.2em + 14px);
+    bottom: -.2em;
+    width: 2px;
+    background: rgba(154, 137, 234, 0.6);
+  }
+  .intro__path li:last-child { padding-bottom: 0; }
+  .intro::before { left: -2rem; right: -2rem; }
+}
+
 // -- Caption + scroll cue ------------------------------------
 .hero__caption {
   position: absolute;
   left: var(--gutter);
-  bottom: 1.25rem;
+  bottom: 1.4rem;
   margin: 0;
-  max-width: 25rem;
+  max-width: 24rem;
   color: var(--text-dim);
-  font-family: var(--font-mono);
-  font-size: .7rem;
+  font-size: .75rem;
+  font-style: italic;
   line-height: 1.55;
 }
-.hero__caption code { color: var(--purple); background: none; padding: 0; border: 0; font-size: inherit; }
+.hero__caption code { padding: 0; background: none; color: inherit; font-family: inherit; font-size: inherit; }
+.hero__hint { display: block; margin-top: .2rem; font-style: normal; opacity: .85; }
 
 .hero__cue {
   position: absolute;
   right: var(--gutter);
   bottom: 1.25rem;
-  color: var(--text-dim);
-  font-family: var(--font-mono);
-  font-size: .72rem;
-  letter-spacing: .1em;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--line-bright);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--purple);
 }
 .hero__cue span { display: inline-block; animation: bob 2.4s ease-in-out infinite; }
 
-@keyframes bob { 50% { transform: translateY(4px); } }
+@keyframes bob { 50% { transform: translateY(3px); } }
 
-// On phones the terminal can fill the hero, so the caption joins
-// the normal flow below it instead of overlapping.
+// On phones the caption joins the flow below the intro
 @media (max-width: $bp-sm) {
   .hero__caption {
     position: static;
     align-self: stretch;
     max-width: none;
-    margin-top: 1.25rem;
+    margin-top: 2.5rem;
   }
 }

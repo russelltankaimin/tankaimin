@@ -11,7 +11,7 @@
   em { color: var(--text-strong); }
 
   a {
-    background-image: linear-gradient(rgba(179, 166, 242, 0.55), rgba(179, 166, 242, 0.55));
+    background-image: linear-gradient(rgba(154, 137, 234, 0.55), rgba(154, 137, 234, 0.55));
     background-position: 0 100%;
     background-repeat: no-repeat;
     background-size: 100% 1px;
@@ -57,14 +57,13 @@
     background: var(--bg-raised);
   }
 
-  // h3/h4: quiet monospace labels
+  // h3: a quiet small-caps label
   h3 {
     margin: 2.25rem 0 .75rem;
     color: var(--purple);
-    font-family: var(--font-mono);
     font-size: .8rem;
-    font-weight: 500;
-    letter-spacing: .06em;
+    font-weight: 600;
+    letter-spacing: .08em;
     text-transform: uppercase;
   }
   h4 { margin: 1.75rem 0 .5rem; font-size: 1rem; color: var(--text); }
@@ -96,9 +95,9 @@
     left: 0;
     top: .3em;
     color: var(--blue);
-    font-family: var(--font-mono);
-    font-size: .75em;
-    opacity: .8;
+    font-size: .8em;
+    font-variant-numeric: tabular-nums;
+    opacity: .75;
   }
 
   hr {
@@ -141,6 +140,9 @@
     padding: 1.9rem 0 .45rem 1.75rem;
     border-left: 2px solid var(--line);
     color: var(--blue);
+    text-transform: none;
+    letter-spacing: .01em;
+    font-size: .85rem;
   }
   h3::before {
     content: "";
@@ -193,11 +195,11 @@ pre { padding: 1rem 1.15rem; font-size: .84rem; line-height: 1.65; }
 // Rouge tokens
 .highlight {
   .c, .c1, .cm, .cs, .cp, .ch, .cpf { color: #9196b0; font-style: italic; }
-  .k, .kc, .kd, .kn, .kp, .kr, .kt, .ow { color: #6c5ad0; }
+  .k, .kc, .kd, .kn, .kp, .kr, .kt, .ow { color: #5b48c2; }
   .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx, .sr, .ss { color: #2f8a6e; }
   .m, .mi, .mf, .mh, .mo, .il { color: #b0567f; }
-  .nf, .fm, .nc, .nn { color: #2a77b3; }
-  .nb, .bp, .nt { color: #2a77b3; }
+  .nf, .fm, .nc, .nn { color: #1f6aa5; }
+  .nb, .bp, .nt { color: #1f6aa5; }
   .na, .nv, .vi, .vg, .vc { color: var(--text-strong); }
   .o { color: var(--text-dim); }
   .err { color: #b0567f; background: none; }

@@ -33,7 +33,7 @@
   var CELL = 76;           // average spacing between points (px)
   var WOBBLE = 1.6;        // px of gentle drift around each point
 
-  var BLUE = [118, 178, 232], PURPLE = [150, 128, 232];
+  var BLUE = [92, 158, 222], PURPLE = [124, 100, 218];
 
   var w = 0, h = 0;
   var px = [], py = [], phase = [];

@@ -32,7 +32,7 @@
   var HOVER_PX = 22;       // hover pick radius
   var CLICK_PX = 70;       // click pick radius
 
-  var CYAN = [118, 178, 232], MAGENTA = [150, 128, 232];  // light blue -> lilac
+  var CYAN = [92, 158, 222], MAGENTA = [124, 100, 218];  // light blue -> lilac
   var LIME = '214,112,170';                              // hover: soft rose
 
   var w = 0, h = 0, n = 0, r = 0;
@@ -277,7 +277,7 @@
       ctx.beginPath();
       ctx.arc(rx, ry, 5 + phase * 16, 0, Math.PI * 2);
       ctx.lineWidth = 1.2;
-      ctx.strokeStyle = 'rgba(118,178,232,' + ((1 - phase) * 0.9 * st.alpha).toFixed(3) + ')';
+      ctx.strokeStyle = 'rgba(92,158,222,' + ((1 - phase) * 0.9 * st.alpha).toFixed(3) + ')';
       ctx.stroke();
     }
 

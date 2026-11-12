@@ -7,16 +7,14 @@ nav_label: nus
 graphs: [q4, heawood, konigsberg, wilson, petersen]   # figures beside each ## section
 hero:
   art: graph
-  commands:
-    - cmd: cat transcript.txt
-      out:
-        - MSc (AI Research) · in progress
-        - B.Comp (Hons) Computer Science · 1st · 165 credits
-        - B.Sci (Hons) Mathematics · 1st · 136 credits
-        - Highest Distinction in both · graduated June 2026
+  lines:
+    - MSc (AI Research) · in progress
+    - B.Comp (Hons) Computer Science · 1st · 165 credits
+    - B.Sci (Hons) Mathematics · 1st · 136 credits
+    - Highest Distinction in both · graduated June 2026
   caption: >-
-    // <code>G(n, r)</code>: u ~ v iff |u &minus; v| &lt; r &mdash; breadth-first search, one layer at a time.
-    <span class="hero__hint">Hover a vertex for N(v) &middot; click to choose the root.</span>
+    A random geometric graph <code>G(n, r)</code>: u ~ v whenever |u &minus; v| &lt; r, explored by breadth-first search one layer at a time.
+    <span class="hero__hint">Hover a vertex to see its neighbours; click to choose the root.</span>
 ---
 # Masters
 I am currently a research masters student at the School of Computing. 

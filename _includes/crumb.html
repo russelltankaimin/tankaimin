@@ -1,6 +1,0 @@
-{%- comment -%}
-  Shell-prompt breadcrumb, e.g.  russell@tankm:~/nus$ cat README.md
-  Usage: {% include crumb.html cmd="cat README.md" %}
-{%- endcomment -%}
-{%- assign crumb_path = page.url | remove: "index.html" | split: "/" | join: "/" -%}
-<p class="page-crumb" aria-hidden="true"><span class="prompt">{{ site.prompt_user | default: "user" }}@{{ site.prompt_host | default: "web" }}:<span class="path">~{{ crumb_path }}</span>$</span>{{ include.cmd }}</p>

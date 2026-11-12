@@ -3,8 +3,6 @@ title:       Tan Kai Min, Russell
 email:       russelltankm@u.nus.edu
 author:      RussellTanKM
 description: "Personal Website"
-prompt_user: russell    # shown in the terminal-style logo: russell@tankm:~$
-prompt_host: tankm
 baseurl:     ""
 url:         "https://russelltankm.com"
 date_format: "%b %-d, %Y"

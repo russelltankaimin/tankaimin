@@ -5,25 +5,28 @@ layout: default
 {%- assign hero_name = hero.name | default: site.title -%}
 
 {%- capture hero_body -%}
-      <p class="term__line term__line--cmd"><span class="prompt" aria-hidden="true">$</span>whoami</p>
-      <h1 class="term__line hero__name">{{ hero_name }}</h1>
+    <h1 class="intro__name">{{ hero_name }}</h1>
 
-      {%- if hero.education %}
-      <p class="term__line term__line--cmd"><span class="prompt" aria-hidden="true">$</span>cat education.txt</p>
+    {%- if hero.education %}
+    <ol class="intro__path" aria-label="Education">
       {%- for line in hero.education %}
-      <p class="term__line term__line--out">{{ line }}</p>
+      <li>{{ line }}</li>
       {%- endfor %}
-      {%- endif %}
+    </ol>
+    {%- endif %}
 
-      {%- if hero.interests %}
-      <p class="term__line term__line--cmd"><span class="prompt" aria-hidden="true">$</span>ls ./interests</p>
-      <p class="term__line term__line--out">{% for interest in hero.interests %}<span class="tag">{{ interest }}</span>{% endfor %}</p>
-      {%- endif %}
+    {%- if hero.interests %}
+    <ul class="intro__vertices" aria-label="Interests">
+      {%- for interest in hero.interests %}
+      <li>{{ interest }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
 {%- endcapture -%}
 
 {%- capture hero_caption -%}
-    // Kruskal&rsquo;s algorithm: take edges in order of length, skip any that would close a cycle &mdash; a minimum spanning tree.
-    <span class="hero__hint">Click to add a vertex.</span>
+    Kruskal&rsquo;s algorithm &mdash; edges join in order of length, never closing a cycle, until a minimum spanning tree remains.
+    <span class="hero__hint">Click anywhere to add a vertex.</span>
 {%- endcapture -%}
 
 {% include hero.html art="mst" body=hero_body caption=hero_caption %}

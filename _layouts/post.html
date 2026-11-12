@@ -3,12 +3,10 @@ layout: default
 ---
 {%- assign minutes = content | strip_html | number_of_words | divided_by: 180 -%}
 {%- if minutes == 0 -%}{%- assign minutes = 1 -%}{%- endif -%}
-{%- capture post_cmd -%}cat {{ page.slug | default: "post" }}.md{%- endcapture -%}
 
 <main id="main" class="site-main">
   <article class="shell">
     <header class="page-header">
-      {% include crumb.html cmd=post_cmd %}
       <h1 class="page-title">{{ page.title }}</h1>
       <p class="page-meta">
         <span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.date_format }}</time></span>
@@ -42,7 +40,7 @@ layout: default
     {% endif %}
 
     {% if site.show_related_posts and site.related_posts.size > 0 %}
-      <h2 class="page-crumb" style="margin-top:3rem">{{ site.text.post.related_posts | default: "Related Posts" }}</h2>
+      <h2 class="related__title">{{ site.text.post.related_posts | default: "Related Posts" }}</h2>
       <ul class="post-list">
         {% for post in site.related_posts limit: 3 %}
           <li class="post-row">
@@ -56,7 +54,7 @@ layout: default
     {% endif %}
 
     <div class="btn-row">
-      <a class="btn btn--ghost" href="{{ "/blog/" | relative_url }}">cd ../blog</a>
+      <a class="btn btn--ghost" href="{{ "/blog/" | relative_url }}">&larr; All posts</a>
     </div>
   </article>
 </main>

@@ -1,29 +1,21 @@
 {%- comment -%}
-  Full-width generative hero with a terminal window on top.
+  Full-width generative hero with the intro set directly on the art.
   Params:
     art      — name of the canvas script in /js (e.g. "mst", "graph");
                head.html loads it, and the canvas gets id "<art>-canvas"
-    body     — captured HTML for the terminal lines (.term__line elements)
-    caption  — captured HTML for the bottom-left caption
-    cwd      — directory shown in the window title (default "~")
+    body     — captured HTML for the intro (name, path graph, vertices)
+    caption  — captured HTML for the small caption about the art
     modifier — optional extra class, e.g. "page" -> .hero--page
 {%- endcomment -%}
 <section class="hero{% if include.modifier %} hero--{{ include.modifier }}{% endif %}" aria-label="Introduction">
   <canvas class="hero__canvas" id="{{ include.art }}-canvas" aria-hidden="true"></canvas>
 
-  <div class="term" data-typewriter>
-    <div class="term__bar" aria-hidden="true">
-      <span class="term__dot"></span><span class="term__dot"></span><span class="term__dot"></span>
-      <span class="term__title">{{ site.prompt_user | default: "user" }}@{{ site.prompt_host | default: "web" }}: {{ include.cwd | default: "~" }}</span>
-    </div>
-    <div class="term__body">
-      {{ include.body }}
-      <p class="term__line term__line--cmd" aria-hidden="true"><span class="prompt">$</span><span class="cursor"></span></p>
-    </div>
+  <div class="intro">
+    {{ include.body }}
   </div>
 
   {%- if include.caption %}
-  <p class="hero__caption" aria-hidden="true">{{ include.caption }}</p>
+  <p class="hero__caption">{{ include.caption }}</p>
   {%- endif %}
-  <a class="hero__cue" href="#main">scroll <span aria-hidden="true">&darr;</span></a>
+  <a class="hero__cue" href="#main" aria-label="Scroll to content"><span aria-hidden="true">&darr;</span></a>
 </section>

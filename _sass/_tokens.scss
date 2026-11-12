@@ -27,21 +27,21 @@ $bp-md: 56em;   // 896px
 
   // Accents. The light tints are for fills and art; the deeper
   // shades are for text so it stays readable on the pale ground.
-  --purple:       #6c5ad0;
-  --purple-light: #b3a6f2;
-  --purple-soft:  rgba(155, 140, 240, 0.14);
-  --blue:         #2a77b3;
-  --blue-light:   #9fd0f5;
-  --blue-soft:    rgba(124, 190, 240, 0.16);
+  --purple:       #5b48c2;
+  --purple-light: #9a89ea;
+  --purple-soft:  rgba(124, 100, 218, 0.14);
+  --blue:         #1f6aa5;
+  --blue-light:   #80bbec;
+  --blue-soft:    rgba(92, 158, 222, 0.16);
 
-  --gradient: linear-gradient(90deg, #9fd0f5, #b3a6f2);
+  --gradient: linear-gradient(90deg, #80bbec, #9a89ea);
 
   --shadow-sm: 0 1px 2px rgba(60, 50, 120, 0.06), 0 2px 8px rgba(60, 50, 120, 0.05);
   --shadow-lg: 0 2px 6px rgba(60, 50, 120, 0.06), 0 24px 60px rgba(60, 50, 120, 0.12);
 
   // Type
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
   --fs-body: 1.0625rem;
   --fs-small: 0.8rem;
 
