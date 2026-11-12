@@ -18,8 +18,8 @@ layout: null
     }
   ],
   "start_url": "{{ '/' | relative_url }}",
-  "background_color": "#ffffff",
+  "background_color": "#f7f6fc",
   "display": "standalone",
   "scope": "{{ '/' | relative_url }}",
-  "theme_color": "#ffffff"
+  "theme_color": "#f7f6fc"
 }

@@ -1,23 +1,21 @@
-{% if paginator.total_pages != 1 %}
-<div class="pagination clearfix mb1 mt4">
-  <div class="left">
-    {% if paginator.previous_page %}
-      {% if paginator.page == 2 %}
-        <a class="pagination-item" href="{{ "/blog/" | relative_url }}">{{ site.text.pagination.newer | default: "Newer" }}</a>
-      {% else %}
-        <a class="pagination-item" href="{{ paginator.previous_page_path | relative_url }}">{{ site.text.pagination.newer | default: "Older" }}</a>
-      {% endif %}
+{% if paginator.total_pages > 1 %}
+<nav class="pagination" aria-label="Pagination">
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination__item" href="{{ "/blog/" | relative_url }}">&larr; {{ site.text.pagination.newer | default: "Newer" }}</a>
     {% else %}
-      <span class="pagination-item disabled">{{ site.text.pagination.newer | default: "Newer" }}</span>
+      <a class="pagination__item" href="{{ paginator.previous_page_path | relative_url }}">&larr; {{ site.text.pagination.newer | default: "Newer" }}</a>
     {% endif %}
-  </div>
-  <div class="right">
-    {% if paginator.next_page %}
-      <a class="pagination-item" href="{{ paginator.next_page_path | relative_url }}">{{ site.text.pagination.older | default: "Older" }}</a>
-    {% else %}
-      <span class="pagination-item disabled">{{ site.text.pagination.older | default: "Older" }}</span>
-    {% endif %}
-  </div>
-  <div class="pagination-meta">Page {{ paginator.page }} of {{ paginator.total_pages }}</div>
-</div>
+  {% else %}
+    <span class="pagination__item pagination__item--disabled">&larr; {{ site.text.pagination.newer | default: "Newer" }}</span>
+  {% endif %}
+
+  <span class="pagination__meta">page {{ paginator.page }}/{{ paginator.total_pages }}</span>
+
+  {% if paginator.next_page %}
+    <a class="pagination__item" href="{{ paginator.next_page_path | relative_url }}">{{ site.text.pagination.older | default: "Older" }} &rarr;</a>
+  {% else %}
+    <span class="pagination__item pagination__item--disabled">{{ site.text.pagination.older | default: "Older" }} &rarr;</span>
+  {% endif %}
+</nav>
 {% endif %}

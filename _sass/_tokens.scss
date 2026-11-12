@@ -1,0 +1,57 @@
+// -------------------------------------------------------------
+//  Calm graph theme - design tokens
+//  Light lavender surfaces, light purple + light blue accents.
+//  Edit colours here; everything else reads these variables.
+//  NB: GitHub Pages compiles with Ruby Sass 3.7, so avoid CSS
+//  min()/max() and space-separated rgb() in these files, and keep
+//  this file ASCII-only.
+// -------------------------------------------------------------
+
+$bp-sm: 40em;   // 640px
+$bp-md: 56em;   // 896px
+
+:root {
+  color-scheme: light;
+
+  // Surfaces
+  --bg:          #f7f6fc;
+  --bg-raised:   #ffffff;
+  --bg-sunken:   #f0eef9;
+  --line:        #e6e3f3;
+  --line-bright: #d4cfec;
+
+  // Text
+  --text:        #43475f;
+  --text-strong: #1f2238;
+  --text-dim:    #757a96;
+
+  // Accents. The light tints are for fills and art; the deeper
+  // shades are for text so it stays readable on the pale ground.
+  --purple:       #5b48c2;
+  --purple-light: #9a89ea;
+  --purple-soft:  rgba(124, 100, 218, 0.14);
+  --blue:         #1f6aa5;
+  --blue-light:   #80bbec;
+  --blue-soft:    rgba(92, 158, 222, 0.16);
+
+  --gradient: linear-gradient(90deg, #80bbec, #9a89ea);
+
+  --shadow-sm: 0 1px 2px rgba(60, 50, 120, 0.06), 0 2px 8px rgba(60, 50, 120, 0.05);
+  --shadow-lg: 0 2px 6px rgba(60, 50, 120, 0.06), 0 24px 60px rgba(60, 50, 120, 0.12);
+
+  // Type
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --fs-body: 1.0625rem;
+  --fs-small: 0.8rem;
+
+  // Layout
+  --measure: 44rem;
+  --gutter: 1rem;
+  --nav-h: 3.75rem;
+  --radius: 12px;
+}
+
+@media (min-width: $bp-sm) {
+  :root { --gutter: 2rem; }
+}

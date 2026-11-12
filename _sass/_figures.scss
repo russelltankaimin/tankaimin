@@ -1,0 +1,85 @@
+// Background figures down both margins (built by js/figures.js).
+//
+// Large, soft drawings sit in the side margins on wide screens,
+// staggered left and right, each with a small caption. On narrow
+// screens they become faint watermarks behind the text. The script
+// sets each figure's top, width and side.
+
+$bp-wide: 64rem;
+
+.has-graphs {
+  position: relative;
+  isolation: isolate;
+}
+
+.gbg-layer {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+  // Safety net: nothing in the layer may paint below the content's
+  // bottom padding, i.e. into the footer. Sides and top stay open so
+  // figures can sit in the margins.
+  -webkit-clip-path: inset(-100vh -100vw -2.5rem -100vw);
+          clip-path: inset(-100vh -100vw -2.5rem -100vw);
+}
+
+.gbg {
+  position: absolute;
+  top: 0;
+  right: -1.5rem;
+  width: 18rem;
+  margin: 0;
+  opacity: .3;
+}
+.gbg--left { right: auto; left: -1.5rem; }
+
+.gbg__svg { display: block; width: 100%; height: auto; overflow: visible; }
+
+.gbg__cap { display: none; }
+
+// SVG parts. Colours that change during the animation are set
+// inline by the script; these are the resting styles.
+.gbg .g-edge  { fill: none; stroke: #c4bce6; stroke-width: .8; stroke-linecap: round; stroke-linejoin: round; }
+.gbg .g-hi    { fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.gbg .g-hi-layer { transition: opacity 1.4s ease; }
+.gbg .g-vert  {
+  fill: #fff;
+  stroke: #a99ee0;
+  stroke-width: 1.1;
+  transition: fill .6s ease, stroke .6s ease;
+}
+.gbg .g-ring  { fill: none; stroke-width: 1; }
+.gbg .g-label {
+  fill: var(--text-strong);
+  font-family: var(--font-sans);
+  font-size: 7px;
+  font-weight: 600;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+@media (min-width: $bp-wide) {
+  .gbg { opacity: .8; }
+  // Hug the viewport edge, 2rem in from it
+  .gbg--right { right: calc((100% - 100vw) / 2 + 2rem); }
+  .gbg--left  { left: calc((100% - 100vw) / 2 + 2rem); }
+
+  .gbg__cap {
+    display: block;
+    max-width: 19rem;
+    margin: .5rem 0 0;
+    color: var(--text-dim);
+    font-size: .78rem;
+    line-height: 1.5;
+  }
+  .gbg--right .gbg__cap { margin-left: auto; text-align: right; }
+
+  .gbg__name { display: block; color: var(--text); font-weight: 600; }
+  .gbg__name em { color: var(--purple); font-style: normal; font-weight: 500; }
+  .gbg__note { display: block; margin-top: .15rem; font-style: italic; }
+}
+
+// AnchorJS links on headings
+.anchorjs-link { color: var(--line-bright) !important; background: none !important; }
+.anchorjs-link:hover { color: var(--purple) !important; }

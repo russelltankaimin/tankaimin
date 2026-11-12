@@ -1,34 +1,90 @@
-@charset "UTF-8";
-/*!
+// Reset + global atmosphere (soft colour washes, faint dot lattice)
 
-Pixyll
+*, *::before, *::after { box-sizing: border-box; }
 
-A simple, beautiful theme for Jekyll that emphasizes content rather than
-aesthetic fluff.
-
-Built upon BASSCSS (https://basscss.com/).
-
-Crafted with <3 by John Otander (@4lpine) - ©2015-2021 John Otander
-MIT License https://opensource.org/licenses/MIT
-
-*/
-
-html, body {
-  height: auto;
-  min-height: 100%;
-}
-
-img {
-  max-width: 100%;
-}
-
-em img {
-  max-width: 100%;
-  margin-left: 0;
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 1rem);
 }
 
 body {
-          box-sizing: border-box;
-     -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(55rem 38rem at 88% -8%, rgba(154, 137, 234, 0.28), transparent 62%),
+    radial-gradient(48rem 36rem at -8% 18%, rgba(128, 187, 236, 0.26), transparent 62%);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+// A very faint dot lattice - Z^2, if you like - fading out downwards
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(108, 90, 208, 0.16) 1px, transparent 1.5px);
+  background-size: 28px 28px;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 0%, #000 25%, transparent 75%);
+          mask-image: radial-gradient(ellipse at 50% 0%, #000 25%, transparent 75%);
+}
+
+::selection { background: rgba(154, 137, 234, 0.45); color: var(--text-strong); }
+
+body > main { flex: 1 0 auto; }
+
+img, svg, video, canvas { display: block; max-width: 100%; }
+
+a {
+  color: var(--purple);
+  text-decoration: none;
+  transition: color .2s;
+}
+a:hover { color: var(--blue); }
+
+:focus-visible {
+  outline: 2px solid var(--purple-light);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 200;
+  padding: .5rem .75rem;
+  border-radius: 6px;
+  background: var(--purple);
+  color: #fff;
+}
+.skip-link:focus { top: 1rem; color: #fff; }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }

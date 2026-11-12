@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{%- assign hero = page.hero -%}
+{%- assign hero_name = hero.name | default: site.title -%}
+
+{%- capture hero_body -%}
+    <h1 class="intro__name">{{ hero_name }}</h1>
+
+    {%- if hero.education %}
+    <ol class="intro__path" aria-label="Education">
+      {%- for line in hero.education %}
+      <li>{{ line }}</li>
+      {%- endfor %}
+    </ol>
+    {%- endif %}
+
+    {%- if hero.interests %}
+    <ul class="intro__vertices" aria-label="Interests">
+      {%- for interest in hero.interests %}
+      <li>{{ interest }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+{%- endcapture -%}
+
+{%- capture hero_caption -%}
+    Kruskal&rsquo;s algorithm &mdash; edges join in order of length, never closing a cycle, until a minimum spanning tree remains.
+    <span class="hero__hint">Click anywhere to add a vertex.</span>
+{%- endcapture -%}
+
+{% include hero.html art="mst" body=hero_body caption=hero_caption %}
+
+<main id="main" class="site-main site-main--hero">
+  <div class="shell prose prose--home" data-reveal data-graphs="{{ page.graphs | join: ' ' }}">
+    {{ content }}
+  </div>
+</main>

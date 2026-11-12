@@ -1,0 +1,135 @@
+// Buttons, forms, blog list, pagination
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .7rem 1.3rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: linear-gradient(100deg, #5c9ede, #7c64da);
+  color: #fff;
+  font: inherit;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(108, 90, 208, 0.22);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.btn:hover,
+.btn:focus-visible {
+  color: #fff;
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(108, 90, 208, 0.28);
+}
+
+.btn--ghost {
+  border-color: var(--line-bright);
+  background: var(--bg-raised);
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+}
+.btn--ghost:hover,
+.btn--ghost:focus-visible { color: var(--purple); }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+
+// -- Forms ---------------------------------------------------
+.form { display: grid; gap: 1.25rem; }
+
+.field { display: grid; gap: .4rem; }
+
+.field__label { color: var(--text); font-size: .85rem; font-weight: 500; }
+
+.field__input {
+  width: 100%;
+  padding: .75rem .95rem;
+  border: 1px solid var(--line-bright);
+  border-radius: 10px;
+  background: var(--bg-raised);
+  color: var(--text-strong);
+  font: inherit;
+  caret-color: var(--purple);
+  transition: border-color .2s, box-shadow .2s;
+}
+.field__input::placeholder { color: var(--text-dim); opacity: .7; }
+.field__input:focus {
+  outline: none;
+  border-color: var(--purple-light);
+  box-shadow: 0 0 0 4px var(--purple-soft);
+}
+textarea.field__input { resize: vertical; min-height: 9rem; }
+
+.form .btn { justify-self: start; }
+
+// -- Blog index ----------------------------------------------
+.post-list { margin: 0; padding: 0; list-style: none; }
+
+.post-row + .post-row { margin-top: .75rem; }
+
+.post-row__link {
+  display: grid;
+  gap: .25rem 1.5rem;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--text);
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.post-row__link:hover {
+  border-color: var(--line-bright);
+  box-shadow: var(--shadow-sm);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+@media (min-width: $bp-sm) {
+  .post-row__link { grid-template-columns: 7.5rem 1fr; }
+}
+
+.post-row__date { color: var(--text-dim); font-size: .85rem; font-variant-numeric: tabular-nums; padding-top: .2rem; }
+.post-row__title { margin: 0; color: var(--text-strong); font-size: 1.08rem; font-weight: 600; }
+.post-row__link:hover .post-row__title { color: var(--purple); }
+.post-row__summary { margin: .25rem 0 0; color: var(--text-dim); font-size: .9rem; }
+
+.empty-state { color: var(--text-dim); }
+
+// -- Pagination ----------------------------------------------
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  font-size: .9rem;
+}
+.pagination__meta { color: var(--text-dim); }
+.pagination__item { color: var(--purple); }
+.pagination__item--disabled { color: var(--line-bright); }
+
+// -- 404 -----------------------------------------------------
+.notfound { text-align: left; }
+.notfound__code {
+  margin: 0;
+  font-size: clamp(4rem, 20vw, 9rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.05em;
+  color: var(--purple-light);
+}
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .notfound__code {
+    background: linear-gradient(100deg, #80bbec, #7c64da);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+  }
+}
+.notfound__lead { margin: 1rem 0 .25rem; color: var(--text-strong); font-size: 1.35rem; font-weight: 600; }
+.notfound__msg { color: var(--text-dim); }
+.notfound__path { color: var(--purple); font-weight: 500; overflow-wrap: anywhere; }
+
+.related__title { margin: 3.5rem 0 1rem; color: var(--text-strong); font-size: 1.1rem; font-weight: 600; }

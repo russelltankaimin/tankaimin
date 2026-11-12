@@ -1,54 +1,24 @@
 ---
 layout: null
 ---
-var CACHE_NAME = "pixyll2";
-
-self.addEventListener("install", function(e) {
-  e.waitUntil(
-    caches.open(CACHE_NAME).then(function(cache) {
-      return cache.addAll([
-        "{{ '/css/pixyll.css' | relative_url }}?{{ site.time | date: '%Y%m%d%H%M' }}",
-        "{{ '/' | relative_url }}"
-      ]);
-    })
-  );
+// The old Pixyll theme registered a cache-first service worker, so
+// returning visitors could keep seeing stale pages. This replacement
+// clears those caches, unregisters itself and reloads open tabs once.
+// It can be deleted entirely after a few months.
+self.addEventListener("install", function () {
+  self.skipWaiting();
 });
 
-self.addEventListener("activate", function(e) {
-  e.waitUntil(
-    caches.keys().then(function(names) {
-      return Promise.all(
-        names.map(function(name) {
-          if (name != CACHE_NAME) {
-            return caches.delete(name);
-          }
-        })
-      );
-    })
-  );
-  return clients.claim();
-});
-
-addEventListener("fetch", function(e) {
-  e.respondWith(
-    caches.match(e.request).then(function(response) {
-        return response || fetch(e.request).then(function(response) {
-        var clonedResponse = response.clone();
-        var hosts = [
-          "https://fonts.googleapis.com",
-          "https://fonts.gstatic.com",
-          "https://maxcdn.bootstrapcdn.com",
-          "https://cdnjs.cloudflare.com"
-        ];
-        hosts.map(function(host) {
-          if (e.request.url.indexOf(host) === 0) {
-            caches.open(CACHE_NAME).then(function(cache) {
-              cache.put(e.request, clonedResponse);
-            });
-          }
-        });
-        return response;
-      });
-    })
+self.addEventListener("activate", function (event) {
+  event.waitUntil(
+    caches.keys()
+      .then(function (names) {
+        return Promise.all(names.map(function (name) { return caches.delete(name); }));
+      })
+      .then(function () { return self.registration.unregister(); })
+      .then(function () { return self.clients.matchAll({ type: "window" }); })
+      .then(function (clients) {
+        clients.forEach(function (client) { client.navigate(client.url); });
+      })
   );
 });
