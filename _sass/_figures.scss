@@ -1,11 +1,10 @@
 // Background figures down both margins (built by js/figures.js).
 //
-// Large, soft drawings sit in the side margins on wide screens,
-// staggered left and right, each with a small caption. On narrow
-// screens they become faint watermarks behind the text. The script
-// sets each figure's top, width and side.
-
-$bp-wide: 64rem;
+// When the side margins are wide enough, soft drawings sit in them,
+// staggered left and right, each with a small caption, sized so they
+// never reach the text (the script adds .gbg-layer--margins). Otherwise
+// they become faint watermarks behind the text. The script sets each
+// figure's top, width and side.
 
 .has-graphs {
   position: relative;
@@ -59,9 +58,9 @@ $bp-wide: 64rem;
   dominant-baseline: central;
 }
 
-@media (min-width: $bp-wide) {
-  .gbg { opacity: .8; }
-  // Hug the viewport edge, 2rem in from it
+.gbg-layer--margins {
+  .gbg { opacity: .85; }
+  // Hug the viewport edge, 2rem in from it (matches EDGE in the script)
   .gbg--right { right: calc((100% - 100vw) / 2 + 2rem); }
   .gbg--left  { left: calc((100% - 100vw) / 2 + 2rem); }
 

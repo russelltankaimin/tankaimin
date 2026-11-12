@@ -33,7 +33,9 @@
     <!-- Scripts (deferred, progressive enhancement only) -->
     {%- assign hero_art = page.hero.art -%}
     {%- if hero_art == nil and page.layout == "home" -%}{%- assign hero_art = "mst" -%}{%- endif -%}
-    {%- if page.layout == "home" or page.layout == "hero-page" %}
+    {%- assign research = false -%}
+    {%- if page.categories contains 'research' or page.tags contains 'research' -%}{%- assign research = true -%}{%- endif -%}
+    {%- if page.layout == "home" or page.layout == "hero-page" or page.layout == "post" and research == false %}
     <script src="{{ "/js/figures.js" | relative_url }}?{{ site.time | date: "%Y%m%d%H%M" }}" defer></script>
     {%- endif %}
     <script src="{{ "/js/site.js" | relative_url }}?{{ site.time | date: "%Y%m%d%H%M" }}" defer></script>
@@ -41,11 +43,17 @@
     <script src="{{ "/js/" | append: hero_art | append: ".js" | relative_url }}?{{ site.time | date: "%Y%m%d%H%M" }}" defer></script>
     {%- endif %}
 
-    <!-- MathJax -->
-    {% if site.enable_mathjax %}
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    <!-- MathJax 3 (site-wide via enable_mathjax, or per page with `mathjax: true`).
+         kramdown turns $$...$$ into \( \) inline and \[ \] display math. -->
+    {% if site.enable_mathjax or page.mathjax %}
+    <script>
+      window.MathJax = {
+        tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']], tags: 'none' },
+        chtml: { scale: 1.0 },
+        options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+      };
     </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
     {% endif %}
 
     <!-- Verifications -->

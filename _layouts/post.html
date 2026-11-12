@@ -5,7 +5,10 @@ layout: default
 {%- if minutes == 0 -%}{%- assign minutes = 1 -%}{%- endif -%}
 
 <main id="main" class="site-main">
-  <article class="shell">
+  {%- assign research = false -%}
+  {%- comment -%} Research posts get no background diagrams {%- endcomment -%}
+  {%- if page.categories contains 'research' or page.tags contains 'research' -%}{%- assign research = true -%}{%- endif %}
+  <article class="shell"{% unless research %} data-graphs="{{ page.graphs | join: ' ' }}"{% endunless %}>
     <header class="page-header">
       <h1 class="page-title">{{ page.title }}</h1>
       <p class="page-meta">
