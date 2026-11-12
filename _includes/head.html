@@ -20,20 +20,23 @@
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.title }}" href="{{ "/feed.xml" | relative_url }}" />
 
-    <meta name="theme-color" content="#05070b">
+    <meta name="theme-color" content="#f7f6fc">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}?{{ site.time | date: "%Y%m%d%H%M" }}" type="text/css">
 
     <!-- Scripts (deferred, progressive enhancement only) -->
-    <script src="{{ "/js/site.js" | relative_url }}?{{ site.time | date: "%Y%m%d%H%M" }}" defer></script>
     {%- assign hero_art = page.hero.art -%}
-    {%- if hero_art == nil and page.layout == "home" -%}{%- assign hero_art = "randomwalk" -%}{%- endif -%}
+    {%- if hero_art == nil and page.layout == "home" -%}{%- assign hero_art = "mst" -%}{%- endif -%}
+    {%- if page.layout == "home" or page.layout == "hero-page" %}
+    <script src="{{ "/js/figures.js" | relative_url }}?{{ site.time | date: "%Y%m%d%H%M" }}" defer></script>
+    {%- endif %}
+    <script src="{{ "/js/site.js" | relative_url }}?{{ site.time | date: "%Y%m%d%H%M" }}" defer></script>
     {%- if hero_art %}
     <script src="{{ "/js/" | append: hero_art | append: ".js" | relative_url }}?{{ site.time | date: "%Y%m%d%H%M" }}" defer></script>
     {%- endif %}

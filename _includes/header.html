@@ -1,7 +1,18 @@
 <header class="site-nav">
   <nav class="site-nav__inner" aria-label="Main">
     <a href="{{ "/" | relative_url }}" class="site-logo" aria-label="{{ site.title }}, home">
-      <span class="site-logo__user">{{ site.prompt_user | default: "user" }}</span>@{{ site.prompt_host | default: "web" }}:<span class="site-logo__path">~</span>$<span class="cursor" aria-hidden="true"></span>
+      {%- comment -%} K4 drawn as a triangle with its centre vertex {%- endcomment -%}
+      <svg class="site-logo__mark" viewBox="0 0 24 24" aria-hidden="true">
+        <g fill="none" stroke="#c7bdf2" stroke-width="1.4" stroke-linecap="round">
+          <path d="M12 3 L3.5 19 L20.5 19 Z"/>
+          <path d="M12 3 L12 13.5 M3.5 19 L12 13.5 L20.5 19"/>
+        </g>
+        <circle cx="12" cy="3" r="2.3" fill="#9c88ec"/>
+        <circle cx="3.5" cy="19" r="2.3" fill="#7fb9ea"/>
+        <circle cx="20.5" cy="19" r="2.3" fill="#b3a6f2"/>
+        <circle cx="12" cy="13.5" r="2.3" fill="#fff" stroke="#9c88ec" stroke-width="1.4"/>
+      </svg>
+      <span><span class="site-logo__user">{{ site.prompt_user | default: "user" }}</span>@{{ site.prompt_host | default: "web" }}:<span class="site-logo__path">~</span></span>
     </a>
     <ul class="site-links">
       {% include navigation.html %}

@@ -4,6 +4,7 @@ title: Education
 permalink: /nus/
 tags: nus
 nav_label: nus
+graphs: [q4, heawood, konigsberg, wilson, petersen]   # figures beside each ## section
 hero:
   art: graph
   commands:

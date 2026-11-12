@@ -4,7 +4,7 @@
  * Vertices drift slowly; u ~ v whenever |u - v| < r, with r chosen
  * so the mean degree is about MEAN_DEGREE. Every few seconds a BFS
  * runs from a random root: vertices light up layer by layer
- * (cyan at the root -> magenta at the deepest layer) and the BFS
+ * (light blue at the root -> lilac at the deepest layer) and the BFS
  * tree grows along the edges. Vertices outside the root's connected
  * component stay dim.
  *
@@ -24,16 +24,16 @@
 
   // ── Tunables ────────────────────────────────────────────────
   var MEAN_DEGREE = 4.4;   // expected degree, sets the connection radius
-  var SPEED = 0.012;       // drift speed in px per ms
-  var LAYER_MS = 240;      // time per BFS layer
-  var HOLD_MS = 1800;      // keep the finished search on screen
-  var FADE_MS = 1400;      // fade-out duration
-  var GAP_MS = 900;        // pause before the next automatic search
+  var SPEED = 0.008;       // drift speed in px per ms
+  var LAYER_MS = 380;      // time per BFS layer
+  var HOLD_MS = 2800;      // keep the finished search on screen
+  var FADE_MS = 1800;      // fade-out duration
+  var GAP_MS = 1400;       // pause before the next automatic search
   var HOVER_PX = 22;       // hover pick radius
   var CLICK_PX = 70;       // click pick radius
 
-  var CYAN = [0, 234, 255], MAGENTA = [255, 61, 220];
-  var LIME = '125,255,106';
+  var CYAN = [118, 178, 232], MAGENTA = [150, 128, 232];  // light blue -> lilac
+  var LIME = '214,112,170';                              // hover: soft rose
 
   var w = 0, h = 0, n = 0, r = 0;
   var xs, ys, ang, spd;
@@ -205,7 +205,7 @@
     var i, a, b;
 
     // Base edges, bucketed by length: short edges a little brighter
-    var bands = [[0, 0.5, 0.34], [0.5, 0.8, 0.22], [0.8, 1.01, 0.11]];
+    var bands = [[0, 0.5, 0.26], [0.5, 0.8, 0.17], [0.8, 1.01, 0.09]];
     ctx.lineWidth = 1;
     for (var bi = 0; bi < bands.length; bi++) {
       ctx.beginPath();
@@ -214,16 +214,15 @@
         a = edges[2 * i]; b = edges[2 * i + 1];
         ctx.moveTo(xs[a], ys[a]); ctx.lineTo(xs[b], ys[b]);
       }
-      ctx.strokeStyle = 'rgba(0,234,255,' + bands[bi][2] + ')';
+      ctx.strokeStyle = 'rgba(130,120,190,' + bands[bi][2] + ')';
       ctx.stroke();
     }
-
-    ctx.globalCompositeOperation = 'lighter';
 
     // BFS tree, growing from parent to child within each layer
     if (st) {
       var dist = search.dist, parent = search.parent, maxD = search.maxD || 1;
-      ctx.lineWidth = 1.8;
+      ctx.lineWidth = 2;
+      ctx.lineCap = 'round';
       for (i = 0; i < n; i++) {
         if (dist[i] <= 0) continue;
         var t = clamp((st.elapsed - (dist[i] - 1) * LAYER_MS) / LAYER_MS, 0, 1);
@@ -265,7 +264,7 @@
         ctx.beginPath();
         ctx.fillStyle = 'rgba(' + col + ',' + (0.45 + 0.55 * st.alpha).toFixed(3) + ')';
       } else {
-        ctx.fillStyle = 'rgba(150,185,215,0.62)';
+        ctx.fillStyle = 'rgba(140,130,190,0.5)';
       }
       ctx.arc(xs[i], ys[i], rad, 0, Math.PI * 2);
       ctx.fill();
@@ -278,7 +277,7 @@
       ctx.beginPath();
       ctx.arc(rx, ry, 5 + phase * 16, 0, Math.PI * 2);
       ctx.lineWidth = 1.2;
-      ctx.strokeStyle = 'rgba(0,234,255,' + ((1 - phase) * 0.8 * st.alpha).toFixed(3) + ')';
+      ctx.strokeStyle = 'rgba(118,178,232,' + ((1 - phase) * 0.9 * st.alpha).toFixed(3) + ')';
       ctx.stroke();
     }
 
@@ -290,7 +289,6 @@
       ctx.stroke();
     }
 
-    ctx.globalCompositeOperation = 'source-over';
   }
 
   function frame(t) {

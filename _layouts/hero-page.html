@@ -5,7 +5,7 @@ layout: default
   A regular page with a generative hero instead of the plain header.
   Front matter:
     hero:
-      art: graph                 # script in /js, e.g. graph or randomwalk
+      art: graph                 # script in /js, e.g. graph or mst
       title: ...                 # optional, defaults to page.title
       caption: "..."             # optional HTML caption, bottom-left
       commands:                  # terminal lines, typed in order
@@ -21,7 +21,7 @@ layout: default
 
 {%- capture hero_body -%}
       <p class="term__line term__line--cmd"><span class="prompt" aria-hidden="true">$</span>cat README.md</p>
-      <h1 class="term__line hero__name glitch" data-text="{{ hero_title | escape }}">{{ hero_title }}</h1>
+      <h1 class="term__line hero__name">{{ hero_title }}</h1>
       {%- for c in hero.commands %}
       <p class="term__line term__line--cmd"><span class="prompt" aria-hidden="true">$</span>{{ c.cmd }}</p>
       {%- for line in c.out %}
@@ -36,7 +36,7 @@ layout: default
 {% include hero.html art=hero.art body=hero_body caption=hero.caption cwd=hero_cwd modifier="page" %}
 
 <main id="main" class="site-main site-main--hero">
-  <article class="shell prose" data-reveal>
+  <article class="shell prose" data-reveal data-graphs="{{ page.graphs | join: ' ' }}">
     {{ content }}
   </article>
 </main>

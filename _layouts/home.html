@@ -6,7 +6,7 @@ layout: default
 
 {%- capture hero_body -%}
       <p class="term__line term__line--cmd"><span class="prompt" aria-hidden="true">$</span>whoami</p>
-      <h1 class="term__line hero__name glitch" data-text="{{ hero_name | escape }}">{{ hero_name }}</h1>
+      <h1 class="term__line hero__name">{{ hero_name }}</h1>
 
       {%- if hero.education %}
       <p class="term__line term__line--cmd"><span class="prompt" aria-hidden="true">$</span>cat education.txt</p>
@@ -22,14 +22,14 @@ layout: default
 {%- endcapture -%}
 
 {%- capture hero_caption -%}
-    // <code>X<sub>t+1</sub> = X<sub>t</sub> + &xi;<sub>t</sub></code> &mdash; simple random walks on &#8484;&sup2;.
-    <span class="hero__hint">Hover to add drift &middot; click to release walkers.</span>
+    // Kruskal&rsquo;s algorithm: take edges in order of length, skip any that would close a cycle &mdash; a minimum spanning tree.
+    <span class="hero__hint">Click to add a vertex.</span>
 {%- endcapture -%}
 
-{% include hero.html art="randomwalk" body=hero_body caption=hero_caption %}
+{% include hero.html art="mst" body=hero_body caption=hero_caption %}
 
 <main id="main" class="site-main site-main--hero">
-  <div class="shell prose prose--home" data-reveal>
+  <div class="shell prose prose--home" data-reveal data-graphs="{{ page.graphs | join: ' ' }}">
     {{ content }}
   </div>
 </main>

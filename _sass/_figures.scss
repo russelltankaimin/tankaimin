@@ -1,0 +1,119 @@
+// Graph figures beside each section (built by js/figures.js).
+//
+// The script wraps every "## section" of a page in .g-section and
+// gives it a figure. On wide screens the figure sits in a sticky
+// column to the right of the text; on narrow ones it becomes a
+// compact card under the heading.
+
+$bp-wide: 68rem;
+
+.g-section { position: relative; }
+.g-section__body > :first-child { margin-top: 0; }
+
+.gfig {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 1.5rem;
+  padding: .85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+
+.gfig__svg {
+  flex: none;
+  width: 112px;
+  height: 112px;
+  overflow: visible;
+}
+
+.gfig__cap {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: .8rem;
+  line-height: 1.5;
+}
+.gfig__no {
+  display: block;
+  margin-bottom: .15rem;
+  color: var(--purple);
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.gfig__name { display: block; color: var(--text-strong); font-size: .92rem; font-weight: 600; }
+.gfig__note { display: block; margin-top: .2rem; }
+.gfig__hint {
+  display: block;
+  margin-top: .35rem;
+  font-family: var(--font-mono);
+  font-size: .66rem;
+  opacity: .75;
+}
+
+// SVG parts. Colours that change during the animation are set
+// inline by the script; these are the resting styles.
+.gfig .g-edge  { fill: none; stroke: #d6d0ee; stroke-width: 1.4; stroke-linecap: round; }
+.gfig .g-hi    { fill: none; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; }
+.gfig .g-hi-layer { transition: opacity 1.1s ease; }
+.gfig .g-vert  {
+  fill: #fff;
+  stroke: #b9b0e4;
+  stroke-width: 1.6;
+  transition: fill .5s ease, stroke .5s ease;
+}
+.gfig .g-ring  { fill: none; stroke-width: 1.4; transition: opacity .5s ease; }
+.gfig .g-label {
+  fill: var(--text-strong);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-anchor: middle;
+  dominant-baseline: central;
+  transition: opacity .5s ease;
+}
+
+// Wide screens: text column + sticky figure column
+@media (min-width: $bp-wide) {
+  .shell.has-graphs { max-width: calc(var(--measure) + 18rem); }
+
+  .g-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 14.5rem;
+    grid-template-rows: auto 1fr;   // a tall figure stretches the body row, not the heading
+    column-gap: 3.5rem;
+  }
+  .g-section > * { grid-column: 1; }
+  .g-section > .gfig {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: start;
+    position: -webkit-sticky;
+    position: sticky;
+    top: calc(var(--nav-h) + 2rem);
+    flex-direction: column;
+    align-items: stretch;
+    gap: .75rem;
+    margin: 3.25rem 0 2rem;
+    padding: 1.1rem 1.1rem 1rem;
+  }
+  .g-section > .gfig .gfig__svg { width: 100%; height: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gfig { cursor: default; }
+  .gfig__hint { display: none; }
+}
+
+// The first section shouldn't push the page down
+.prose > .g-section:first-child > :first-child { margin-top: 0; }
+@media (min-width: $bp-wide) {
+  .prose > .g-section:first-child > .gfig { margin-top: 0; }
+}
+
+// AnchorJS links on headings
+.anchorjs-link { color: var(--line-bright) !important; background: none !important; }
+.anchorjs-link:hover { color: var(--purple) !important; }

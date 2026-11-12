@@ -1,4 +1,4 @@
-// Home hero: generative random-walk canvas + terminal window
+// Hero: generative graph canvas + a frosted terminal card
 
 .hero {
   position: relative;
@@ -33,119 +33,97 @@
   position: absolute;
   left: 0; right: 0; bottom: 0;
   z-index: -1;
-  height: 30%;
-  background: linear-gradient(to bottom, transparent, var(--bg));
+  height: 28%;
+  background: linear-gradient(to bottom, rgba(247, 246, 252, 0), var(--bg));
   pointer-events: none;
 }
 
-// -- Terminal window -----------------------------------------
+// -- Terminal card -------------------------------------------
 .term {
   width: 100%;
-  max-width: 44rem;
-  border: 1px solid var(--line-bright);
+  max-width: 42rem;
+  border: 1px solid rgba(212, 207, 236, 0.9);
   border-radius: var(--radius);
-  background: rgba(7, 10, 16, 0.82);
-  -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
-  box-shadow:
-    0 0 0 1px rgba(0, 234, 255, 0.06),
-    0 0 40px rgba(0, 234, 255, 0.10),
-    0 30px 80px rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+          backdrop-filter: blur(10px) saturate(140%);
+  box-shadow: var(--shadow-lg);
+  font-family: var(--font-mono);
 }
 
 .term__bar {
   display: flex;
   align-items: center;
   gap: .45rem;
-  padding: .6rem .9rem;
+  padding: .65rem 1rem;
   border-bottom: 1px solid var(--line);
   color: var(--text-dim);
-  font-size: .75rem;
+  font-size: .72rem;
 }
 
-.term__dot { width: .65rem; height: .65rem; border-radius: 50%; background: var(--line-bright); }
-.term__dot:nth-child(1) { background: var(--magenta); box-shadow: 0 0 8px var(--magenta); }
-.term__dot:nth-child(2) { background: var(--amber); }
-.term__dot:nth-child(3) { background: var(--lime); }
+.term__dot { width: .62rem; height: .62rem; border-radius: 50%; background: var(--line-bright); }
+.term__dot:nth-child(1) { background: #f4c3d9; }
+.term__dot:nth-child(2) { background: #c9bff5; }
+.term__dot:nth-child(3) { background: #b5dcf7; }
 .term__title { margin-left: auto; margin-right: auto; padding-right: 2.5rem; }
 
 .term__body {
-  padding: 1.25rem 1.1rem 1.5rem;
-  font-size: .9rem;
+  padding: 1.25rem 1.15rem 1.5rem;
+  font-size: .85rem;
   line-height: 1.75;
 }
 
 @media (min-width: $bp-sm) {
-  .term__body { padding: 1.75rem 2rem 2rem; font-size: .95rem; }
+  .term__body { padding: 1.75rem 2rem 2rem; font-size: .9rem; }
 }
 
 .term__line { margin: 0; overflow-wrap: anywhere; }
 .term__line + .term__line { margin-top: .15rem; }
-.term__line--cmd { margin-top: 1rem !important; color: var(--text-strong); }
+.term__line--cmd { margin-top: 1rem !important; color: var(--text-dim); }
 .term__line--cmd:first-child { margin-top: 0 !important; }
 .term__line--out { color: var(--text); }
 .term__line--dim { color: var(--text-dim); }
 
-.prompt { color: var(--lime); }
+.prompt { color: var(--purple); }
 .prompt::after { content: " "; }
 
 .tag {
   display: inline-block;
   margin: .2rem .35rem .2rem 0;
-  padding: 0 .5rem;
-  border: 1px solid var(--line-bright);
-  border-radius: 3px;
-  color: var(--cyan);
-  font-size: .82em;
-  line-height: 1.7;
+  padding: 0 .6rem;
+  border-radius: 999px;
+  background: var(--blue-soft);
+  color: #2b6597;
+  font-size: .8em;
+  line-height: 1.85;
 }
-.tag:nth-child(even) { color: var(--magenta); }
+.tag:nth-child(even) { background: var(--purple-soft); color: #5a49b8; }
 
 // Typewriter helper - the untyped remainder keeps its space so
 // nothing shifts while typing.
 .is-pending { visibility: hidden; }
-.typed-rest { color: transparent !important; text-shadow: none !important; }
-.typed-rest .tag { border-color: transparent; }
+.typed-rest { color: transparent !important; }
+.typed-rest .tag { background: transparent; }
 
-// -- Name, with a brief periodic glitch ----------------------
+// -- Name ----------------------------------------------------
 .hero__name {
-  position: relative;
-  margin: .25rem 0 0;
+  margin: .2rem 0 0;
   color: var(--text-strong);
-  font-size: clamp(1.8rem, 7vw, 3.4rem);
-  font-weight: 800;
-  line-height: 1.08;
+  font-family: var(--font-sans);
+  font-size: clamp(1.9rem, 7vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.1;
   letter-spacing: -.03em;
-  text-shadow: var(--glow-cyan);
 }
 
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  overflow: hidden;
-  pointer-events: none;
-  opacity: 0;
-}
-.glitch::before { color: var(--magenta); text-shadow: var(--glow-magenta); animation: glitch-a 7s infinite steps(1); }
-.glitch::after  { color: var(--cyan);    animation: glitch-b 7s infinite steps(1); }
-
-@keyframes glitch-a {
-  0%, 91%, 100% { opacity: 0; transform: none; clip-path: inset(0 0 0 0); }
-  92% { opacity: .9; transform: translate(-3px, 1px);  clip-path: inset(10% 0 60% 0); }
-  94% { opacity: .9; transform: translate(3px, -1px);  clip-path: inset(55% 0 20% 0); }
-  96% { opacity: .9; transform: translate(-2px, 0);    clip-path: inset(30% 0 45% 0); }
-}
-@keyframes glitch-b {
-  0%, 92%, 100% { opacity: 0; transform: none; clip-path: inset(0 0 0 0); }
-  93% { opacity: .8; transform: translate(3px, 0);   clip-path: inset(65% 0 5% 0); }
-  95% { opacity: .8; transform: translate(-3px, 1px); clip-path: inset(5% 0 75% 0); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .glitch::before, .glitch::after { display: none; }
+// Gradient ink where the browser supports it
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .hero__name {
+    background: linear-gradient(100deg, #1f2238 30%, #5a49b8 75%, #2a77b3);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+  }
 }
 
 // -- Caption + scroll cue ------------------------------------
@@ -154,22 +132,24 @@
   left: var(--gutter);
   bottom: 1.25rem;
   margin: 0;
-  max-width: 24rem;
+  max-width: 25rem;
   color: var(--text-dim);
+  font-family: var(--font-mono);
   font-size: .7rem;
-  line-height: 1.5;
+  line-height: 1.55;
 }
-.hero__caption code { color: var(--cyan); background: none; padding: 0; border: 0; font-size: inherit; }
+.hero__caption code { color: var(--purple); background: none; padding: 0; border: 0; font-size: inherit; }
 
 .hero__cue {
   position: absolute;
   right: var(--gutter);
   bottom: 1.25rem;
   color: var(--text-dim);
-  font-size: .75rem;
+  font-family: var(--font-mono);
+  font-size: .72rem;
   letter-spacing: .1em;
 }
-.hero__cue span { display: inline-block; animation: bob 1.8s ease-in-out infinite; }
+.hero__cue span { display: inline-block; animation: bob 2.4s ease-in-out infinite; }
 
 @keyframes bob { 50% { transform: translateY(4px); } }
 

@@ -1,4 +1,4 @@
-// Reset + global atmosphere (grid, glow, scanlines)
+// Reset + global atmosphere (soft colour washes, faint dot lattice)
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -16,11 +16,11 @@ body {
   min-height: 100vh;
   background-color: var(--bg);
   background-image:
-    radial-gradient(60rem 40rem at 85% -10%, rgba(255, 61, 220, 0.10), transparent 60%),
-    radial-gradient(50rem 40rem at -10% 20%, rgba(0, 234, 255, 0.08), transparent 60%);
+    radial-gradient(55rem 38rem at 88% -8%, rgba(179, 166, 242, 0.28), transparent 62%),
+    radial-gradient(48rem 36rem at -8% 18%, rgba(159, 208, 245, 0.26), transparent 62%);
   background-attachment: fixed;
   color: var(--text);
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-size: var(--fs-body);
   line-height: 1.7;
   overflow-x: hidden;
@@ -28,54 +28,36 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-// Faint perspective-free lattice behind everything
+// A very faint dot lattice - Z^2, if you like - fading out downwards
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background-image:
-    linear-gradient(rgba(0, 234, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 234, 255, 0.045) 1px, transparent 1px);
-  background-size: 32px 32px;
-  -webkit-mask-image: radial-gradient(ellipse at 50% 0%, #000 30%, transparent 80%);
-          mask-image: radial-gradient(ellipse at 50% 0%, #000 30%, transparent 80%);
+  background-image: radial-gradient(rgba(108, 90, 208, 0.16) 1px, transparent 1.5px);
+  background-size: 28px 28px;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 0%, #000 25%, transparent 75%);
+          mask-image: radial-gradient(ellipse at 50% 0%, #000 25%, transparent 75%);
 }
 
-// CRT scanlines - very subtle
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  pointer-events: none;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.018) 0,
-    rgba(255, 255, 255, 0.018) 1px,
-    transparent 1px,
-    transparent 3px
-  );
-}
-
-::selection { background: var(--magenta); color: var(--bg); }
+::selection { background: rgba(179, 166, 242, 0.45); color: var(--text-strong); }
 
 body > main { flex: 1 0 auto; }
 
 img, svg, video, canvas { display: block; max-width: 100%; }
 
 a {
-  color: var(--cyan);
+  color: var(--purple);
   text-decoration: none;
-  transition: color .15s, text-shadow .15s;
+  transition: color .2s;
 }
-a:hover { color: var(--text-strong); text-shadow: var(--glow-cyan); }
+a:hover { color: var(--blue); }
 
 :focus-visible {
-  outline: 2px solid var(--cyan);
+  outline: 2px solid var(--purple-light);
   outline-offset: 3px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .skip-link {
@@ -84,10 +66,11 @@ a:hover { color: var(--text-strong); text-shadow: var(--glow-cyan); }
   top: -3rem;
   z-index: 200;
   padding: .5rem .75rem;
-  background: var(--cyan);
-  color: var(--bg);
+  border-radius: 6px;
+  background: var(--purple);
+  color: #fff;
 }
-.skip-link:focus { top: 1rem; }
+.skip-link:focus { top: 1rem; color: #fff; }
 
 .visually-hidden {
   position: absolute !important;
@@ -97,19 +80,19 @@ a:hover { color: var(--text-strong); text-shadow: var(--glow-cyan); }
   white-space: nowrap;
 }
 
-// Blinking block cursor, reused everywhere
+// Soft text cursor for the terminal card
 .cursor {
   display: inline-block;
-  width: .6em;
-  height: 1.1em;
-  margin-left: .15em;
+  width: 2px;
+  height: 1.15em;
+  margin-left: .2em;
   vertical-align: text-bottom;
-  background: var(--cyan);
-  box-shadow: var(--glow-cyan);
-  animation: blink 1.05s steps(1) infinite;
+  border-radius: 1px;
+  background: var(--purple);
+  animation: breathe 1.6s ease-in-out infinite;
 }
 
-@keyframes blink { 50% { opacity: 0; } }
+@keyframes breathe { 50% { opacity: .15; } }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
