@@ -56,6 +56,11 @@
   font-weight: 600;
   text-anchor: middle;
   dominant-baseline: central;
+  // A halo in the page colour keeps labels legible over lines
+  paint-order: stroke;
+  stroke: var(--bg);
+  stroke-width: 2.4px;
+  stroke-linejoin: round;
 }
 
 .gbg-layer--margins {
