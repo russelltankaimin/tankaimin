@@ -1,0 +1,21 @@
+{%- comment -%}
+  One post in the blog list. Pass the post: {% include post-row.html post=post %}
+  Its tags are its categories plus its tags, as slugs in data-tags for
+  the tag filter in js/site.js.
+{%- endcomment -%}
+{%- assign row = include.post -%}
+{%- assign row_tags = row.categories | concat: row.tags | uniq -%}
+<li class="post-row" data-tags="{% for t in row_tags %}{{ t | slugify }}{% unless forloop.last %} {% endunless %}{% endfor %}">
+  <a href="{{ row.url | relative_url }}" class="post-row__link">
+    <time class="post-row__date" datetime="{{ row.date | date_to_xmlschema }}">{{ row.date | date: "%Y-%m-%d" }}</time>
+    <div>
+      <h2 class="post-row__title">{{ row.title }}</h2>
+      <p class="post-row__summary">{{ row.summary | default: row.excerpt | strip_html | truncate: 160 }}</p>
+      {%- if row_tags.size > 0 %}
+      <ul class="post-row__tags" aria-label="Tags">
+        {%- for t in row_tags %}<li class="post-row__tag">{{ t }}</li>{% endfor -%}
+      </ul>
+      {%- endif %}
+    </div>
+  </a>
+</li>
