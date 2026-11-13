@@ -4,8 +4,9 @@
  * Large, soft drawings of mathematical objects fill both margins of
  * the page, staggered down the left and right sides: graphs (Petersen,
  * Cayley, max-flow min-cut, ...), geometry and topology (Klein bottle,
- * Kakeya needle, Hopf fibration, ...) and some AI (attention, gradient
- * descent, alpha-beta pruning, ...). Each animates one of its
+ * Kakeya needle, Hopf fibration, ...), differential and algebraic
+ * geometry (Morse theory, Pascal, Bezout, blow-ups, amoebas, ...) and
+ * some AI (attention, gradient descent, alpha-beta pruning, ...). Each animates one of its
  * properties when it scrolls into view, rests, fades, and replays.
  *
  * Which figures appear: the page's front matter list comes first, e.g.
@@ -950,6 +951,377 @@
       plan: function (g) {
         var steps = g.e.map(function (e, i) { return { edge: i, from: e[0] }; });
         steps.push({ text: [0, 0], str: '\u03b2\u2081 = 1', size: 13, col: PURPLE, italic: true });
+        return steps;
+      }
+    },
+
+    // -------- differential topology, geometry and algebraic geometry
+    hairyBall: {
+      name: 'Hairy ball theorem',
+      hint: 'a field on the sphere with one zero',
+      note: 'You can&rsquo;t comb a hairy ball flat. Seen through stereographic projection, this tangent field on the sphere vanishes at a single point, of index 2 &mdash; the sphere&rsquo;s Euler characteristic, as Poincar&eacute;&ndash;Hopf demands.',
+      ms: 230,
+      make: function () {
+        var R = 1.5, lines = [];
+        function clip(pts) {
+          var out = [], cur = [];
+          pts.forEach(function (p) {
+            if (p[0] * p[0] + p[1] * p[1] <= R * R) cur.push(p);
+            else if (cur.length) { if (cur.length > 1) out.push(cur); cur = []; }
+          });
+          if (cur.length > 1) out.push(cur);
+          return out;
+        }
+        // flow lines: circles through the zero, tangent to one direction
+        [0.22, 0.4, 0.62, 0.9, 1.3, 2.1].forEach(function (c) {
+          [c, -c].forEach(function (cc) {
+            lines.push(clip(sample(function (t) { return [cc * Math.sin(t), cc - cc * Math.cos(t)]; }, -Math.PI, Math.PI, 160)));
+          });
+        });
+        lines.push([[[-R, 0], [R, 0]]]);
+        return { curves: [circlePts(0, 0, R, 120)], lines: lines, bounds: [-R, -R, R, R] };
+      },
+      plan: function (g) {
+        var steps = g.lines.map(function (p) { return { pieces: p, w: 1.4 }; });
+        steps.push({ dot: [0, 0], col: ROSE, r: 3.4 });
+        steps.push({ text: [0, 0], str: 'index 2', dy: 12, col: ROSE, italic: true });
+        return steps;
+      }
+    },
+
+    morse: {
+      name: 'Morse theory on a torus',
+      hint: 'slicing by height',
+      note: 'Sweep a plane up through a torus. The slices change shape only at four critical points &mdash; a minimum, two saddles and a maximum &mdash; whose indices 0, 1, 1, 2 rebuild the torus cell by cell; 1 &minus; 2 + 1 = 0 is its Euler characteristic.',
+      ms: 330,
+      make: function () {
+        var R = 1, r = 0.42, view = viewY(0.62, 0.16), curves = [], i;
+        // height is the second coordinate; the torus axis points at the viewer
+        function T(phi, th) { var m = R + r * Math.cos(th); return flat(view([m * Math.cos(phi), m * Math.sin(phi), r * Math.sin(th)])); }
+        for (i = 0; i < 18; i++) {
+          var phi = TAU * i / 18;
+          curves.push(sample(function (th) { return T(phi, th); }, 0, TAU, 32));
+        }
+        [0, Math.PI].forEach(function (th) { curves.push(sample(function (p) { return T(p, th); }, 0, TAU, 96)); });
+        function asinC(x) { return Math.asin(Math.max(-1, Math.min(1, x))); }
+        function level(c) {                 // the slice at height c
+          var A = [], B = [], k, th, a;
+          if (Math.abs(c) <= R - r) {       // two circles (a figure eight at the saddles)
+            for (k = 0; k <= 120; k++) {
+              th = TAU * k / 120; a = asinC(c / (R + r * Math.cos(th)));
+              A.push(T(a, th)); B.push(T(Math.PI - a, th));
+            }
+            return [A, B];
+          }
+          var thm = Math.acos(Math.max(-1, Math.min(1, (Math.abs(c) - R) / r)));
+          for (k = 0; k <= 80; k++) {       // one circle round the outside
+            th = -thm + 2 * thm * k / 80; a = asinC(c / (R + r * Math.cos(th)));
+            A.push(T(a, th)); B.unshift(T(Math.PI - a, th));
+          }
+          return [A.concat(B)];
+        }
+        var levels = [-1.32, -1.12, -0.88, -(R - r), -0.3, 0, 0.3, R - r, 0.88, 1.12, 1.32].map(level);
+        // labels: beside the extremes, and inside the hole for the saddles
+        var crit = [[-Math.PI / 2, 0, '0', 8, -2], [-Math.PI / 2, Math.PI, '1', 0, -10],
+                    [Math.PI / 2, Math.PI, '1', 0, 10], [Math.PI / 2, 0, '2', 8, -2]]
+          .map(function (q) { return { p: T(q[0], q[1]), s: q[2], dx: q[3], dy: q[4] }; });
+        return { curves: curves, levels: levels, crit: crit };
+      },
+      plan: function (g) {
+        var steps = [], L = g.levels;
+        function crit(q) {
+          steps.push({ dot: q.p, col: ROSE, r: 3 });
+          steps.push({ text: q.p, str: q.s, dx: q.dx, dy: q.dy, col: ROSE, italic: true });
+        }
+        crit(g.crit[0]);
+        [0, 1, 2].forEach(function (i) { steps.push({ pieces: L[i], w: 1.4 }); });
+        steps.push({ pieces: L[3], col: ROSE, w: 1.8 }); crit(g.crit[1]);
+        [4, 5, 6].forEach(function (i) { steps.push({ pieces: L[i], w: 1.4 }); });
+        steps.push({ pieces: L[7], col: ROSE, w: 1.8 }); crit(g.crit[2]);
+        [8, 9, 10].forEach(function (i) { steps.push({ pieces: L[i], w: 1.4 }); });
+        crit(g.crit[3]);
+        return steps;
+      }
+    },
+
+    hyperboloid: {
+      name: 'Doubly ruled surface',
+      hint: 'straight lines on a curved surface',
+      note: 'The hyperboloid x<sup>2</sup> + y<sup>2</sup> &minus; z<sup>2</sup> = 1 curves like a saddle at every point, yet through each point pass two straight lines lying entirely on it.',
+      ms: 140,
+      make: function () {
+        var H = 1.15, view = viewY(0.3, 0.3), curves = [];
+        function V(x, y, z) { return flat(view([x, z, y])); }
+        [-H, -H / 2, 0, H / 2, H].forEach(function (s) {
+          var rad = Math.sqrt(1 + s * s);
+          curves.push(sample(function (t) { return V(rad * Math.cos(t), rad * Math.sin(t), s); }, 0, TAU, 90));
+        });
+        function rule(t, sgn) {
+          return [-H, H].map(function (s) { return V(Math.cos(t) - sgn * s * Math.sin(t), Math.sin(t) + sgn * s * Math.cos(t), s); });
+        }
+        var A = [], B = [];
+        for (var k = 0; k < 16; k++) { A.push(rule(TAU * k / 16, 1)); B.push(rule(TAU * k / 16 + TAU / 32, -1)); }
+        return { curves: curves, A: A, B: B };
+      },
+      plan: function (g) {
+        return g.A.map(function (c) { return { curve: c, col: BLUE, w: 1.3 }; })
+          .concat(g.B.map(function (c) { return { curve: c, col: PURPLE, w: 1.3 }; }));
+      }
+    },
+
+    nodal: {
+      name: 'A node is born',
+      hint: 'a family of cubic curves',
+      note: 'The curves y<sup>2</sup> = x<sup>3</sup> + x<sup>2</sup> + t. As t falls through 0, one smooth curve pinches into a node (rose) and then splits into an oval and a branch: a singular member of a family of smooth ones.',
+      ms: 650,
+      make: function () {
+        var X0 = -1.55, X1 = 0.95;
+        function comps(t) {                 // real components of y^2 = f(x) in [X0, X1]
+          function f(x) { return x * x * x + x * x + t; }
+          function root(a, b) {
+            for (var i = 0; i < 60; i++) { var m = (a + b) / 2; if ((f(a) >= 0) === (f(m) >= 0)) a = m; else b = m; }
+            return (a + b) / 2;
+          }
+          var N = 400, ivs = [], start = null, prev = X0;
+          for (var i = 0; i <= N; i++) {
+            var x = X0 + (X1 - X0) * i / N, pos = f(x) >= -1e-12;
+            if (pos && start === null) start = i === 0 ? X0 : root(prev, x);
+            if (!pos && start !== null) { ivs.push([start, root(prev, x), true]); start = null; }
+            prev = x;
+          }
+          if (start !== null) ivs.push([start, X1, false]);
+          return ivs.map(function (iv) {
+            var a = iv[0], b = iv[1], up = [], M = 90;
+            for (var k = 0; k <= M; k++) {    // bunch samples near the roots
+              var u = k / M, x = iv[2] ? a + (b - a) * (1 - Math.cos(Math.PI * u)) / 2 : a + (b - a) * u * u;
+              up.push([x, -Math.sqrt(Math.max(0, f(x)))]);
+            }
+            var down = up.map(function (p) { return [p[0], -p[1]]; }).reverse();
+            return iv[2] ? up.concat(down) : down.concat(up);    // an oval, or an open branch
+          });
+        }
+        var fam = [0.12, 0.06, 0, -0.035, -0.075, -0.11].map(function (t) { return { t: t, pieces: comps(t) }; });
+        return { curves: [[[X0 - 0.1, 0], [X1 + 0.1, 0]], [[0, -1.55], [0, 1.55]]], fam: fam, bounds: [X0 - 0.1, -1.55, X1 + 0.1, 1.55] };
+      },
+      plan: function (g) {
+        var steps = [];
+        g.fam.forEach(function (F) {
+          if (F.t === 0) {
+            steps.push({ pieces: F.pieces, col: ROSE, w: 2, dur: 1200 });
+            steps.push({ dot: [0, 0], col: ROSE, r: 3 });
+          } else steps.push({ pieces: F.pieces, w: 1.4 });
+        });
+        return steps;
+      }
+    },
+
+    blowup: {
+      name: 'Blowing up a point',
+      hint: 'pulling apart lines through the origin',
+      note: 'Replace the origin of the plane by the set of all directions through it. Lines that all met at one point are lifted to their own heights and no longer meet; the new vertical line (rose) is the exceptional divisor.',
+      ms: 200,
+      make: function () {
+        var view = viewY(-0.35, 0.62), base = -0.7, Hh = 1.5, N = 14, curves = [], lifts = [];
+        function V(x, y, h) { return flat(view([x, h, y])); }
+        curves.push(sample(function (t) { return V(Math.cos(t), Math.sin(t), base); }, 0, TAU, 96));
+        for (var k = 0; k < N; k++) {
+          var th = Math.PI * k / N, c = Math.cos(th), s = Math.sin(th), h = Hh * k / N;
+          curves.push([V(-c, -s, base), V(c, s, base)]);      // the lines in the plane below
+          lifts.push([V(-c, -s, h), V(c, s, h)]);             // the same lines, lifted by slope
+        }
+        [1, -1].forEach(function (sg) {
+          curves.push(sample(function (th) { return V(sg * Math.cos(th), sg * Math.sin(th), Hh * th / Math.PI); }, 0, Math.PI, 80));
+        });
+        return { curves: curves, lifts: lifts, axis: [V(0, 0, 0), V(0, 0, Hh)] };
+      },
+      plan: function (g) {
+        return g.lifts.map(function (l) { return { curve: l, w: 1.5 }; })
+          .concat([{ curve: g.axis, col: ROSE, w: 2.2, dur: 900 }]);
+      }
+    },
+
+    turning: {
+      name: 'Whitney&ndash;Graustein theorem',
+      hint: 'how many times the tangent turns',
+      note: 'Two closed curves in the plane can be deformed into each other without ever creasing exactly when their tangents turn the same number of times. Along this lima&ccedil;on the tangent turns twice.',
+      ms: 200,
+      make: function () {
+        function L(t) { var r = 0.5 + Math.cos(t); return [r * Math.cos(t), -r * Math.sin(t)]; }
+        return { curves: [sample(L, 0, TAU, 240)], L: L, bounds: [-0.5, -1.45, 1.95, 1.45] };
+      },
+      plan: function (g) {
+        var steps = [], N = 16;
+        for (var k = 0; k < N; k++) {
+          var t0 = TAU * k / N, t1 = TAU * (k + 1) / N;
+          steps.push({ curve: sample(g.L, t0, t1, 16), col: INK, w: 1.6, dur: 260, linear: true, wait: 160 });
+          var p = g.L(t1), q = g.L(t1 + 1e-3), dx = q[0] - p[0], dy = q[1] - p[1], l = Math.sqrt(dx * dx + dy * dy);
+          steps.push({ curve: [p, [p[0] + 0.28 * dx / l, p[1] + 0.28 * dy / l]], arrow: true, col: mixRGB(k / (N - 1)), w: 1.5 });
+        }
+        steps.push({ text: [0.72, 1.32], str: 'turning number 2', col: PURPLE, italic: true, size: 9 });
+        return steps;
+      }
+    },
+
+    pascal: {
+      name: 'Pascal&rsquo;s theorem',
+      hint: 'a hexagon in a conic',
+      note: 'Inscribe any hexagon in a conic. Its three pairs of opposite sides meet in three points, and those points always lie on one line (rose).',
+      ms: 520,
+      make: function () {
+        var a = 1.3, b = 1;
+        var H = [15, 95, 330, 165, 215, 285].map(function (d) { var t = d * Math.PI / 180; return [a * Math.cos(t), -b * Math.sin(t)]; });
+        function meet(p1, p2, p3, p4) {
+          var d = (p1[0] - p2[0]) * (p3[1] - p4[1]) - (p1[1] - p2[1]) * (p3[0] - p4[0]);
+          var t = ((p1[0] - p3[0]) * (p3[1] - p4[1]) - (p1[1] - p3[1]) * (p3[0] - p4[0])) / d;
+          return [p1[0] + t * (p2[0] - p1[0]), p1[1] + t * (p2[1] - p1[1])];
+        }
+        var X = [meet(H[0], H[1], H[3], H[4]), meet(H[1], H[2], H[4], H[5]), meet(H[2], H[3], H[5], H[0])];
+        function span(p, q, x) {            // the piece of line pq that covers p, q and x
+          var dx = q[0] - p[0], dy = q[1] - p[1], s = ((x[0] - p[0]) * dx + (x[1] - p[1]) * dy) / (dx * dx + dy * dy);
+          var lo = Math.min(0, s), hi = Math.max(1, s);
+          return [[p[0] + lo * dx, p[1] + lo * dy], [p[0] + hi * dx, p[1] + hi * dy]];
+        }
+        var sides = [], ext = [];
+        for (var i = 0; i < 6; i++) {       // side i and side i + 3 meet at X[i mod 3]
+          sides.push([H[i], H[(i + 1) % 6]]);
+          ext.push(span(H[i], H[(i + 1) % 6], X[i % 3]));
+        }
+        var d0 = [X[1][0] - X[0][0], X[1][1] - X[0][1]], L2 = d0[0] * d0[0] + d0[1] * d0[1];
+        var ss = X.map(function (x) { return (x[0] - X[0][0]) * d0[0] + (x[1] - X[0][1]) * d0[1]; });
+        var lo = Math.min.apply(null, ss), hi = Math.max.apply(null, ss), pad = 0.12 * (hi - lo);
+        var line = [lo - pad, hi + pad].map(function (s) { return [X[0][0] + s / L2 * d0[0], X[0][1] + s / L2 * d0[1]]; });
+        var conic = sample(function (t) { return [a * Math.cos(t), b * Math.sin(t)]; }, 0, TAU, 120);
+        return { v: H, vr: 4.5, curves: [conic].concat(ext), sides: sides, X: X, line: line, pts: line };
+      },
+      plan: function (g) {
+        var steps = g.sides.map(function (s) { return { curve: s, w: 1.6 }; });
+        g.X.forEach(function (x) { steps.push({ dot: x, col: BLUE, r: 3 }); });
+        steps.push({ curve: g.line, col: ROSE, w: 2, dur: 1000 });
+        return steps;
+      }
+    },
+
+    bezout: {
+      name: 'B&eacute;zout&rsquo;s theorem',
+      hint: 'a conic meets a cubic six times',
+      note: 'A curve of degree 2 and a curve of degree 3 meet in 2 &times; 3 = 6 points, counted properly in the complex projective plane. Here all six are real.',
+      ms: 320,
+      make: function () {
+        var R = 2, Y = 2.75;
+        function f(x) { return x * x * x - 3 * x; }
+        function gap(x) { var y = f(x); return x * x + y * y - R * R; }
+        var cubic = sample(function (x) { return [x, -f(x)]; }, -2.2, 2.2, 220).filter(function (p) { return Math.abs(p[1]) <= Y; });
+        var hits = [], prev = -2.5;
+        for (var i = 1; i <= 2000; i++) {
+          var x = -2.5 + 5 * i / 2000;
+          if (gap(prev) * gap(x) < 0) {
+            var a = prev, b = x;
+            for (var k = 0; k < 50; k++) { var m = (a + b) / 2; if (gap(a) * gap(m) <= 0) b = m; else a = m; }
+            hits.push([(a + b) / 2, -f((a + b) / 2)]);
+          }
+          prev = x;
+        }
+        var circle = circlePts(0, 0, R, 120);
+        return { curves: [circle, cubic], circle: circle, cubic: cubic, hits: hits, bounds: [-2.4, -Y, 2.4, Y] };
+      },
+      plan: function (g) {
+        var steps = [{ curve: g.circle, col: BLUE, w: 1.8, dur: 1300 }, { curve: g.cubic, col: PURPLE, w: 1.8, dur: 1500, wait: 900 }];
+        g.hits.forEach(function (h) { steps.push({ dot: h, col: ROSE, r: 3.2 }); });
+        return steps;
+      }
+    },
+
+    pseudosphere: {
+      name: 'Pseudosphere',
+      hint: 'constant negative curvature',
+      note: 'Spin a tractrix about its asymptote and you get Beltrami&rsquo;s pseudosphere: curved like a saddle by the same amount at every point, a piece of the hyperbolic plane sitting in space.',
+      ms: 170,
+      make: function () {
+        var view = viewY(0.3, 0.28), U = 2.7, curves = [], merid = [];
+        function V(u, phi) { var rho = 1 / Math.cosh(u); return flat(view([rho * Math.cos(phi), u - Math.tanh(u), rho * Math.sin(phi)])); }
+        [-2.2, -1.5, -0.9, -0.4, 0.4, 0.9, 1.5, 2.2].forEach(function (u) {
+          curves.push(sample(function (p) { return V(u, p); }, 0, TAU, 64));
+        });
+        var rim = sample(function (p) { return V(0, p); }, 0, TAU, 96);
+        for (var k = 0; k < 16; k++) {
+          var phi = TAU * k / 16;
+          merid.push(sample(function (u) { return V(u, phi); }, -U, U, 90));
+        }
+        return { curves: curves.concat([rim]), rim: rim, merid: merid, pts: [].concat.apply([], merid) };
+      },
+      plan: function (g) {
+        return [{ curve: g.rim, col: ROSE, w: 1.8, dur: 900 }]
+          .concat(g.merid.map(function (c) { return { curve: c, w: 1.3 }; }));
+      }
+    },
+
+    stereo: {
+      name: 'Stereographic projection',
+      hint: 'flattening the sphere',
+      note: 'Send each point of the sphere to where the line from the north pole through it meets the plane. Every point but the pole lands somewhere, and circles go to circles (or lines) with angles kept.',
+      ms: 380,
+      make: function () {
+        // screen coordinates: the pole N is at (0, -1), the plane is y = 1
+        return { curves: [circlePts(0, 0, 1, 120), [[-2.55, 1], [2.55, 1]]], bounds: [-2.55, -1.45, 2.55, 1.45] };
+      },
+      plan: function () {
+        var steps = [{ dot: [0, -1], col: ROSE, r: 3.2 }, { text: [0, -1], str: 'N', dy: -9, col: ROSE }];
+        [-65, -40, -15, 10, 245, 220, 195, 170].forEach(function (d) {
+          var a = d * Math.PI / 180, P = [Math.cos(a), -Math.sin(a)], Q = [2 * Math.cos(a) / (1 - Math.sin(a)), 1];
+          steps.push({ curve: [[0, -1], Q], w: 1.2, op: 0.9 });
+          steps.push({ dot: P, r: 2.4, wait: 60 });
+          steps.push({ dot: Q, col: PURPLE, r: 2.4 });
+        });
+        return steps;
+      }
+    },
+
+    torusSquare: {
+      name: 'The torus as a square',
+      hint: 'glue opposite sides',
+      note: 'Glue the arrowed edges of a square and you get a torus. A straight line of slope 3/2 then closes up after four pieces, winding twice one way and three times the other; on the doughnut it is the trefoil knot.',
+      ms: 650,
+      make: function () {
+        function chev(x, y, dx, dy) {       // an arrowhead at (x, y) pointing along (dx, dy)
+          var s = 0.045;
+          return [[x - dx * s - dy * s, y - dy * s + dx * s], [x, y], [x - dx * s + dy * s, y - dy * s - dx * s]];
+        }
+        var marks = [chev(0.52, 0, 1, 0), chev(0.52, 1, 1, 0),
+                     chev(0, 0.46, 0, -1), chev(0, 0.53, 0, -1), chev(1, 0.46, 0, -1), chev(1, 0.53, 0, -1)];
+        var ts = [0, 1 / 3, 1 / 2, 2 / 3, 1], pieces = [];
+        for (var i = 0; i + 1 < ts.length; i++) {   // (2t, 3t) mod 1, one straight piece per crossing
+          var tm = (ts[i] + ts[i + 1]) / 2, fx = Math.floor(2 * tm), fy = Math.floor(3 * tm);
+          pieces.push([ts[i], ts[i + 1]].map(function (t) { return [2 * t - fx, 1 - (3 * t - fy)]; }));
+        }
+        return { curves: [[[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]], marks: marks, pieces: pieces, bounds: [-0.08, -0.08, 1.08, 1.08] };
+      },
+      plan: function (g) {
+        return g.marks.map(function (m) { return { curve: m, col: INK, w: 1.3, dur: 300, wait: 120 }; })
+          .concat(g.pieces.map(function (p) { return { curve: p, w: 2, dur: 700 }; }));
+      }
+    },
+
+    amoeba: {
+      name: 'Amoeba of a line',
+      hint: 'a tropical shadow',
+      note: 'Plot (log|z|, log|w|) for the complex points of the line 1 + z + w = 0. You get an amoeba with three tentacles; shrink it and only its spine survives &mdash; a tropical line.',
+      ms: 700,
+      make: function () {
+        var B = 3;
+        function arc(fn, a, b) { return sample(fn, a, b, 160).filter(function (p) { return Math.abs(p[0]) <= B && Math.abs(p[1]) <= B; }); }
+        // the boundary comes from the real points; y is flipped for the screen
+        var arcs = [
+          arc(function (u) { return [u, -Math.log(1 + Math.exp(u))]; }, -B, Math.log(Math.exp(B) - 1)),   // z > 0
+          arc(function (u) { return [u, -Math.log(1 - Math.exp(u))]; }, -B, Math.log(1 - Math.exp(-B))),  // -1 < z < 0
+          arc(function (v) { return [Math.log(1 + Math.exp(v)), -v]; }, -B, Math.log(Math.exp(B) - 1))    // z < -1
+        ];
+        var spine = [[[0, 0], [-B, 0]], [[0, 0], [0, B]], [[0, 0], [B, -B]]];
+        return { curves: arcs, arcs: arcs, spine: spine, bounds: [-B, -B, B, B] };
+      },
+      plan: function (g) {
+        var steps = g.arcs.map(function (a) { return { curve: a, w: 1.8, dur: 1300 }; });
+        g.spine.forEach(function (s) { steps.push({ curve: s, col: ROSE, w: 1.6, dash: true }); });
+        steps.push({ dot: [0, 0], col: ROSE, r: 2.8 });
         return steps;
       }
     },

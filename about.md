@@ -13,6 +13,7 @@ hero:
   interests:
     - Machine Learning Theory
     - Artificial Intelligence
+    - Operations Research
     - Computational Game Theory
     - Cybersecurity
     - Cryptography
@@ -34,12 +35,15 @@ I was born and raised here in Singapore and am a proud Singaporean.
 
 My primary research interests revolve around the following topics:
 
-1. Artificial Intelligence and Machine Learning (+ Decision Making) Theory  
-2. Cybersecurity, Cryptography
-3. Mathematical Optimisation (Discrete and Continuous)
-4. Constraint Satisfaction (SAT Solving/SMT Solving) 
+1. Artificial Intelligence and Machine Learning (+ Decision Making) Theory
+2. Graph and Network Theory  
+3. Cybersecurity, Cryptography
+4. Mathematical Optimisation (Discrete and Continuous)
+5. Constraint Satisfaction (SAT Solving/SMT Solving) 
   
 I tend to favour topics with a more theoretical flavour. But it's still cool to see how theoretical research can be applied in many practical settings.
+
+Other topics that excite me include: Geometry (Differential/Hyperbolic/Algebraic), Combinatorics, Quantum Mechanics/Computing, Theoretical Physics and the list goes on...(these are just on a recreational basis)
 
 
 ## conferences  
