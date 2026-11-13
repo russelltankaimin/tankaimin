@@ -16,9 +16,9 @@ It doesn't only work in base 10. Javier Cilleruelo, Florian Luca and Lewis Baxte
 
 ## Try it
 
-Choose a base from 5 to 36 and type a number in that base. Digits above 9 are the letters A to Z, so base 16 is ordinary hexadecimal. The answer is computed by [my actual Python script]({{ "/code_stuff/sumof3palindromes.py" | relative_url }}), running in your browser through [Pyodide](https://pyodide.org). The first answer takes a few seconds while Python loads; after that they are instant.
+Choose a base from 5 to 36 and type a number in that base. Digits above 9 are the letters A to Z, so base 16 is ordinary hexadecimal. The answers come from a line-by-line JavaScript translation of [my Python script]({{ "/code_stuff/sumof3palindromes.py" | relative_url }}), checked against it on millions of numbers (more on that below).
 
-<div class="palin" data-palindromes data-src="{{ "/code_stuff/sumof3palindromes.py" | relative_url }}">
+<div class="palin" data-palindromes>
   <form class="palin__form" autocomplete="off">
     <label class="field">
       <span class="field__label">Base</span>
@@ -41,6 +41,7 @@ Choose a base from 5 to 36 and type a number in that base. Digits above 9 are th
   <div class="palin__result" data-result hidden></div>
   <p class="palin__nojs">This needs JavaScript. You can still <a href="{{ "/code_stuff/sumof3palindromes.py" | relative_url }}">download the script</a> and run it with Python.</p>
 </div>
+<script src="{{ "/js/sumof3palindromes.js" | relative_url }}" defer></script>
 <script src="{{ "/js/palindromes.js" | relative_url }}" defer></script>
 
 Under the answer it says which *type* the number is and which of the paper's algorithms produced the palindromes. The next section explains what those are.
@@ -70,7 +71,9 @@ The culprit was case IV.4.iii. The paper splits it on whether the middle digit $
 - every number below $$5^9$$ in base 5, below $$6^8$$ in base 6, below $$7^7$$ in base 7, below $$8^7$$ in base 8, below $$10^7$$ in base 10 and below $$16^5$$ in base 16 is correct (about 17.6 million numbers), and
 - nearly a million random and deliberately awkward numbers in every base from 5 to 36, up to 60 digits long, are all correct too.
 
-To be safe, the script now checks every answer before returning it, so if anything were still wrong you would see an error rather than a wrong sum. It is also fast: even a 5000-digit number takes well under a second, in the browser too.
+To be safe, the script now checks every answer before returning it, so if anything were still wrong you would see an error rather than a wrong sum. It is also fast: even a 5000-digit number takes a fraction of a second.
+
+For this page I then translated the script into JavaScript, line by line, so the widget answers instantly without loading Python in your browser. To make sure nothing was lost in translation, I ran both versions on the same 2.27 million numbers and compared their outputs. That covers every number of up to six digits in bases 5, 6, 7, 8 and 10 (up to eight in base 5), plus random and awkward ones in every base from 5 to 36. The two agree on every one, down to the type and the algorithms used. The JavaScript version is quick enough to check every number below $$10^8$$ in base 10, and below $$5^{10}$$, $$6^9$$, $$16^6$$ and $$36^4$$ in those bases: about 138 million numbers, all correct.
 
 ## Run it yourself
 
