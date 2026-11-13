@@ -187,3 +187,104 @@ textarea.field__input { resize: vertical; min-height: 9rem; }
 .notfound__path { color: var(--purple); font-weight: 500; overflow-wrap: anywhere; }
 
 .related__title { margin: 3.5rem 0 1rem; color: var(--text-strong); font-size: 1.1rem; font-weight: 600; }
+
+// -- Sum of three palindromes widget (js/palindromes.js) ------
+.palin {
+  margin: 2rem 0 2.25rem;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+  box-shadow: var(--shadow-sm);
+
+  p { margin: 0; }
+}
+
+.palin__form {
+  display: grid;
+  gap: 1rem;
+  align-items: end;
+}
+@media (min-width: $bp-sm) {
+  .palin__form { grid-template-columns: 6.5rem 1fr auto; }
+}
+.palin__form .field__input { font-family: var(--font-mono); }
+.palin__form .btn { justify-self: start; }
+
+// Without JS the form can't do anything: show a note instead
+.palin__form, .palin__examples { display: none; }
+.palin.is-ready .palin__form { display: grid; }
+.palin.is-ready .palin__examples { display: flex; }
+.palin.is-ready .palin__nojs { display: none; }
+.palin__nojs { color: var(--text-dim); font-size: .92rem; }
+
+.palin__examples {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .9rem;
+  color: var(--text-dim);
+  font-size: .82rem;
+}
+.palin__example {
+  padding: .2rem .65rem;
+  border: 1px solid var(--line-bright);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  transition: border-color .2s, color .2s;
+}
+.palin__example:hover { border-color: var(--purple-light); color: var(--purple); }
+.palin__example code { font-size: .95em; }
+
+.palin__status:empty { display: none; }
+.palin .palin__status { margin-top: .9rem; color: var(--text-dim); font-size: .88rem; }
+.palin .palin__status--error { color: #b4507f; }
+
+.palin__result { margin-top: 1.25rem; }
+.palin__result[hidden] { display: none; }
+
+// Long answers scroll sideways inside the card
+.palin__scroll {
+  overflow-x: auto;
+  padding: .9rem 1rem;
+  border-radius: 10px;
+  background: var(--bg-sunken);
+}
+.palin__sum {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  gap: .3rem .75rem;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.palin__sum--dec { grid-template-columns: auto auto auto; column-gap: 1.75rem; }
+.palin__row { display: contents; }
+.palin__op { color: var(--text-dim); text-align: center; }
+.palin__digits, .palin__dec { text-align: right; }
+.palin__dec { color: var(--text-dim); font-size: .85em; align-self: center; }
+.palin__row--head > span {
+  color: var(--text-dim);
+  font-family: var(--font-sans);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.palin__row--p1 .palin__digits { color: var(--blue); }
+.palin__row--p2 .palin__digits { color: var(--purple); }
+.palin__row--p3 .palin__digits { color: #b4507f; }
+.palin__row--total > span {
+  padding-top: .35rem;
+  border-top: 1px solid var(--line-bright);
+  color: var(--text-strong);
+  font-weight: 600;
+}
+.palin__row--total .palin__dec { color: var(--text-strong); }
+.palin__row--total > .palin__op { border-top: 0; }
+
+.palin .palin__how { margin-top: .75rem; color: var(--text-dim); font-size: .85rem; }
