@@ -5,6 +5,15 @@ nav_label: blog
 ---
 {% assign posts_count = paginator.posts | size %}
 
+{%- comment -%}
+  Every tag in use: each post's categories plus its tags.
+{%- endcomment -%}
+{%- assign all_tags = "" | split: "" -%}
+{%- for post in site.posts -%}
+  {%- assign all_tags = all_tags | concat: post.categories | concat: post.tags -%}
+{%- endfor -%}
+{%- assign all_tags = all_tags | uniq | sort_natural -%}
+
 <main id="main" class="site-main">
   <div class="shell">
     <header class="page-header">
@@ -12,21 +21,34 @@ nav_label: blog
     </header>
 
     {% if posts_count > 0 %}
-      <ul class="post-list">
-        {% for post in paginator.posts %}
-          <li class="post-row">
-            <a href="{{ post.url | relative_url }}" class="post-row__link">
-              <time class="post-row__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-              <div>
-                <h2 class="post-row__title">{{ post.title }}</h2>
-                <p class="post-row__summary">{{ post.summary | default: post.excerpt | strip_html | truncate: 160 }}</p>
-              </div>
-            </a>
-          </li>
+      {%- comment -%}
+        Tag filter. Hidden until js/site.js runs; a chosen tag (?tag=slug)
+        swaps the paginated list for the matching posts from the full list.
+      {%- endcomment -%}
+      {% if all_tags.size > 0 %}
+      <nav class="tag-filter" aria-label="Filter posts by tag" data-tag-filter hidden>
+        <a class="tag-chip" href="{{ "/blog/" | relative_url }}" data-tag="">All</a>
+        {%- for t in all_tags %}
+        <a class="tag-chip" href="{{ "/blog/" | relative_url }}?tag={{ t | slugify }}" data-tag="{{ t | slugify }}">{{ t }}</a>
+        {%- endfor %}
+      </nav>
+      {% endif %}
+
+      <div data-paged>
+        <ul class="post-list">
+          {% for post in paginator.posts %}
+            {% include post-row.html post=post %}
+          {% endfor %}
+        </ul>
+
+        {% include pagination.html %}
+      </div>
+
+      <ul class="post-list" data-tag-results hidden>
+        {% for post in site.posts %}
+          {% include post-row.html post=post %}
         {% endfor %}
       </ul>
-
-      {% include pagination.html %}
     {% else %}
       <p class="empty-state">{{ site.text.index.coming_soon | default: "Coming soon..." }}</p>
     {% endif %}
