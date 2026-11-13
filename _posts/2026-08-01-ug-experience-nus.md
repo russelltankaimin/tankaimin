@@ -32,7 +32,7 @@ I think my third year was one that really tested my resilience and tenacity and 
 
 Another highlight in my third year (I hate it that it is even a highlight), was that I had to take General Education classes that the Year 1s typically take. On the menu were Philosophy (HSH1000 The Human Condition), Science (HSI1000 How Science Works, Why Science Works) and Engineering (Design Thinking). That said I was one of the oldest people in the class. And it being Y1 classes, the content can feel...very childish. One of the labs for a classes ask WHY DO THINGS FLOAT??? Also, in each of my General Education classes that year, I was called "old" right at my face (dicks).
 
-My CS GPA dropped quite a bit but it was cushioned by an A+ for my UROP research project (I had acquired 2 Bs for 2 of my CS classes. Worst disaster ever! O.o||) but my Math GPA shot up (I don't know how). I think at that time I needed a break from research and decided not to start my FYP next academic year. 
+My CS GPA dropped quite a bit but it was cushioned by an A+ for my UROP research project (I had acquired 2 Bs for 2 of my CS classes. Worst disaster ever! O.o) but my Math GPA shot up (I don't know how). I think at that time I needed a break from research and decided not to start my FYP next academic year. 
 
 I also managed to get a research internship at A*STAR doing algorithmic work alongside a software engineering position. I was essentially double hatting. In contrast to my previous internship, I really had a blast! I met so many friends and I managed to properly rest and chill out over the summer. It was indeed a strange feeling! These are the friends I would still keep in contact with till this day. A shoutout to Barnabas, Arshia, Justin, Belinda, Yu Xuan, Roxi and James!
 
